@@ -15,6 +15,7 @@ import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.pekkatrol.hg2t.block.ModBlocks;
 import net.pekkatrol.hg2t.item.ModItems;
 import org.slf4j.Logger;
 
@@ -38,6 +39,7 @@ public class HG2Tomato
         MinecraftForge.EVENT_BUS.register(this);
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -54,6 +56,9 @@ public class HG2Tomato
     {
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.BANANA);
+        }
+        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(ModBlocks.MARBLE_BLOCK);
         }
     }
     // You can use SubscribeEvent and let the Event Bus discover methods to call
