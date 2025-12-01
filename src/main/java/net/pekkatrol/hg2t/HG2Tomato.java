@@ -16,6 +16,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.pekkatrol.hg2t.block.ModBlocks;
+import net.pekkatrol.hg2t.item.ModCreativeModeTabs;
 import net.pekkatrol.hg2t.item.ModItems;
 import org.slf4j.Logger;
 
@@ -37,6 +38,8 @@ public class HG2Tomato
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
+
+        ModCreativeModeTabs.register(modEventBus);
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
