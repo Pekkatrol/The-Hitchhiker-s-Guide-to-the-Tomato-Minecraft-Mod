@@ -1,4 +1,10 @@
 {
   "item.hgtotomato.banana": "Banana",
-  "block.hgtotomato.marble_block": "Marble Block"
+
+
+  "block.hgtotomato.marble_block": "Marble Block",
+
+
+  "creativetab.hgtotomato.hgtotomato_items": "HG2Tomato Items",
+  "creativetab.hgtotomato.hgtotomato_blocks": "HG2Tomato Blocks"
 }
