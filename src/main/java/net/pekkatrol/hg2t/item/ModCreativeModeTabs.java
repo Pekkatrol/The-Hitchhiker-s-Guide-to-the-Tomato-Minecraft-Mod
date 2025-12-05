@@ -19,6 +19,7 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("creativetab.hgtotomato.hgtotomato_items"))
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.BANANA.get());
+                        output.accept(ModItems.WHEAT_POUCH.get());
                     })
                     .build());
 
