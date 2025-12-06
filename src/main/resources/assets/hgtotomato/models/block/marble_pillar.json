@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "hgtotomato:block/marble_pillar_top",
+    "side": "hgtotomato:block/marble_pillar"
+  }
+}

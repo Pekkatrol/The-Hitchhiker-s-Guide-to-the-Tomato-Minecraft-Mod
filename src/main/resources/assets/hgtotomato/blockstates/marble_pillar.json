@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=y": {
+      "model": "hgtotomato:block/marble_pillar"
+    },
+    "axis=z": {
+      "model": "hgtotomato:block/marble_pillar",
+      "x": 90
+    },
+    "axis=x": {
+      "model": "hgtotomato:block/marble_pillar",
+      "x": 90,
+      "y": 90
+    }
+  }
+}

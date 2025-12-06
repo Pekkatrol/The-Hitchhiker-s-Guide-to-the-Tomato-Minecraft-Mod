@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "hgtotomato:marble_block"
+  },
+  "result": {
+    "id": "hgtotomato:marble_pillar"
+  }
+}

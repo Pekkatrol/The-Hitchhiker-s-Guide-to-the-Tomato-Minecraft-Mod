@@ -1,9 +1,12 @@
 {
   "item.hgtotomato.banana": "Banana",
   "item.hgtotomato.wheat_pouch": "Pouch of wheat seeds",
+  "item.hgtotomato.bio_powder": "Bio powder",
 
 
   "block.hgtotomato.marble_block": "Marble Block",
+  "block.hgtotomato.marble_brick": "Marble Brick",
+  "block.hgtotomato.marble_pillar": "Marble pillar block",
 
 
   "creativetab.hgtotomato.hgtotomato_items": "HG2Tomato Items",

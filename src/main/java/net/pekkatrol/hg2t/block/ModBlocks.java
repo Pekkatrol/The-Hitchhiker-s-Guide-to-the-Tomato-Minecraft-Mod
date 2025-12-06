@@ -3,6 +3,7 @@ package net.pekkatrol.hg2t.block;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -20,6 +21,18 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> MARBLE_BLOCK = registerBlock("marble_block",
             () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(1.5f, 6f)
+                    .requiresCorrectToolForDrops()
+                    .sound(SoundType.STONE)));
+
+    public static final RegistryObject<Block> MARBLE_BRICK = registerBlock("marble_brick",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(1.5f, 6f)
+                    .requiresCorrectToolForDrops()
+                    .sound(SoundType.STONE)));
+
+    public static final RegistryObject<Block> MARBLE_PILLAR = registerBlock("marble_pillar",
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.of()
                     .strength(1.5f, 6f)
                     .requiresCorrectToolForDrops()
                     .sound(SoundType.STONE)));
