@@ -20,6 +20,7 @@ public class ModCreativeModeTabs {
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.BANANA.get());
                         output.accept(ModItems.WHEAT_POUCH.get());
+                        output.accept(ModItems.BIO_POWDER.get());
                     })
                     .build());
 
@@ -29,6 +30,8 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("creativetab.hgtotomato.hgtotomato_blocks"))
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModBlocks.MARBLE_BLOCK.get());
+                        output.accept(ModBlocks.MARBLE_BRICK.get());
+                        output.accept(ModBlocks.MARBLE_PILLAR.get());
                     })
                     .build());
 
