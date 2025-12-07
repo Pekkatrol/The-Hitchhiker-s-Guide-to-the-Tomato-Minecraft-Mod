@@ -37,6 +37,13 @@ public class ModBlocks {
                     .requiresCorrectToolForDrops()
                     .sound(SoundType.STONE)));
 
+    public static final RegistryObject<Block> CARD_BOX = registerBlock("card_box",
+            () -> new CardBoxBlock(BlockBehaviour.Properties.of()
+                    .strength(2f, 3f)
+                    .requiresCorrectToolForDrops()
+                    .sound(SoundType.WOOD)));
+
+
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);
