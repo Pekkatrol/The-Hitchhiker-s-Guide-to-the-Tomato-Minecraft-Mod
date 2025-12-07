@@ -32,6 +32,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.MARBLE_BLOCK.get());
                         output.accept(ModBlocks.MARBLE_BRICK.get());
                         output.accept(ModBlocks.MARBLE_PILLAR.get());
+                        output.accept(ModBlocks.CARD_BOX.get());
                     })
                     .build());
 
