@@ -21,6 +21,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.BANANA.get());
                         output.accept(ModItems.WHEAT_POUCH.get());
                         output.accept(ModItems.BIO_POWDER.get());
+                        output.accept(ModItems.NICKEL_INGOT.get());
                     })
                     .build());
 
@@ -33,6 +34,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.MARBLE_BRICK.get());
                         output.accept(ModBlocks.MARBLE_PILLAR.get());
                         output.accept(ModBlocks.CARD_BOX.get());
+                        output.accept(ModBlocks.NICKEL_BLOCK.get());
+                        output.accept(ModBlocks.NICKEL_ORE.get());
                     })
                     .build());
 
