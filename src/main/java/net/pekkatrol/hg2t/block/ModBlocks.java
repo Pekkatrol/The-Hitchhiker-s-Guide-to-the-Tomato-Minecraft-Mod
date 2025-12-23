@@ -43,6 +43,18 @@ public class ModBlocks {
                     .requiresCorrectToolForDrops()
                     .sound(SoundType.WOOD)));
 
+    public static final RegistryObject<Block> NICKEL_BLOCK = registerBlock("nickel_block",
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.of()
+                    .strength(1.5f, 6f)
+                    .requiresCorrectToolForDrops()
+                    .sound(SoundType.NETHERITE_BLOCK)));
+
+    public static final RegistryObject<Block> NICKEL_ORE = registerBlock("nickel_ore",
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.of()
+                    .strength(1.5f, 6f)
+                    .requiresCorrectToolForDrops()
+                    .sound(SoundType.STONE)));
+
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

@@ -21,6 +21,9 @@ public class ModItems {
     public static final RegistryObject<Item> BIO_POWDER = ITEMS.register("bio_powder",
             () -> new Item(new Item.Properties()));
 
+    public static final RegistryObject<Item> NICKEL_INGOT = ITEMS.register("nickel_ingot",
+            () -> new Item(new Item.Properties()));
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }
