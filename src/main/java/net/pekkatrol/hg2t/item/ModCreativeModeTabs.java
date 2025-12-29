@@ -21,7 +21,9 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.BANANA.get());
                         output.accept(ModItems.WHEAT_POUCH.get());
                         output.accept(ModItems.BIO_POWDER.get());
+                        output.accept(ModItems.RAW_NICKEL.get());
                         output.accept(ModItems.NICKEL_INGOT.get());
+                        output.accept(ModItems.COMPACT_LOG.get());
                     })
                     .build());
 
@@ -33,9 +35,20 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.MARBLE_BLOCK.get());
                         output.accept(ModBlocks.MARBLE_BRICK.get());
                         output.accept(ModBlocks.MARBLE_PILLAR.get());
+                        output.accept(ModBlocks.MARBLE_WALL.get());
                         output.accept(ModBlocks.CARD_BOX.get());
                         output.accept(ModBlocks.NICKEL_BLOCK.get());
                         output.accept(ModBlocks.NICKEL_ORE.get());
+                        output.accept(ModBlocks.LUMIR_LOG.get());
+                        output.accept(ModBlocks.LUMIR_PLANKS.get());
+                        output.accept(ModBlocks.LUMIR_SLAB.get());
+                        output.accept(ModBlocks.LUMIR_FENCE.get());
+                        output.accept(ModBlocks.LUMIR_FENCE_GATE.get());
+                        output.accept(ModBlocks.LUMIR_STAIRS.get());
+                        output.accept(ModBlocks.LUMIR_DOOR.get());
+                        output.accept(ModBlocks.LUMIR_TRAPDOOR.get());
+                        output.accept(ModBlocks.LUMIR_BUTTON.get());
+                        output.accept(ModBlocks.LUMIR_PRESSURE_PLATE.get());
                     })
                     .build());
 
