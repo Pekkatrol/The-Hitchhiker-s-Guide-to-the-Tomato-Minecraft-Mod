@@ -45,6 +45,7 @@ public class ModItems {
     public static final RegistryObject<Item> TOMATO_POUCH = ITEMS.register("tomato_pouch",
             () -> new Item(new Item.Properties()));
 
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }
