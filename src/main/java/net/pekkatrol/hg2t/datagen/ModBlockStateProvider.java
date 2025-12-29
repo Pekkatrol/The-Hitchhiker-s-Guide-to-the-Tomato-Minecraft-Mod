@@ -26,6 +26,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
+        blockWithItem(ModBlocks.BLACK_SAND);
         blockWithItem(ModBlocks.MARBLE_BLOCK);
         blockWithItem(ModBlocks.MARBLE_BRICK);
         blockWithItem(ModBlocks.LUMIR_PLANKS);
@@ -44,6 +45,14 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         wallBlock(ModBlocks.MARBLE_WALL.get(), blockTexture(ModBlocks.MARBLE_BLOCK.get()));
 
+        logBlock(ModBlocks.LUMIR_LOG.get());
+        logBlock(ModBlocks.STRIPPED_LUMIR_LOG.get());
+
+        leavesBlock(ModBlocks.LUMIR_LEAVES);
+        saplingBlock(ModBlocks.LUMIR_SAPLING);
+
+        blockItem(ModBlocks.LUMIR_LOG);
+        blockItem(ModBlocks.STRIPPED_LUMIR_LOG);
         blockItem(ModBlocks.LUMIR_STAIRS);
         blockItem(ModBlocks.LUMIR_SLAB);
         blockItem(ModBlocks.LUMIR_PRESSURE_PLATE);
@@ -51,6 +60,17 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.LUMIR_TRAPDOOR, "_bottom");
 
         makeCrop((CropBlock) ModBlocks.TOMATO_CROP.get(), "tomato_crop_stage", "tomato_crop_stage");
+    }
+
+    public void saplingBlock(RegistryObject<Block> blockRegistryObject) {
+        simpleBlock(blockRegistryObject.get(),
+                models().cross(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath(), blockTexture(blockRegistryObject.get())).renderType("cutout"));
+    }
+
+    public void leavesBlock(RegistryObject<Block> blockRegistryObject) {
+        simpleBlockWithItem(blockRegistryObject.get(),
+                models().singleTexture(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath(), ResourceLocation.parse("minecraft:block/leaves"),
+                        "all", blockTexture(blockRegistryObject.get())).renderType("cutout"));
     }
 
     public void makeCrop(CropBlock block, String modelName, String textureName) {

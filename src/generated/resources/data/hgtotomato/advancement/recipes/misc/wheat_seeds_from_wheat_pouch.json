@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "hgtotomato:wheat_seeds_from_wheat_pouch"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_wheat_pouch": {
+      "conditions": {
+        "items": [
+          {
+            "items": "hgtotomato:wheat_pouch"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_wheat_pouch"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "hgtotomato:wheat_seeds_from_wheat_pouch"
+    ]
+  }
+}

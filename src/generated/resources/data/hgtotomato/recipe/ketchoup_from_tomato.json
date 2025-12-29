@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:glass_bottle"
+    },
+    "B": {
+      "item": "minecraft:sugar"
+    },
+    "C": {
+      "item": "hgtotomato:tomato"
+    }
+  },
+  "pattern": [
+    " B ",
+    "CAC"
+  ],
+  "result": {
+    "count": 1,
+    "id": "hgtotomato:ketchoup"
+  }
+}

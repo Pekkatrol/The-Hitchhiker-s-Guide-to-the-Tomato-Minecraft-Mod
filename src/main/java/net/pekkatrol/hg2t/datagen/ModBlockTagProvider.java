@@ -48,6 +48,11 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         tag(BlockTags.FENCES).add(ModBlocks.LUMIR_FENCE.get());
         tag(BlockTags.FENCE_GATES).add(ModBlocks.LUMIR_FENCE_GATE.get());
         tag(BlockTags.WALLS).add(ModBlocks.MARBLE_WALL.get());
+        tag(BlockTags.LOGS).add(ModBlocks.LUMIR_LOG.get());
+        tag(BlockTags.SAND).add(ModBlocks.BLACK_SAND.get());
 
+        this.tag(BlockTags.LOGS_THAT_BURN)
+                .add(ModBlocks.LUMIR_LOG.get())
+                .add(ModBlocks.STRIPPED_LUMIR_LOG.get());
     }
 }

@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "group": "lumir",
+  "ingredients": [
+    {
+      "item": "hgtotomato:lumir_planks"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "hgtotomato:lumir_button"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "hgtotomato:block/lumir_log_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "hgtotomato:block/lumir_log"
+    },
+    "axis=z": {
+      "model": "hgtotomato:block/lumir_log_horizontal",
+      "x": 90
+    }
+  }
+}

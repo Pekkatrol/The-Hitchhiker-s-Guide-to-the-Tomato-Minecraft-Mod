@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column_horizontal",
+  "textures": {
+    "end": "hgtotomato:block/stripped_lumir_log_top",
+    "side": "hgtotomato:block/stripped_lumir_log"
+  }
+}

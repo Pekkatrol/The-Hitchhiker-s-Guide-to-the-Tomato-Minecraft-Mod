@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_lumir_planks": {
+      "conditions": {
+        "items": [
+          {
+            "items": "hgtotomato:lumir_planks"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "hgtotomato:lumir_slab"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_lumir_planks"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "hgtotomato:lumir_slab"
+    ]
+  }
+}
