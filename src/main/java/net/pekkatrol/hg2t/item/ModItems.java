@@ -6,6 +6,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.pekkatrol.hg2t.HG2Tomato;
+import net.pekkatrol.hg2t.item.custom.FuelItem;
 import org.spongepowered.asm.mixin.extensibility.IActivityContext;
 
 public class ModItems {
@@ -13,7 +14,7 @@ public class ModItems {
             DeferredRegister.create(ForgeRegistries.ITEMS, HG2Tomato.MOD_ID);
 
     public static final RegistryObject<Item> BANANA = ITEMS.register("banana",
-            () -> new Item(new Item.Properties()));
+            () -> new Item(new Item.Properties().food(ModFoodProperties.BANANA)));
 
     public static final RegistryObject<Item> WHEAT_POUCH = ITEMS.register("wheat_pouch",
             () -> new Item(new Item.Properties()));
@@ -23,6 +24,12 @@ public class ModItems {
 
     public static final RegistryObject<Item> NICKEL_INGOT = ITEMS.register("nickel_ingot",
             () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> RAW_NICKEL = ITEMS.register("raw_nickel",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> COMPACT_LOG = ITEMS.register("compact_log",
+            () -> new FuelItem(new Item.Properties(), 16000));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

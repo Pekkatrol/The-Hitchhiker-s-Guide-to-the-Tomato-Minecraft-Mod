@@ -3,14 +3,27 @@
   "item.hgtotomato.wheat_pouch": "Pouch of wheat seeds",
   "item.hgtotomato.bio_powder": "Bio powder",
   "item.hgtotomato.nickel_ingot": "Nickel Ingot",
+  "item.hgtotomato.raw_nickel": "Raw Nickel",
+  "item.hgtotomato.compact_log": "Bunch of logs",
 
 
   "block.hgtotomato.marble_block": "Marble Block",
   "block.hgtotomato.marble_brick": "Marble Brick",
+  "block.hgtotomato.marble_wall": "Marble Wall",
   "block.hgtotomato.marble_pillar": "Marble pillar block",
   "block.hgtotomato.card_box": "Cardboard box",
   "block.hgtotomato.nickel_block": "Nickel block",
   "block.hgtotomato.nickel_ore": "Nickel ore",
+  "block.hgtotomato.lumir_planks": "Lumir planks",
+  "block.hgtotomato.lumir_log": "Lumir log",
+  "block.hgtotomato.lumir_slab": "Lumir slab",
+  "block.hgtotomato.lumir_stairs": "Lumir stairs",
+  "block.hgtotomato.lumir_fence": "Lumir fence",
+  "block.hgtotomato.lumir_fence_gate": "Lumir fence gate",
+  "block.hgtotomato.lumir_button": "Lumir button",
+  "block.hgtotomato.lumir_door": "Lumir door",
+  "block.hgtotomato.lumir_trapdoor": "Lumir trapdoor",
+  "block.hgtotomato.lumir_pressure_plate": "Lumir pressure plate",
 
 
   "creativetab.hgtotomato.hgtotomato_items": "HG2Tomato Items",

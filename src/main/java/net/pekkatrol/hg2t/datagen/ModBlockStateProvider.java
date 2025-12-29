@@ -1,0 +1,60 @@
+package net.pekkatrol.hg2t.datagen;
+
+import net.minecraft.data.PackOutput;
+import net.minecraft.world.level.block.Block;
+import net.minecraftforge.client.model.generators.BlockStateProvider;
+import net.minecraftforge.client.model.generators.ModelFile;
+import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.RegistryObject;
+import net.pekkatrol.hg2t.HG2Tomato;
+import net.pekkatrol.hg2t.block.ModBlocks;
+
+public class ModBlockStateProvider extends BlockStateProvider {
+
+    public ModBlockStateProvider(PackOutput output, ExistingFileHelper existingFileHelper) {
+        super(output, HG2Tomato.MOD_ID, existingFileHelper);
+    }
+
+    @Override
+    protected void registerStatesAndModels() {
+        blockWithItem(ModBlocks.MARBLE_BLOCK);
+        blockWithItem(ModBlocks.MARBLE_BRICK);
+        blockWithItem(ModBlocks.LUMIR_PLANKS);
+        blockWithItem(ModBlocks.NICKEL_BLOCK);
+        blockWithItem(ModBlocks.NICKEL_ORE);
+
+        stairsBlock(ModBlocks.LUMIR_STAIRS.get(), blockTexture(ModBlocks.LUMIR_PLANKS.get()));
+        slabBlock(ModBlocks.LUMIR_SLAB.get(), blockTexture(ModBlocks.LUMIR_PLANKS.get()), blockTexture(ModBlocks.LUMIR_PLANKS.get()));
+        buttonBlock(ModBlocks.LUMIR_BUTTON.get(), blockTexture(ModBlocks.LUMIR_PLANKS.get()));
+        pressurePlateBlock(ModBlocks.LUMIR_PRESSURE_PLATE.get(), blockTexture(ModBlocks.LUMIR_PLANKS.get()));
+        fenceBlock(ModBlocks.LUMIR_FENCE.get(), blockTexture(ModBlocks.LUMIR_PLANKS.get()));
+        fenceGateBlock(ModBlocks.LUMIR_FENCE_GATE.get(), blockTexture(ModBlocks.LUMIR_PLANKS.get()));
+
+        doorBlockWithRenderType(ModBlocks.LUMIR_DOOR.get(), modLoc("block/lumir_door_bottom"), modLoc("block/lumir_door_top"), "cutout");
+        trapdoorBlockWithRenderType(ModBlocks.LUMIR_TRAPDOOR.get(), modLoc("block/lumir_trapdoor"), true, "cutout");
+
+        wallBlock(ModBlocks.MARBLE_WALL.get(), blockTexture(ModBlocks.MARBLE_BLOCK.get()));
+
+        blockItem(ModBlocks.LUMIR_STAIRS);
+        blockItem(ModBlocks.LUMIR_SLAB);
+        blockItem(ModBlocks.LUMIR_PRESSURE_PLATE);
+        blockItem(ModBlocks.LUMIR_FENCE_GATE);
+        blockItem(ModBlocks.LUMIR_TRAPDOOR, "_bottom");
+    }
+
+    private void blockWithItem(RegistryObject<Block> blockRegistryObject) {
+        simpleBlockWithItem(blockRegistryObject.get(), cubeAll(blockRegistryObject.get()));
+    }
+
+    private void blockItem(RegistryObject<? extends Block> blockRegistryObject) {
+        simpleBlockItem(blockRegistryObject.get(), new ModelFile.UncheckedModelFile("hgtotomato:block/" +
+                ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath()));
+    }
+
+    private void blockItem(RegistryObject<? extends Block> blockRegistryObject, String appendix) {
+        simpleBlockItem(blockRegistryObject.get(), new ModelFile.UncheckedModelFile("hgtotomato:block/" +
+                ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath() + appendix));
+    }
+}
