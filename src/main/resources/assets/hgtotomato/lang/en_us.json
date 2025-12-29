@@ -5,6 +5,9 @@
   "item.hgtotomato.nickel_ingot": "Nickel Ingot",
   "item.hgtotomato.raw_nickel": "Raw Nickel",
   "item.hgtotomato.compact_log": "Bunch of logs",
+  "item.hgtotomato.tomato_seeds": "Tomato seeds",
+  "item.hgtotomato.tomato": "Tomato",
+  "item.hgtotomato.tomato_pouch": "Pouch of tomato seeds",
 
 
   "block.hgtotomato.marble_block": "Marble Block",
@@ -24,6 +27,8 @@
   "block.hgtotomato.lumir_door": "Lumir door",
   "block.hgtotomato.lumir_trapdoor": "Lumir trapdoor",
   "block.hgtotomato.lumir_pressure_plate": "Lumir pressure plate",
+
+  "block.hgtotomato.tomato_crop": "Tomato crop",
 
 
   "creativetab.hgtotomato.hgtotomato_items": "HG2Tomato Items",

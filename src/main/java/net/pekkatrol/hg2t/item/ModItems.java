@@ -1,11 +1,13 @@
 package net.pekkatrol.hg2t.item;
 
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemNameBlockItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.pekkatrol.hg2t.HG2Tomato;
+import net.pekkatrol.hg2t.block.ModBlocks;
 import net.pekkatrol.hg2t.item.custom.FuelItem;
 import org.spongepowered.asm.mixin.extensibility.IActivityContext;
 
@@ -30,6 +32,15 @@ public class ModItems {
 
     public static final RegistryObject<Item> COMPACT_LOG = ITEMS.register("compact_log",
             () -> new FuelItem(new Item.Properties(), 16000));
+
+    public static final RegistryObject<Item> TOMATO_SEEDS = ITEMS.register("tomato_seeds",
+            () -> new ItemNameBlockItem(ModBlocks.TOMATO_CROP.get(), new Item.Properties()));
+
+    public static final RegistryObject<Item> TOMATO = ITEMS.register("tomato",
+            () -> new Item(new Item.Properties().food(ModFoodProperties.TOMATO)));
+
+    public static final RegistryObject<Item> TOMATO_POUCH = ITEMS.register("tomato_pouch",
+            () -> new Item(new Item.Properties()));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

@@ -27,6 +27,9 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.RAW_NICKEL.get());
         basicItem(ModItems.WHEAT_POUCH.get());
         basicItem(ModItems.COMPACT_LOG.get());
+        basicItem(ModItems.TOMATO_SEEDS.get());
+        basicItem(ModItems.TOMATO.get());
+        basicItem(ModItems.TOMATO_POUCH.get());
 
         buttonItem(ModBlocks.LUMIR_BUTTON, ModBlocks.LUMIR_PLANKS);
         fenceItem(ModBlocks.LUMIR_FENCE, ModBlocks.LUMIR_PLANKS);

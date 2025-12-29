@@ -24,6 +24,9 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.RAW_NICKEL.get());
                         output.accept(ModItems.NICKEL_INGOT.get());
                         output.accept(ModItems.COMPACT_LOG.get());
+                        output.accept(ModItems.TOMATO_SEEDS.get());
+                        output.accept(ModItems.TOMATO.get());
+                        output.accept(ModItems.TOMATO_POUCH.get());
                     })
                     .build());
 
