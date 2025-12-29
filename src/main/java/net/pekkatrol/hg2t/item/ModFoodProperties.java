@@ -10,4 +10,9 @@ public class ModFoodProperties {
             nutrition(3)
             .saturationModifier(0.25f)
             .effect(new MobEffectInstance(MobEffects.DIG_SPEED, 400), 0.30f).build();
+
+    public static final FoodProperties TOMATO = new FoodProperties.Builder().
+            nutrition(3)
+            .saturationModifier(0.25f)
+            .effect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 400), 0.30f).build();
 }

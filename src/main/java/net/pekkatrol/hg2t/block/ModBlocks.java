@@ -13,6 +13,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.pekkatrol.hg2t.HG2Tomato;
+import net.pekkatrol.hg2t.block.custom.TomatoCropBlock;
 import net.pekkatrol.hg2t.item.ModItems;
 
 import java.util.function.Supplier;
@@ -147,6 +148,9 @@ public class ModBlocks {
                             .sound(SoundType.STONE)
             )
     );
+
+    public static final RegistryObject<Block> TOMATO_CROP = BLOCKS.register("tomato_crop",
+            () -> new TomatoCropBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT)));
 
 
 
