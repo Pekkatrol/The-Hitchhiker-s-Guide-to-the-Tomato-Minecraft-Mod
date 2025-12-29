@@ -1,20 +1,29 @@
 package net.pekkatrol.hg2t.block;
 
 import net.minecraft.client.resources.model.Material;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.util.ColorRGBA;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
+import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.block.state.properties.WoodType;
+import net.minecraft.world.level.material.MapColor;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.pekkatrol.hg2t.HG2Tomato;
+import net.pekkatrol.hg2t.block.custom.ModFlammableRotatedPillarBlock;
 import net.pekkatrol.hg2t.block.custom.TomatoCropBlock;
 import net.pekkatrol.hg2t.item.ModItems;
+import net.pekkatrol.hg2t.worldgen.tree.ModTreeGrowers;
 
 import java.util.function.Supplier;
 
@@ -23,6 +32,17 @@ public class ModBlocks {
 
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, HG2Tomato.MOD_ID);
+
+    public static final RegistryObject<Block> BLACK_SAND = registerBlock("black_sand",
+            () -> new ColoredFallingBlock(
+            new ColorRGBA(14406560),
+            BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.SAND)
+                .instrument(NoteBlockInstrument.SNARE)
+                .strength(0.5F)
+                .sound(SoundType.SAND)
+        ));
+
 
     public static final RegistryObject<Block> MARBLE_BLOCK = registerBlock("marble_block",
             () -> new Block(BlockBehaviour.Properties.of()
@@ -65,9 +85,31 @@ public class ModBlocks {
                     .sound(SoundType.WOOD)));
 
     public static final RegistryObject<RotatedPillarBlock> LUMIR_LOG = registerBlock("lumir_log",
-            () -> new RotatedPillarBlock(BlockBehaviour.Properties.of()
-                    .strength(2f, 3f)
-                    .sound(SoundType.WOOD)));
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG)));
+
+    public static final RegistryObject<RotatedPillarBlock> STRIPPED_LUMIR_LOG = registerBlock("stripped_lumir_log",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_OAK_LOG)));
+
+    public static final RegistryObject<Block> LUMIR_LEAVES = registerBlock("lumir_leaves",
+            () -> new LeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)) {
+                @Override
+                public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return true;
+                }
+
+                @Override
+                public int getFlammability(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 60;
+                }
+
+                @Override
+                public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 30;
+                }
+            });
+
+    public static final RegistryObject<Block> LUMIR_SAPLING = registerBlock("lumir_sapling",
+            () -> new SaplingBlock(ModTreeGrowers.LUMIR, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING)));
 
     public static final RegistryObject<FenceBlock> LUMIR_FENCE = registerBlock("lumir_fence",
             () -> new FenceBlock(BlockBehaviour.Properties.of()

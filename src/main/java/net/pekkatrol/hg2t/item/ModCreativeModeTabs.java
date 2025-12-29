@@ -36,6 +36,7 @@ public class ModCreativeModeTabs {
                     .withTabsBefore(HGTOTOMATO_ITEMS_TAB.getId())
                     .title(Component.translatable("creativetab.hgtotomato.hgtotomato_blocks"))
                     .displayItems((itemDisplayParameters, output) -> {
+                        output.accept(ModBlocks.BLACK_SAND.get());
                         output.accept(ModBlocks.MARBLE_BLOCK.get());
                         output.accept(ModBlocks.MARBLE_BRICK.get());
                         output.accept(ModBlocks.MARBLE_PILLAR.get());
@@ -43,7 +44,10 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.CARD_BOX.get());
                         output.accept(ModBlocks.NICKEL_BLOCK.get());
                         output.accept(ModBlocks.NICKEL_ORE.get());
+                        output.accept(ModBlocks.LUMIR_SAPLING.get());
+                        output.accept(ModBlocks.LUMIR_LEAVES.get());
                         output.accept(ModBlocks.LUMIR_LOG.get());
+                        output.accept(ModBlocks.STRIPPED_LUMIR_LOG.get());
                         output.accept(ModBlocks.LUMIR_PLANKS.get());
                         output.accept(ModBlocks.LUMIR_SLAB.get());
                         output.accept(ModBlocks.LUMIR_FENCE.get());

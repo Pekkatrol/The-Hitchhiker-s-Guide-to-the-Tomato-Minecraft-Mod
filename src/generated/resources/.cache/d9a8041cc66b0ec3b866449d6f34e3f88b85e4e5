@@ -1,0 +1,10 @@
+// 1.21	2025-12-30T00:07:23.6610425	Tags for minecraft:block mod id hgtotomato
+bc4f04be8622dffbec900187572256966fdb3aa0 data/minecraft/tags/block/fences.json
+564117510ac2a715b853784baf1c5dd00eface66 data/minecraft/tags/block/fence_gates.json
+860016f621dfd34a614baf828587e70d9b512d20 data/minecraft/tags/block/logs.json
+4f8f8d6c2cc62546e403bd9c3b303f7dceda5f24 data/minecraft/tags/block/logs_that_burn.json
+0df3c1d648312e8026ad459973a08ebf503f032e data/minecraft/tags/block/mineable/axe.json
+552d6ccd2b8d2ea5d2d1d19831d9c2fd5df9c1f0 data/minecraft/tags/block/mineable/pickaxe.json
+a7d83de5eaac517d3a6cab69702383e5b59955f8 data/minecraft/tags/block/needs_iron_tool.json
+7e0d8176830ffbd5de2f39759eb14b40593de81d data/minecraft/tags/block/sand.json
+22bd5a00a0cc59d14639713226da0e6a765120e7 data/minecraft/tags/block/walls.json

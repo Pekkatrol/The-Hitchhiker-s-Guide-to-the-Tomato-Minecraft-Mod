@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "hgtotomato:block/lumir_slab"
+    },
+    "type=double": {
+      "model": "hgtotomato:block/lumir_planks"
+    },
+    "type=top": {
+      "model": "hgtotomato:block/lumir_slab_top"
+    }
+  }
+}

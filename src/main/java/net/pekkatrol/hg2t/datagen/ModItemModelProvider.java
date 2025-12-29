@@ -37,6 +37,14 @@ public class ModItemModelProvider extends ItemModelProvider {
         wallItem(ModBlocks.MARBLE_WALL, ModBlocks.MARBLE_BLOCK);
 
         simpleBlockItem(ModBlocks.LUMIR_DOOR);
+
+        saplingItem(ModBlocks.LUMIR_SAPLING);
+    }
+
+    private ItemModelBuilder saplingItem(RegistryObject<Block> item) {
+        return withExistingParent(item.getId().getPath(),
+                ResourceLocation.parse("item/generated")).texture("layer0",
+                ResourceLocation.fromNamespaceAndPath(HG2Tomato.MOD_ID, "block/" + item.getId().getPath()));
     }
 
     public void buttonItem(RegistryObject<? extends Block> block, RegistryObject<Block> baseBlock) {

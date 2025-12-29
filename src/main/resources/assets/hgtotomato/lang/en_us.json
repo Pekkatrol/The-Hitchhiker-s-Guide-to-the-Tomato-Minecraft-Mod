@@ -10,6 +10,7 @@
   "item.hgtotomato.tomato_pouch": "Pouch of tomato seeds",
   "item.hgtotomato.ketchoup": "Ketchoup",
 
+  "block.hgtotomato.black_sand": "Black Sand",
   "block.hgtotomato.marble_block": "Marble Block",
   "block.hgtotomato.marble_brick": "Marble Brick",
   "block.hgtotomato.marble_wall": "Marble Wall",
@@ -19,6 +20,9 @@
   "block.hgtotomato.nickel_ore": "Nickel ore",
   "block.hgtotomato.lumir_planks": "Lumir planks",
   "block.hgtotomato.lumir_log": "Lumir log",
+  "block.hgtotomato.stripped_lumir_log": "Stripped lumir log",
+  "block.hgtotomato.lumir_leaves": "Lumir leaves",
+  "block.hgtotomato.lumir_sapling": "Lumir sapling",
   "block.hgtotomato.lumir_slab": "Lumir slab",
   "block.hgtotomato.lumir_stairs": "Lumir stairs",
   "block.hgtotomato.lumir_fence": "Lumir fence",

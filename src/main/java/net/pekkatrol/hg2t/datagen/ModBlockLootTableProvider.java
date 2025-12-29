@@ -1,19 +1,25 @@
 package net.pekkatrol.hg2t.datagen;
 
+import net.minecraft.advancements.critereon.EnchantmentPredicate;
+import net.minecraft.advancements.critereon.ItemPredicate;
+import net.minecraft.advancements.critereon.MinMaxBounds;
 import net.minecraft.advancements.critereon.StatePropertiesPredicate;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.Enchantments;
+import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
+import net.minecraft.world.level.storage.loot.entries.LootPoolSingletonContainer;
 import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
-import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
-import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
+import net.minecraft.world.level.storage.loot.predicates.*;
+import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.RegistryObject;
@@ -21,6 +27,8 @@ import net.minecraft.world.level.block.Block;
 import net.pekkatrol.hg2t.block.ModBlocks;
 import net.pekkatrol.hg2t.block.custom.TomatoCropBlock;
 import net.pekkatrol.hg2t.item.ModItems;
+
+
 
 import java.util.Iterator;
 import java.util.Set;
@@ -33,6 +41,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
     @Override
     protected void generate() {
         dropSelf(ModBlocks.CARD_BOX.get());
+        dropSelf(ModBlocks.BLACK_SAND.get());
         dropSelf(ModBlocks.MARBLE_PILLAR.get());
         dropSelf(ModBlocks.MARBLE_BRICK.get());
         dropSelf(ModBlocks.MARBLE_WALL.get());
@@ -47,6 +56,12 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.LUMIR_TRAPDOOR.get());
         dropSelf(ModBlocks.LUMIR_PRESSURE_PLATE.get());
         dropSelf(ModBlocks.LUMIR_BUTTON.get());
+
+        dropSelf(ModBlocks.LUMIR_SAPLING.get());
+        dropSelf(ModBlocks.STRIPPED_LUMIR_LOG.get());
+
+        this.add(ModBlocks.LUMIR_LEAVES.get(), block ->
+                createBananaLeavesDrops(block, ModBlocks.LUMIR_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
 
 
         LootItemCondition.Builder lootItemConditionBuilder = LootItemBlockStatePropertyCondition.hasBlockStateProperties(ModBlocks.TOMATO_CROP.get())
@@ -75,4 +90,35 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
     protected Iterable<Block> getKnownBlocks() {
         return ModBlocks.BLOCKS.getEntries().stream().map(RegistryObject::get)::iterator;
     }
+
+    protected LootTable.Builder createBananaLeavesDrops(
+            Block leavesBlock,
+            Block saplingBlock,
+            float... saplingChances
+    ) {
+        HolderLookup.RegistryLookup<Enchantment> registrylookup =
+                this.registries.lookupOrThrow(Registries.ENCHANTMENT);
+
+        return this.createLeavesDrops(leavesBlock, saplingBlock, saplingChances)
+                .withPool(
+                        LootPool.lootPool()
+                                .setRolls(ConstantValue.exactly(1.0F))
+                                .add(
+                                        this.applyExplosionCondition(
+                                                leavesBlock,
+                                                LootItem.lootTableItem(ModItems.BANANA.get())
+                                        ).when(
+                                                BonusLevelTableCondition.bonusLevelFlatChance(
+                                                        registrylookup.getOrThrow(Enchantments.FORTUNE),
+                                                        0.005F,
+                                                        0.005555556F,
+                                                        0.00625F,
+                                                        0.008333334F,
+                                                        0.025F
+                                                )
+                                        )
+                                )
+                );
+    }
+
 }

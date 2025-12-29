@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_bio_powder": {
+      "conditions": {
+        "items": [
+          {
+            "items": "hgtotomato:bio_powder"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "hgtotomato:card_box_from_bio_powder_and_paper"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_bio_powder"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "hgtotomato:card_box_from_bio_powder_and_paper"
+    ]
+  }
+}

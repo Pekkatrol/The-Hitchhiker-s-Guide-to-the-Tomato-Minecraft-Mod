@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "hgtotomato:block/lumir_planks",
+    "side": "hgtotomato:block/lumir_planks",
+    "top": "hgtotomato:block/lumir_planks"
+  }
+}
