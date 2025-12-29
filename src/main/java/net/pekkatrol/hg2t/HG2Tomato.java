@@ -19,6 +19,7 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.pekkatrol.hg2t.block.ModBlocks;
 import net.pekkatrol.hg2t.item.ModCreativeModeTabs;
 import net.pekkatrol.hg2t.item.ModItems;
+import net.pekkatrol.hg2t.potion.ModPotions;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -44,6 +45,7 @@ public class HG2Tomato
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);

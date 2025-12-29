@@ -95,6 +95,17 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModItems.TOMATO_POUCH.get()), has(ModItems.TOMATO_POUCH.get()))
                 .save(pRecipeOutput, HG2Tomato.MOD_ID + ":tomato_seeds_from_tomato_pouch");
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.KETCHOUP.get())
+                .pattern(" B ")
+                .pattern("CAC")
+                .define('A', Items.GLASS_BOTTLE)
+                .define('B', Items.SUGAR)
+                .define('C', ModItems.TOMATO.get())
+                .unlockedBy(getHasName(ModItems.TOMATO.get()), has(ModItems.TOMATO.get()))
+                .save(pRecipeOutput, HG2Tomato.MOD_ID + ":ketchoup_from_tomato");
+
+
+
         oreSmelting(pRecipeOutput, NICKEL_SMELTABLES, RecipeCategory.MISC, ModItems.NICKEL_INGOT.get(), 0.25f, 200, "nickel");
         oreBlasting(pRecipeOutput, NICKEL_SMELTABLES, RecipeCategory.MISC, ModItems.NICKEL_INGOT.get(), 0.25f, 100, "nickel");
 
