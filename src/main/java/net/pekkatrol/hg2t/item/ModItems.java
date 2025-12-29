@@ -39,8 +39,12 @@ public class ModItems {
     public static final RegistryObject<Item> TOMATO = ITEMS.register("tomato",
             () -> new Item(new Item.Properties().food(ModFoodProperties.TOMATO)));
 
+    public static final RegistryObject<Item> KETCHOUP = ITEMS.register("ketchoup",
+            () -> new Item(new Item.Properties().stacksTo(4).food(ModFoodProperties.KETCHOUP)));
+
     public static final RegistryObject<Item> TOMATO_POUCH = ITEMS.register("tomato_pouch",
             () -> new Item(new Item.Properties()));
+
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

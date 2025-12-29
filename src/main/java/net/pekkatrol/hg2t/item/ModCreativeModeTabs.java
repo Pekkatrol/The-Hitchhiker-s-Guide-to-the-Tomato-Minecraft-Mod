@@ -27,6 +27,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.TOMATO_SEEDS.get());
                         output.accept(ModItems.TOMATO.get());
                         output.accept(ModItems.TOMATO_POUCH.get());
+                        output.accept(ModItems.KETCHOUP.get());
                     })
                     .build());
 
