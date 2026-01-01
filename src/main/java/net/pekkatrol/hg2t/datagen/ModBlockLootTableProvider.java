@@ -41,6 +41,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
     @Override
     protected void generate() {
         dropSelf(ModBlocks.CARD_BOX.get());
+        dropSelf(ModBlocks.PRESENT.get());
         dropSelf(ModBlocks.BLACK_SAND.get());
         dropSelf(ModBlocks.MARBLE_PILLAR.get());
         dropSelf(ModBlocks.MARBLE_BRICK.get());

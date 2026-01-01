@@ -67,6 +67,11 @@ public class ModBlocks {
                     .strength(2f, 3f)
                     .sound(SoundType.WOOD)));
 
+    public static final RegistryObject<Block> PRESENT = registerBlock("present",
+            () -> new CardBoxBlock(BlockBehaviour.Properties.of()
+                    .strength(2f, 3f)
+                    .sound(SoundType.WOOD)));
+
     public static final RegistryObject<Block> NICKEL_BLOCK = registerBlock("nickel_block",
             () -> new RotatedPillarBlock(BlockBehaviour.Properties.of()
                     .strength(1.5f, 6f)
