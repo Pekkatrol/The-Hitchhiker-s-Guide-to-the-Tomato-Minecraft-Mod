@@ -10,6 +10,7 @@
   "item.hgtotomato.tomato_pouch": "Pouch of tomato seeds",
   "item.hgtotomato.ketchoup": "Ketchoup",
   "item.hgtotomato.nookia": "Nookia",
+  "item.hgtotomato.bienvaillance": "§f§lBienvaillance",
 
   "block.hgtotomato.black_sand": "Black Sand",
   "block.hgtotomato.marble_block": "Marble Block",
@@ -36,6 +37,11 @@
 
   "block.hgtotomato.tomato_crop": "Tomato crop",
 
+  "tooltip.hgtotomato.nookia": "Diamond is unbreakable.",
+  "tooltip.hgtotomato.bio_powder": "Press §eShift§r for more information.",
+  "tooltip.hgtotomato.bio_powder.shift_down": "Right click with it to fertilize some vegetation.",
+  "tooltip.hgtotomato.bienvaillance": "Press §eShift§r for more information.",
+  "tooltip.hgtotomato.bienvaillance.shift_down": "This sword was forged to punished those with §cSEGFAULT§r.",
 
   "creativetab.hgtotomato.hgtotomato_items": "HG2Tomato Items",
   "creativetab.hgtotomato.hgtotomato_blocks": "HG2Tomato Blocks"
