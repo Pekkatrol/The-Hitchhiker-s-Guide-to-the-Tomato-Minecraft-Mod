@@ -124,6 +124,16 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModBlocks.CARD_BOX.get()), has(ModBlocks.CARD_BOX.get()))
                 .save(pRecipeOutput, HG2Tomato.MOD_ID + ":present_from_card_box");
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.BIENVAILLANCE.get())
+                .pattern("CAC")
+                .pattern("CAC")
+                .pattern("CBC")
+                .define('A', Items.NETHER_STAR)
+                .define('B', ModItems.COMPACT_LOG.get())
+                .define('C', Items.NETHERITE_INGOT)
+                .unlockedBy(getHasName(Items.NETHER_STAR), has(Items.NETHER_STAR))
+                .save(pRecipeOutput, HG2Tomato.MOD_ID + ":bienvaillance_from_nether_star");
+
 
 
         oreSmelting(pRecipeOutput, NICKEL_SMELTABLES, RecipeCategory.MISC, ModItems.NICKEL_INGOT.get(), 0.25f, 200, "nickel");

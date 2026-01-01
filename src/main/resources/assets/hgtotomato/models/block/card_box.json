@@ -4,7 +4,7 @@
     "down": "hgtotomato:block/card_box",
     "east": "hgtotomato:block/card_box_side1",
     "north": "hgtotomato:block/card_box_side2",
-    "particle": "minecraft:block/crafting_table_front",
+    "particle": "hgtotomato:block/card_box",
     "south": "hgtotomato:block/card_box_side2",
     "up": "hgtotomato:block/card_box_top",
     "west": "hgtotomato:block/card_box_side1"

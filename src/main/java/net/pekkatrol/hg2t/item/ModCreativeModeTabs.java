@@ -29,6 +29,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.TOMATO_POUCH.get());
                         output.accept(ModItems.KETCHOUP.get());
                         output.accept(ModItems.NOOKIA.get());
+                        output.accept(ModItems.BIENVAILLANCE.get());
                     })
                     .build());
 
