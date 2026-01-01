@@ -2,6 +2,7 @@ package net.pekkatrol.hg2t.item;
 
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemNameBlockItem;
+import net.minecraft.world.item.PickaxeItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -9,6 +10,7 @@ import net.minecraftforge.registries.RegistryObject;
 import net.pekkatrol.hg2t.HG2Tomato;
 import net.pekkatrol.hg2t.block.ModBlocks;
 import net.pekkatrol.hg2t.item.custom.FuelItem;
+import net.pekkatrol.hg2t.item.custom.NookiaItem;
 import org.spongepowered.asm.mixin.extensibility.IActivityContext;
 
 public class ModItems {
@@ -45,6 +47,9 @@ public class ModItems {
     public static final RegistryObject<Item> TOMATO_POUCH = ITEMS.register("tomato_pouch",
             () -> new Item(new Item.Properties()));
 
+    public static final RegistryObject<Item> NOOKIA = ITEMS.register("nookia",
+            () -> new NookiaItem(ModToolTiers.NOOKIA, new Item.Properties()
+                    .attributes(PickaxeItem.createAttributes(ModToolTiers.NOOKIA, 1, -2.8f))));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
