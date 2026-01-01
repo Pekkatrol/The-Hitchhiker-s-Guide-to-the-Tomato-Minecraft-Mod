@@ -43,6 +43,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.MARBLE_PILLAR.get());
                         output.accept(ModBlocks.MARBLE_WALL.get());
                         output.accept(ModBlocks.CARD_BOX.get());
+                        output.accept(ModBlocks.PRESENT.get());
                         output.accept(ModBlocks.NICKEL_BLOCK.get());
                         output.accept(ModBlocks.NICKEL_ORE.get());
                         output.accept(ModBlocks.LUMIR_SAPLING.get());
