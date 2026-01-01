@@ -4,11 +4,13 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.data.BlockTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.fml.common.Mod;
 import net.pekkatrol.hg2t.HG2Tomato;
 import net.pekkatrol.hg2t.block.ModBlocks;
+import net.pekkatrol.hg2t.util.ModTags;
 
 import javax.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
@@ -54,5 +56,11 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         this.tag(BlockTags.LOGS_THAT_BURN)
                 .add(ModBlocks.LUMIR_LOG.get())
                 .add(ModBlocks.STRIPPED_LUMIR_LOG.get());
+
+        tag(ModTags.Blocks.NEEDS_NOOKIA_TOOL)
+                .addTag(BlockTags.NEEDS_DIAMOND_TOOL);
+
+        tag(ModTags.Blocks.INCORRECT_FOR_NOOKIA_TOOL)
+                .remove(ModTags.Blocks.NEEDS_NOOKIA_TOOL);
     }
 }
