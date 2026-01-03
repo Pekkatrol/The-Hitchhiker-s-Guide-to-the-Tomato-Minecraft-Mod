@@ -4,7 +4,7 @@
     "down": "hgtotomato:block/present_bottom",
     "east": "hgtotomato:block/present_side",
     "north": "hgtotomato:block/present_side",
-    "particle": "minecraft:block/crafting_table_front",
+    "particle": "hgtotomato:block/present_side",
     "south": "hgtotomato:block/present_side",
     "up": "hgtotomato:block/present_top",
     "west": "hgtotomato:block/present_side"

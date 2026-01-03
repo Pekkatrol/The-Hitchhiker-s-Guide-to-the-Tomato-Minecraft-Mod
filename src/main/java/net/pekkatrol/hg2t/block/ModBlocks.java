@@ -21,6 +21,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.pekkatrol.hg2t.HG2Tomato;
 import net.pekkatrol.hg2t.block.custom.ModFlammableRotatedPillarBlock;
+import net.pekkatrol.hg2t.block.custom.PresentBlock;
 import net.pekkatrol.hg2t.block.custom.TomatoCropBlock;
 import net.pekkatrol.hg2t.item.ModItems;
 import net.pekkatrol.hg2t.worldgen.tree.ModTreeGrowers;
@@ -68,7 +69,7 @@ public class ModBlocks {
                     .sound(SoundType.WOOD)));
 
     public static final RegistryObject<Block> PRESENT = registerBlock("present",
-            () -> new CardBoxBlock(BlockBehaviour.Properties.of()
+            () -> new PresentBlock(BlockBehaviour.Properties.of()
                     .strength(2f, 3f)
                     .sound(SoundType.WOOD)));
 
