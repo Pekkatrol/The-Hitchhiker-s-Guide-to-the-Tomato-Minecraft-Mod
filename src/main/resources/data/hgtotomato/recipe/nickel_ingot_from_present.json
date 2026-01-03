@@ -1,0 +1,10 @@
+{
+  "type": "hgtotomato:present",
+  "ingredient": {
+    "item": "hgtotomato:raw_nickel"
+  },
+  "result": {
+    "id": "hgtotomato:nickel_ingot",
+    "count": 2
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "type": "hgtotomato:present",
+  "ingredient": {
+    "item": "minecraft:raw_iron"
+  },
+  "result": {
+    "id": "minecraft:iron_ingot",
+    "count": 2
+  }
+}

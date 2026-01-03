@@ -1,6 +1,7 @@
 package net.pekkatrol.hg2t;
 
 import com.mojang.logging.LogUtils;
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.block.ComposterBlock;
@@ -17,9 +18,13 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.pekkatrol.hg2t.block.ModBlocks;
+import net.pekkatrol.hg2t.block.entity.renderer.ModBlockEntities;
 import net.pekkatrol.hg2t.item.ModCreativeModeTabs;
 import net.pekkatrol.hg2t.item.ModItems;
 import net.pekkatrol.hg2t.potion.ModPotions;
+import net.pekkatrol.hg2t.recipe.ModRecipes;
+import net.pekkatrol.hg2t.screen.ModMenuTypes;
+import net.pekkatrol.hg2t.screen.custom.PresentScreen;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -46,6 +51,10 @@ public class HG2Tomato
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
 
+        ModBlockEntities.register(modEventBus);
+        ModMenuTypes.register(modEventBus);
+
+        ModRecipes.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -83,7 +92,7 @@ public class HG2Tomato
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
-
+            MenuScreens.register(ModMenuTypes.PRESENT_MENU.get(), PresentScreen::new);
         }
     }
 }

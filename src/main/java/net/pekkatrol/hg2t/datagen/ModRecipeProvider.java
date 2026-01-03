@@ -154,7 +154,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         fenceGateBuilder(ModBlocks.LUMIR_FENCE_GATE.get(), Ingredient.of(ModBlocks.LUMIR_PLANKS.get())).group("lumir")
                 .unlockedBy(getHasName(ModBlocks.LUMIR_PLANKS.get()), has(ModBlocks.LUMIR_PLANKS.get())).save(pRecipeOutput);
 
-        wall(pRecipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.MARBLE_WALL.get(), ModBlocks.LUMIR_PLANKS.get());
+        wall(pRecipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.MARBLE_WALL.get(), ModBlocks.MARBLE_WALL.get());
 
         doorBuilder(ModBlocks.LUMIR_DOOR.get(), Ingredient.of(ModBlocks.LUMIR_PLANKS.get())).group("lumir")
                 .unlockedBy(getHasName(ModBlocks.LUMIR_PLANKS.get()), has(ModBlocks.LUMIR_PLANKS.get())).save(pRecipeOutput);
