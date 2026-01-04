@@ -40,7 +40,6 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
 
     @Override
     protected void generate() {
-        dropSelf(ModBlocks.CARD_BOX.get());
         dropSelf(ModBlocks.PRESENT.get());
         dropSelf(ModBlocks.BLACK_SAND.get());
         dropSelf(ModBlocks.MARBLE_PILLAR.get());
@@ -60,6 +59,14 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
 
         dropSelf(ModBlocks.LUMIR_SAPLING.get());
         dropSelf(ModBlocks.STRIPPED_LUMIR_LOG.get());
+
+        //drop rien sinon pas content
+        this.add(ModBlocks.CARD_BOX.get(), block -> LootTable.lootTable()
+                .withPool(LootPool.lootPool()
+                        .setRolls(ConstantValue.exactly(0))
+                )
+        );
+
 
         this.add(ModBlocks.LUMIR_LEAVES.get(), block ->
                 createBananaLeavesDrops(block, ModBlocks.LUMIR_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));

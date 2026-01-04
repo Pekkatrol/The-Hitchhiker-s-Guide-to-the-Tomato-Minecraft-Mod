@@ -8,6 +8,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.pekkatrol.hg2t.HG2Tomato;
 import net.pekkatrol.hg2t.block.ModBlocks;
+import net.pekkatrol.hg2t.block.entity.custom.CardboardBlockEntity;
 import net.pekkatrol.hg2t.block.entity.custom.PresentBlockEntity;
 
 public class ModBlockEntities {
@@ -18,6 +19,10 @@ public class ModBlockEntities {
     public static final RegistryObject<BlockEntityType<PresentBlockEntity>> PRESENT_BE =
             BLOCK_ENTITIES.register("present_be", () -> BlockEntityType.Builder.of(
                     PresentBlockEntity::new, ModBlocks.PRESENT.get()).build(null));
+
+    public static final RegistryObject<BlockEntityType<CardboardBlockEntity>> CARDBOARD_BE =
+            BLOCK_ENTITIES.register("cardboard_be", () -> BlockEntityType.Builder.of(
+                    CardboardBlockEntity::new, ModBlocks.CARD_BOX.get()).build(null));
 
     public static void register(IEventBus eventBus) {
         BLOCK_ENTITIES.register(eventBus);
