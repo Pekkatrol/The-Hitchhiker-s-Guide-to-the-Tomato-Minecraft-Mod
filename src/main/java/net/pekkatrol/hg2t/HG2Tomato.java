@@ -18,12 +18,14 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.pekkatrol.hg2t.block.ModBlocks;
+import net.pekkatrol.hg2t.block.entity.ModDataComponents;
 import net.pekkatrol.hg2t.block.entity.renderer.ModBlockEntities;
 import net.pekkatrol.hg2t.item.ModCreativeModeTabs;
 import net.pekkatrol.hg2t.item.ModItems;
 import net.pekkatrol.hg2t.potion.ModPotions;
 import net.pekkatrol.hg2t.recipe.ModRecipes;
 import net.pekkatrol.hg2t.screen.ModMenuTypes;
+import net.pekkatrol.hg2t.screen.custom.CardboardScreen;
 import net.pekkatrol.hg2t.screen.custom.PresentScreen;
 import org.slf4j.Logger;
 
@@ -59,6 +61,9 @@ public class HG2Tomato
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
 
+        ModDataComponents.DATA_COMPONENTS.register(FMLJavaModLoadingContext.get().getModEventBus());
+
+
         // Register our mod's ForgeConfigSpec so that Forge can create and load the config file for us
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
@@ -72,12 +77,12 @@ public class HG2Tomato
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event)
     {
-        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
-            event.accept(ModItems.BANANA);
-        }
-        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
-            event.accept(ModBlocks.MARBLE_BLOCK);
-        }
+        //if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+        //    event.accept(ModItems.BANANA);
+        //}
+        //if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+        //    event.accept(ModBlocks.MARBLE_BLOCK);
+        //}
     }
     // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent
@@ -93,6 +98,7 @@ public class HG2Tomato
         public static void onClientSetup(FMLClientSetupEvent event)
         {
             MenuScreens.register(ModMenuTypes.PRESENT_MENU.get(), PresentScreen::new);
+            MenuScreens.register(ModMenuTypes.CARDBOARD_MENU.get(), CardboardScreen::new);
         }
     }
 }

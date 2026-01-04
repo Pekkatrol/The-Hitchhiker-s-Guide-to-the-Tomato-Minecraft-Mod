@@ -26,6 +26,8 @@ public class ModPlacedFeatures {
 
     public static final ResourceKey<PlacedFeature> LUMIR_PLACED_KEY = registerKey("lumir_placed");
 
+    public static final ResourceKey<PlacedFeature> MARBLE_PLACED_KEY = registerKey("marble_placed");
+
     public static void bootstrap(BootstrapContext<PlacedFeature> context) {
         var configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
 
@@ -37,6 +39,10 @@ public class ModPlacedFeatures {
         register(context, LUMIR_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.LUMIR_KEY),
                 VegetationPlacements.treePlacement(PlacementUtils.countExtra(3, 0.1f, 2),
                         ModBlocks.LUMIR_SAPLING.get()));
+
+        register(context, MARBLE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.MARBLE_KEY),
+                ModOrePlacement.commonOrePlacement(
+                        10, HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(80))));
     }
 
     public static ResourceKey<PlacedFeature> registerKey(String name) {

@@ -20,6 +20,9 @@ public class ModBiomeModifiers {
 
     public static final ResourceKey<BiomeModifier> ADD_LUMIR_TREE = registerKey("add_lumir_tree");
 
+    public static final ResourceKey<BiomeModifier> ADD_MARBLE = registerKey("add_marble");
+
+
     public static void bootstrap(BootstrapContext<BiomeModifier> context) {
         var placedFeature = context.lookup(Registries.PLACED_FEATURE);
         var biomes = context.lookup(Registries.BIOME);
@@ -28,6 +31,15 @@ public class ModBiomeModifiers {
                 biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
                 HolderSet.direct(placedFeature.getOrThrow(ModPlacedFeatures.NICKEL_ORE_PLACED_KEY)),
                 GenerationStep.Decoration.UNDERGROUND_ORES));
+
+        context.register(
+                ADD_MARBLE,
+                new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                        HolderSet.direct(
+                                biomes.getOrThrow(Biomes.PLAINS),
+                                biomes.getOrThrow(Biomes.BEACH),
+                                biomes.getOrThrow(Biomes.WINDSWEPT_HILLS)),
+                        HolderSet.direct(placedFeature.getOrThrow(ModPlacedFeatures.MARBLE_PLACED_KEY)), GenerationStep.Decoration.UNDERGROUND_DECORATION));
 
         context.register(ADD_LUMIR_TREE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
                 HolderSet.direct(biomes.getOrThrow(Biomes.PLAINS), biomes.getOrThrow(Biomes.BEACH)),

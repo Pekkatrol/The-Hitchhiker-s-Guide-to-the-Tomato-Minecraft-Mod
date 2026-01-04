@@ -30,12 +30,23 @@ public class ModConfiguredFeatures {
 
     public static final ResourceKey<ConfiguredFeature<?, ?>> LUMIR_KEY = registerKey("lumir");
 
+    public static final ResourceKey<ConfiguredFeature<?, ?>> MARBLE_KEY = registerKey("marble");
+
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context) {
         RuleTest stoneReplaceables = new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES);
 
         List<OreConfiguration.TargetBlockState> overworldNickelOres = List.of(
                 OreConfiguration.target(stoneReplaceables, ModBlocks.NICKEL_ORE.get().defaultBlockState())
         );
+
+        List<OreConfiguration.TargetBlockState> targets = List.of(
+                OreConfiguration.target(
+                        stoneReplaceables,
+                        ModBlocks.MARBLE_BLOCK.get().defaultBlockState()
+                )
+        );
+
+        context.register(MARBLE_KEY, new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(targets, 33)));
 
         register(context, OVERWORLD_NICKEL_ORE_KEY, Feature.ORE, new OreConfiguration(overworldNickelOres, 9));
 

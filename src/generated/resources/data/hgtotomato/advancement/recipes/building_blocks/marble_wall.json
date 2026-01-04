@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_lumir_planks": {
+    "has_marble_wall": {
       "conditions": {
         "items": [
           {
-            "items": "hgtotomato:lumir_planks"
+            "items": "hgtotomato:marble_wall"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_lumir_planks"
+      "has_marble_wall"
     ]
   ],
   "rewards": {
