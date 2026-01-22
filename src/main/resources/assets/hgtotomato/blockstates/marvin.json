@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "hgtotomato:block/marvin" },
+    "facing=south": { "model": "hgtotomato:block/marvin", "y": 180 },
+    "facing=west":  { "model": "hgtotomato:block/marvin", "y": 270 },
+    "facing=east":  { "model": "hgtotomato:block/marvin", "y": 90 }
+  }
+}

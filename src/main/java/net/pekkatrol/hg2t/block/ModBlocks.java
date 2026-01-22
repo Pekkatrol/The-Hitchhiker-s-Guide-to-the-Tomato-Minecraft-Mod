@@ -20,6 +20,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.pekkatrol.hg2t.HG2Tomato;
+import net.pekkatrol.hg2t.block.custom.MarvinBlock;
 import net.pekkatrol.hg2t.block.custom.ModFlammableRotatedPillarBlock;
 import net.pekkatrol.hg2t.block.custom.PresentBlock;
 import net.pekkatrol.hg2t.block.custom.TomatoCropBlock;
@@ -95,6 +96,12 @@ public class ModBlocks {
 
     public static final RegistryObject<RotatedPillarBlock> STRIPPED_LUMIR_LOG = registerBlock("stripped_lumir_log",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_OAK_LOG)));
+
+    public static final RegistryObject<Block> MARVIN = registerBlock("marvin",
+            () -> new MarvinBlock(BlockBehaviour.Properties.of().noOcclusion()
+                    .strength(1.5f, 6f)
+                    .requiresCorrectToolForDrops()
+                    .sound(SoundType.NETHERITE_BLOCK)));
 
     public static final RegistryObject<Block> LUMIR_LEAVES = registerBlock("lumir_leaves",
             () -> new LeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)) {
