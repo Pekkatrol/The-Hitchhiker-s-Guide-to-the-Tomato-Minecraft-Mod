@@ -1,4 +1,4 @@
-// 1.21	2026-01-04T22:07:24.678269	Loot Tables
+// 1.21	2026-01-22T12:51:01.8162886	Loot Tables
 8a1ccd8fddfa655716ae4044fe2b028fddcd4010 data/hgtotomato/loot_table/blocks/black_sand.json
 7f59b586e05583cf8fee491b79f42cd2f5791d05 data/hgtotomato/loot_table/blocks/card_box.json
 6fcca8d092770b72f34882f29917e251b3945b2c data/hgtotomato/loot_table/blocks/lumir_button.json
@@ -17,6 +17,7 @@ f0530816448f4f7ac8df4f5662b4f1dd3c5a4a10 data/hgtotomato/loot_table/blocks/lumir
 2e6ff5d6fcdd42561db9071ead0d4c760cd7bd79 data/hgtotomato/loot_table/blocks/marble_brick.json
 545a1c45689ea695c55d92144a414514eeb0c019 data/hgtotomato/loot_table/blocks/marble_pillar.json
 5b159e16f3ea3fb2a4ed7c5d07c13b5aa4a412f8 data/hgtotomato/loot_table/blocks/marble_wall.json
+8a194b77fd1972f3c0ee996ceba3d46103110efc data/hgtotomato/loot_table/blocks/marvin.json
 cbbe70e40fd98d5932d4000128829a88f5b9977b data/hgtotomato/loot_table/blocks/nickel_block.json
 7b5ba47f5f660c8e017680e15f98e00ee0526900 data/hgtotomato/loot_table/blocks/nickel_ore.json
 769a4c61aef60376c9ba8fd692f07bfdf7486a7a data/hgtotomato/loot_table/blocks/present.json

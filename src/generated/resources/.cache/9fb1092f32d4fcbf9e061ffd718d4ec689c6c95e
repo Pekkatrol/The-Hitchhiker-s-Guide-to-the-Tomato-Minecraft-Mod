@@ -1,4 +1,4 @@
-// 1.21	2026-01-04T13:53:13.6388738	Recipes
+// 1.21	2026-01-22T12:51:01.8182897	Recipes
 6bfa7b38da0e97aa201e7e2505b1139755dec7b0 data/hgtotomato/advancement/recipes/building_blocks/lumir_slab.json
 4a1ae05c700d5ea182a92f3fd576f3bcfd39dc97 data/hgtotomato/advancement/recipes/building_blocks/lumir_stairs.json
 81e95ab0d0cdb4637561c613989517616ab3a365 data/hgtotomato/advancement/recipes/building_blocks/marble_wall.json
@@ -8,6 +8,7 @@ ec8580937a044993caaaa260f5152f22a268017b data/hgtotomato/advancement/recipes/mis
 43ee8df12dff571220eaebf9aa4cfaeb8b2c2f65 data/hgtotomato/advancement/recipes/misc/compact_log_from_logs.json
 68da3b1385b12feaf82e893fc1df272e298e6617 data/hgtotomato/advancement/recipes/misc/ketchoup_from_tomato.json
 bdde8fe72a5b27ab21669c3e8f8f40eacbce6667 data/hgtotomato/advancement/recipes/misc/lumir_planks_from_log.json
+0901df0f6ed9dae8b51c77e2116de21fb0529b7b data/hgtotomato/advancement/recipes/misc/marvin_head.json
 0e321e4907dcd065eb60cebc10d9f827a33533b6 data/hgtotomato/advancement/recipes/misc/nickel_block_from_ingots.json
 c9afff5ea2bb8811cddd70a65abffcada7f7614e data/hgtotomato/advancement/recipes/misc/nickel_ingots_from_block.json
 d531a111ba8262d35889aaaebf402eee923d36c9 data/hgtotomato/advancement/recipes/misc/nickel_ingot_from_blasting_nickel_ore.json
@@ -40,6 +41,7 @@ d11d29b8bbcbe6fd5e0f0ec846b528fa7b176ece data/hgtotomato/recipe/lumir_fence_gate
 697f4048bf7765faf89d957c0ea310571b62838a data/hgtotomato/recipe/lumir_stairs.json
 c77028f17c05f847694427c75e94ef710b2cb2d4 data/hgtotomato/recipe/lumir_trapdoor.json
 01f515f961d99b17ad017ad24e449cb7556701f2 data/hgtotomato/recipe/marble_wall.json
+44747b92d500d2426253e285c8bea9014c13d288 data/hgtotomato/recipe/marvin_head.json
 47c443e3ea77869bfec633909c2a2ce218b1815d data/hgtotomato/recipe/nickel_block_from_ingots.json
 e494e70696b9132149488dbf84d4c85cb8c96799 data/hgtotomato/recipe/nickel_ingots_from_block.json
 7ad50e1eaf2a602c1f146af38f81c3fae83daf18 data/hgtotomato/recipe/nickel_ingot_from_blasting_nickel_ore.json

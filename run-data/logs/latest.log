@@ -1,31 +1,31 @@
-[04janv.2026 22:07:13.571] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forge_userdev_data, --assetIndex, 17, --assetsDir, C:\Users\paris\.gradle\caches\forge_gradle\assets, --gameDir, ., --mod, hgtotomato, --all, --output, C:\Users\paris\IdeaProjects\The-Hitchhiker-s-Guide-to-the-Tomato-Minecraft-Mod-1.21\src\generated\resources, --existing, C:\Users\paris\IdeaProjects\The-Hitchhiker-s-Guide-to-the-Tomato-Minecraft-Mod-1.21\src\main\resources]
-[04janv.2026 22:07:13.575] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: JVM identified as Eclipse Adoptium OpenJDK 64-Bit Server VM 21.0.9+10-LTS
-[04janv.2026 22:07:13.577] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.2.1 starting: java version 21.0.9 by Eclipse Adoptium; OS Windows 11 arch amd64 version 10.0
-[04janv.2026 22:07:13.722] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forge_userdev_data
-[04janv.2026 22:07:13.931] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=jar:file:///C:/Users/paris/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.7/8ab114ac385e6dbdad5efafe28aba4df8120915f/mixin-0.8.7.jar!/ Service=ModLauncher Env=UNKNOWN
-[04janv.2026 22:07:15.042] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: No dependencies to load found. Skipping!
-[04janv.2026 22:07:16.172] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forge_userdev_data' with arguments [--gameDir, ., --assetsDir, C:\Users\paris\.gradle\caches\forge_gradle\assets, --assetIndex, 17, --mod, hgtotomato, --all, --output, C:\Users\paris\IdeaProjects\The-Hitchhiker-s-Guide-to-the-Tomato-Minecraft-Mod-1.21\src\generated\resources, --existing, C:\Users\paris\IdeaProjects\The-Hitchhiker-s-Guide-to-the-Tomato-Minecraft-Mod-1.21\src\main\resources]
-[04janv.2026 22:07:22.239] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 51.0.33, for MC 1.21 with MCP 20240613.102039
-[04janv.2026 22:07:22.239] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v51.0.33 Initialized
-[04janv.2026 22:07:22.299] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Opening jdk.naming.dns/com.sun.jndi.dns to java.naming
-[04janv.2026 22:07:22.825] [modloading-worker-0/INFO] [mezz.jei.library.load.PluginCaller/]: Sending ConfigManager...
-[04janv.2026 22:07:22.832] [modloading-worker-0/INFO] [mezz.jei.library.load.PluginCaller/]: Sending ConfigManager took 5.329 ms
-[04janv.2026 22:07:23.487] [main/INFO] [net.minecraftforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [hgtotomato]
-[04janv.2026 22:07:23.619] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/paris/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.21-51.0.33_mapped_parchment_2024.07.28-1.21/forge-1.21-51.0.33_mapped_parchment_2024.07.28-1.21-recomp.jar%230!/assets/.mcassetsroot' uses unexpected schema
-[04janv.2026 22:07:23.620] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/paris/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.21-51.0.33_mapped_parchment_2024.07.28-1.21/forge-1.21-51.0.33_mapped_parchment_2024.07.28-1.21-recomp.jar%230!/data/.mcassetsroot' uses unexpected schema
-[04janv.2026 22:07:23.974] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Loot Tables
-[04janv.2026 22:07:24.224] [main/INFO] [net.minecraft.data.DataGenerator/]: Loot Tables finished after 248 ms
-[04janv.2026 22:07:24.224] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Recipes
-[04janv.2026 22:07:24.360] [main/INFO] [net.minecraft.data.DataGenerator/]: Recipes finished after 134 ms
-[04janv.2026 22:07:24.361] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:block mod id hgtotomato
-[04janv.2026 22:07:24.442] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:block mod id hgtotomato finished after 81 ms
-[04janv.2026 22:07:24.443] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:item mod id hgtotomato
-[04janv.2026 22:07:24.447] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:item mod id hgtotomato finished after 3 ms
-[04janv.2026 22:07:24.447] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Item Models: hgtotomato
-[04janv.2026 22:07:24.473] [main/INFO] [net.minecraft.data.DataGenerator/]: Item Models: hgtotomato finished after 25 ms
-[04janv.2026 22:07:24.473] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Block States: hgtotomato
-[04janv.2026 22:07:24.651] [main/INFO] [net.minecraft.data.DataGenerator/]: Block States: hgtotomato finished after 177 ms
-[04janv.2026 22:07:24.651] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Registries
-[04janv.2026 22:07:24.674] [main/INFO] [net.minecraft.data.DataGenerator/]: Registries finished after 22 ms
-[04janv.2026 22:07:24.674] [main/INFO] [net.minecraft.data.DataGenerator/]: All providers took: 702 ms
-[04janv.2026 22:07:24.696] [main/INFO] [net.minecraft.data.HashCache/]: Caching: total files: 199, old count: 199, new count: 200, removed stale: 0, written: 1
+[22janv.2026 12:50:54.160] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forge_userdev_data, --assetIndex, 17, --assetsDir, C:\Users\paris\.gradle\caches\forge_gradle\assets, --gameDir, ., --mod, hgtotomato, --all, --output, C:\Users\paris\IdeaProjects\The-Hitchhiker-s-Guide-to-the-Tomato-Minecraft-Mod-1.21\src\generated\resources, --existing, C:\Users\paris\IdeaProjects\The-Hitchhiker-s-Guide-to-the-Tomato-Minecraft-Mod-1.21\src\main\resources]
+[22janv.2026 12:50:54.166] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: JVM identified as Eclipse Adoptium OpenJDK 64-Bit Server VM 21.0.9+10-LTS
+[22janv.2026 12:50:54.167] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.2.1 starting: java version 21.0.9 by Eclipse Adoptium; OS Windows 11 arch amd64 version 10.0
+[22janv.2026 12:50:54.268] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forge_userdev_data
+[22janv.2026 12:50:54.365] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=jar:file:///C:/Users/paris/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.7/8ab114ac385e6dbdad5efafe28aba4df8120915f/mixin-0.8.7.jar!/ Service=ModLauncher Env=UNKNOWN
+[22janv.2026 12:50:55.031] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: No dependencies to load found. Skipping!
+[22janv.2026 12:50:55.908] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forge_userdev_data' with arguments [--gameDir, ., --assetsDir, C:\Users\paris\.gradle\caches\forge_gradle\assets, --assetIndex, 17, --mod, hgtotomato, --all, --output, C:\Users\paris\IdeaProjects\The-Hitchhiker-s-Guide-to-the-Tomato-Minecraft-Mod-1.21\src\generated\resources, --existing, C:\Users\paris\IdeaProjects\The-Hitchhiker-s-Guide-to-the-Tomato-Minecraft-Mod-1.21\src\main\resources]
+[22janv.2026 12:51:00.349] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 51.0.33, for MC 1.21 with MCP 20240613.102039
+[22janv.2026 12:51:00.349] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v51.0.33 Initialized
+[22janv.2026 12:51:00.396] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Opening jdk.naming.dns/com.sun.jndi.dns to java.naming
+[22janv.2026 12:51:00.813] [modloading-worker-0/INFO] [mezz.jei.library.load.PluginCaller/]: Sending ConfigManager...
+[22janv.2026 12:51:00.818] [modloading-worker-0/INFO] [mezz.jei.library.load.PluginCaller/]: Sending ConfigManager took 3.123 ms
+[22janv.2026 12:51:01.275] [main/INFO] [net.minecraftforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [hgtotomato]
+[22janv.2026 12:51:01.345] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/paris/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.21-51.0.33_mapped_parchment_2024.07.28-1.21/forge-1.21-51.0.33_mapped_parchment_2024.07.28-1.21-recomp.jar%230!/assets/.mcassetsroot' uses unexpected schema
+[22janv.2026 12:51:01.346] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/paris/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.21-51.0.33_mapped_parchment_2024.07.28-1.21/forge-1.21-51.0.33_mapped_parchment_2024.07.28-1.21-recomp.jar%230!/data/.mcassetsroot' uses unexpected schema
+[22janv.2026 12:51:01.509] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Loot Tables
+[22janv.2026 12:51:01.586] [main/INFO] [net.minecraft.data.DataGenerator/]: Loot Tables finished after 76 ms
+[22janv.2026 12:51:01.587] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Recipes
+[22janv.2026 12:51:01.637] [main/INFO] [net.minecraft.data.DataGenerator/]: Recipes finished after 49 ms
+[22janv.2026 12:51:01.637] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:block mod id hgtotomato
+[22janv.2026 12:51:01.678] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:block mod id hgtotomato finished after 41 ms
+[22janv.2026 12:51:01.678] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:item mod id hgtotomato
+[22janv.2026 12:51:01.680] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:item mod id hgtotomato finished after 1 ms
+[22janv.2026 12:51:01.680] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Item Models: hgtotomato
+[22janv.2026 12:51:01.692] [main/INFO] [net.minecraft.data.DataGenerator/]: Item Models: hgtotomato finished after 12 ms
+[22janv.2026 12:51:01.692] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Block States: hgtotomato
+[22janv.2026 12:51:01.802] [main/INFO] [net.minecraft.data.DataGenerator/]: Block States: hgtotomato finished after 109 ms
+[22janv.2026 12:51:01.802] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Registries
+[22janv.2026 12:51:01.815] [main/INFO] [net.minecraft.data.DataGenerator/]: Registries finished after 12 ms
+[22janv.2026 12:51:01.815] [main/INFO] [net.minecraft.data.DataGenerator/]: All providers took: 306 ms
+[22janv.2026 12:51:01.826] [main/INFO] [net.minecraft.data.HashCache/]: Caching: total files: 202, old count: 199, new count: 203, removed stale: 0, written: 5

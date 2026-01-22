@@ -134,6 +134,15 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(Items.NETHER_STAR), has(Items.NETHER_STAR))
                 .save(pRecipeOutput, HG2Tomato.MOD_ID + ":bienvaillance_from_nether_star");
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.MARVIN.get())
+                .pattern("BBB")
+                .pattern("BAB")
+                .pattern("BBB")
+                .define('A', ModBlocks.NICKEL_BLOCK.get())
+                .define('B', ModBlocks.MARBLE_BLOCK.get())
+                .unlockedBy(getHasName(ModBlocks.NICKEL_BLOCK.get()), has(ModBlocks.NICKEL_BLOCK.get()))
+                .save(pRecipeOutput, HG2Tomato.MOD_ID + ":marvin_head");
+
 
 
         oreSmelting(pRecipeOutput, NICKEL_SMELTABLES, RecipeCategory.MISC, ModItems.NICKEL_INGOT.get(), 0.25f, 200, "nickel");

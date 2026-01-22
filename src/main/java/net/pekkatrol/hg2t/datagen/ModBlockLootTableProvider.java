@@ -56,6 +56,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.LUMIR_TRAPDOOR.get());
         dropSelf(ModBlocks.LUMIR_PRESSURE_PLATE.get());
         dropSelf(ModBlocks.LUMIR_BUTTON.get());
+        dropSelf(ModBlocks.MARVIN.get());
 
         dropSelf(ModBlocks.LUMIR_SAPLING.get());
         dropSelf(ModBlocks.STRIPPED_LUMIR_LOG.get());

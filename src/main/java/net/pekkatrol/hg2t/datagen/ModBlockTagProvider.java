@@ -29,10 +29,12 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.MARBLE_BRICK.get())
                 .add(ModBlocks.MARBLE_WALL.get())
                 .add(ModBlocks.NICKEL_BLOCK.get())
-                .add(ModBlocks.NICKEL_ORE.get());
+                .add(ModBlocks.NICKEL_ORE.get())
+                .add(ModBlocks.MARVIN.get());
 
         tag(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.NICKEL_BLOCK.get())
+                .add(ModBlocks.MARVIN.get())
                 .add(ModBlocks.NICKEL_ORE.get());
 
         tag(BlockTags.MINEABLE_WITH_AXE)
