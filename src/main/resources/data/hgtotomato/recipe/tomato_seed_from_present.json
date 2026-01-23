@@ -1,0 +1,10 @@
+{
+  "type": "hgtotomato:present",
+  "ingredient": {
+    "item": "minecraft:wheat_seeds"
+  },
+  "result": {
+    "id": "hgtotomato:tomato_seeds",
+    "count": 2
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "type": "hgtotomato:present",
+  "ingredient": {
+    "item": "minecraft:sand"
+  },
+  "result": {
+    "id": "hgtotomato:black_sand",
+    "count": 2
+  }
+}
