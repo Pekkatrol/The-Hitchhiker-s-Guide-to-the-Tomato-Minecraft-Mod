@@ -1,0 +1,10 @@
+{
+  "type": "hgtotomato:present",
+  "ingredient": {
+    "item": "minecraft:raw_gold"
+  },
+  "result": {
+    "id": "minecraft:gold_ingot",
+    "count": 2
+  }
+}
