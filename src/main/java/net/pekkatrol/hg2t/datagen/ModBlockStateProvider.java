@@ -4,6 +4,7 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.CropBlock;
+import net.minecraft.world.level.block.SweetBerryBushBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
@@ -14,6 +15,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.pekkatrol.hg2t.HG2Tomato;
 import net.pekkatrol.hg2t.block.ModBlocks;
+import net.pekkatrol.hg2t.block.custom.AlmondBushBlock;
 import net.pekkatrol.hg2t.block.custom.TomatoCropBlock;
 
 import java.util.function.Function;
@@ -60,6 +62,21 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.LUMIR_TRAPDOOR, "_bottom");
 
         makeCrop((CropBlock) ModBlocks.TOMATO_CROP.get(), "tomato_crop_stage", "tomato_crop_stage");
+        makeBush(((SweetBerryBushBlock) ModBlocks.ALMOND_BUSH.get()), "almond_bush_stage", "almond_bush_stage");
+    }
+
+    public void makeBush(SweetBerryBushBlock block, String modelName, String textureName) {
+        Function<BlockState, ConfiguredModel[]> function = state -> states(state, modelName, textureName);
+
+        getVariantBuilder(block).forAllStates(function);
+    }
+
+    private ConfiguredModel[] states(BlockState state, String modelName, String textureName) {
+        ConfiguredModel[] models = new ConfiguredModel[1];
+        models[0] = new ConfiguredModel(models().cross(modelName + state.getValue(AlmondBushBlock.AGE),
+                ResourceLocation.fromNamespaceAndPath(HG2Tomato.MOD_ID, "block/" + textureName + state.getValue(AlmondBushBlock.AGE))).renderType("cutout"));
+
+        return models;
     }
 
     public void saplingBlock(RegistryObject<Block> blockRegistryObject) {

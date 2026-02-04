@@ -1,10 +1,13 @@
-// 1.21	2026-01-04T13:53:13.6408737	Registries
+// 1.21	2026-02-03T15:42:41.3963898	Registries
+baf5846ee9356991e2ec863f6c7d4e1db02084bd data/hgtotomato/forge/biome_modifier/add_almond_bush.json
 3fa972ece77e8a8ef8b97fbdf6470278ade3245b data/hgtotomato/forge/biome_modifier/add_lumir_tree.json
 dced9bed7b8093c1b5933d98cb5079a155e3a265 data/hgtotomato/forge/biome_modifier/add_marble.json
 0e23223d345554e9f89572a20504346641b73d47 data/hgtotomato/forge/biome_modifier/add_nickel_ore.json
+c4997771fcb88f8b5e239ee4871563047d0c9e79 data/hgtotomato/worldgen/configured_feature/almond_bush.json
 4beecdbbb08074710e286aa773fc65ff4115f9c2 data/hgtotomato/worldgen/configured_feature/lumir.json
 ebb98b336462c2711becd89843786b1247c65953 data/hgtotomato/worldgen/configured_feature/marble.json
 2a4903240df2c890ba4687a1a6fa6095504b2e54 data/hgtotomato/worldgen/configured_feature/nickel_ore.json
+26c0b9eb647849dd8d6d0d6f4f57f360c5bf3605 data/hgtotomato/worldgen/placed_feature/almond_bush_placed.json
 01616c89f7c9a630650863f47466be9ea1e620a0 data/hgtotomato/worldgen/placed_feature/lumir_placed.json
 00d4ee4158b95ea6f7143e8d94734004bc667c46 data/hgtotomato/worldgen/placed_feature/marble_placed.json
 c60503f3913318be6c95de4da68e6c5cdc2d5a49 data/hgtotomato/worldgen/placed_feature/nickel_ore_placed.json

@@ -22,6 +22,8 @@ public class ModBiomeModifiers {
 
     public static final ResourceKey<BiomeModifier> ADD_MARBLE = registerKey("add_marble");
 
+    public static final ResourceKey<BiomeModifier> ADD_ALMOND_BUSH = registerKey("add_almond_bush");
+
 
     public static void bootstrap(BootstrapContext<BiomeModifier> context) {
         var placedFeature = context.lookup(Registries.PLACED_FEATURE);
@@ -44,6 +46,11 @@ public class ModBiomeModifiers {
         context.register(ADD_LUMIR_TREE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
                 HolderSet.direct(biomes.getOrThrow(Biomes.PLAINS), biomes.getOrThrow(Biomes.BEACH)),
                 HolderSet.direct(placedFeature.getOrThrow(ModPlacedFeatures.LUMIR_PLACED_KEY)),
+                GenerationStep.Decoration.VEGETAL_DECORATION));
+
+        context.register(ADD_ALMOND_BUSH, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                HolderSet.direct(biomes.getOrThrow(Biomes.PLAINS), biomes.getOrThrow(Biomes.BEACH)),
+                HolderSet.direct(placedFeature.getOrThrow(ModPlacedFeatures.ALMOND_BUSH_PLACED_KEY)),
                 GenerationStep.Decoration.VEGETAL_DECORATION));
     }
 
