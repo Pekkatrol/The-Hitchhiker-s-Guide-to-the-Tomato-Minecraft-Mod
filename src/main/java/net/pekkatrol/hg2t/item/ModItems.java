@@ -23,6 +23,7 @@ public class ModItems {
     public static final RegistryObject<Item> BANANA = ITEMS.register("banana",
             () -> new Item(new Item.Properties().food(ModFoodProperties.BANANA)));
 
+
     public static final RegistryObject<Item> WHEAT_POUCH = ITEMS.register("wheat_pouch",
             () -> new Item(new Item.Properties()));
 
@@ -50,6 +51,9 @@ public class ModItems {
 
     public static final RegistryObject<Item> TOMATO_SEEDS = ITEMS.register("tomato_seeds",
             () -> new ItemNameBlockItem(ModBlocks.TOMATO_CROP.get(), new Item.Properties()));
+
+    public static final RegistryObject<Item> ALMOND = ITEMS.register("almond",
+            () -> new ItemNameBlockItem(ModBlocks.ALMOND_BUSH.get(), new Item.Properties().food(ModFoodProperties.ALMOND)));
 
     public static final RegistryObject<Item> TOMATO = ITEMS.register("tomato",
             () -> new Item(new Item.Properties().food(ModFoodProperties.TOMATO)));

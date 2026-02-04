@@ -23,6 +23,7 @@ public class ModItemModelProvider extends ItemModelProvider {
     @Override
     protected void registerModels(){
         basicItem(ModItems.BANANA.get());
+        basicItem(ModItems.ALMOND.get());
         basicItem(ModItems.BIO_POWDER.get());
         basicItem(ModItems.NICKEL_INGOT.get());
         basicItem(ModItems.RAW_NICKEL.get());

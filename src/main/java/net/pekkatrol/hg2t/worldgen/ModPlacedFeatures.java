@@ -12,9 +12,7 @@ import net.minecraft.world.level.levelgen.VerticalAnchor;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration;
-import net.minecraft.world.level.levelgen.placement.HeightRangePlacement;
-import net.minecraft.world.level.levelgen.placement.PlacedFeature;
-import net.minecraft.world.level.levelgen.placement.PlacementModifier;
+import net.minecraft.world.level.levelgen.placement.*;
 import net.pekkatrol.hg2t.HG2Tomato;
 import net.pekkatrol.hg2t.block.ModBlocks;
 
@@ -25,6 +23,8 @@ public class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> NICKEL_ORE_PLACED_KEY = registerKey("nickel_ore_placed");
 
     public static final ResourceKey<PlacedFeature> LUMIR_PLACED_KEY = registerKey("lumir_placed");
+
+    public static final ResourceKey<PlacedFeature> ALMOND_BUSH_PLACED_KEY = registerKey("almond_bush_placed");
 
     public static final ResourceKey<PlacedFeature> MARBLE_PLACED_KEY = registerKey("marble_placed");
 
@@ -43,6 +43,9 @@ public class ModPlacedFeatures {
         register(context, MARBLE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.MARBLE_KEY),
                 ModOrePlacement.commonOrePlacement(
                         10, HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(80))));
+
+        register(context, ALMOND_BUSH_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.ALMOND_BUSH_KEY),
+                List.of(RarityFilter.onAverageOnceEvery(32), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_WORLD_SURFACE, BiomeFilter.biome()));
     }
 
     public static ResourceKey<PlacedFeature> registerKey(String name) {

@@ -1,4 +1,5 @@
-// 1.21	2025-12-30T00:14:05.1735516	Block States: hgtotomato
+// 1.21	2026-02-03T15:24:05.0461022	Block States: hgtotomato
+021185ca960338b2b7630efab8c620f5f7da3069 assets/hgtotomato/blockstates/almond_bush.json
 67369ed8234e1f3fcf50e9e043358a565aba91f1 assets/hgtotomato/blockstates/black_sand.json
 ec95cb9434fcd26513fb5d5a506977cc2bcdeda4 assets/hgtotomato/blockstates/lumir_button.json
 54dc01b79260f27b7a5d9389e3254f2c7b4c83cd assets/hgtotomato/blockstates/lumir_door.json
@@ -19,6 +20,10 @@ ece4991be247d352f91224fd42300e1680fc42af assets/hgtotomato/blockstates/marble_bl
 1a221eb6c3075225e2e5aeaf3ab03eb2c7359e50 assets/hgtotomato/blockstates/nickel_ore.json
 7e0db612f074a2fe6dd1666b3cf9cd6d0d22451e assets/hgtotomato/blockstates/stripped_lumir_log.json
 8b6a6851ee03fa9c160e50fa9fdd0fa1b137d464 assets/hgtotomato/blockstates/tomato_crop.json
+a62bf06f77f5f2b706e0f0c0c44162cf26a4a073 assets/hgtotomato/models/block/almond_bush_stage0.json
+57e47ad416823ffdcdf7c8c9daca4f9791936259 assets/hgtotomato/models/block/almond_bush_stage1.json
+ccebece99b3ec5735de51568c5885fcb0e41ce83 assets/hgtotomato/models/block/almond_bush_stage2.json
+acfc44d1ca31f992df96bf0dd29eb07245c9dc5c assets/hgtotomato/models/block/almond_bush_stage3.json
 3da660c5a69438d6ab62a9c6659c3d1e339b5784 assets/hgtotomato/models/block/black_sand.json
 b5f5d55140a1d400739f1142b0212d246be0a9ed assets/hgtotomato/models/block/lumir_button.json
 ce2480e3ae8f639c093ecd6ca99dbe368133c598 assets/hgtotomato/models/block/lumir_button_pressed.json

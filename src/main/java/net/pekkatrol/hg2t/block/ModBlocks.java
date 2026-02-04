@@ -20,10 +20,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.pekkatrol.hg2t.HG2Tomato;
-import net.pekkatrol.hg2t.block.custom.MarvinBlock;
-import net.pekkatrol.hg2t.block.custom.ModFlammableRotatedPillarBlock;
-import net.pekkatrol.hg2t.block.custom.PresentBlock;
-import net.pekkatrol.hg2t.block.custom.TomatoCropBlock;
+import net.pekkatrol.hg2t.block.custom.*;
 import net.pekkatrol.hg2t.item.ModItems;
 import net.pekkatrol.hg2t.worldgen.tree.ModTreeGrowers;
 
@@ -206,6 +203,9 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> TOMATO_CROP = BLOCKS.register("tomato_crop",
             () -> new TomatoCropBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT)));
+
+    public static final RegistryObject<Block> ALMOND_BUSH = BLOCKS.register("almond_bush",
+            () -> new AlmondBushBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SWEET_BERRY_BUSH)));
 
 
 

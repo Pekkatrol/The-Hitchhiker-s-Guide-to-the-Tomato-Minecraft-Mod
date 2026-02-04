@@ -16,6 +16,11 @@ public class ModFoodProperties {
             .saturationModifier(0.25f)
             .effect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 400), 0.30f).build();
 
+    public static final FoodProperties ALMOND = new FoodProperties.Builder().
+            nutrition(3)
+            .saturationModifier(0.25f)
+            .effect(new MobEffectInstance(MobEffects.REGENERATION, 400), 0.30f).build();
+
     public static final FoodProperties KETCHOUP = new FoodProperties.Builder().
             nutrition(6)
             .saturationModifier(0.50f)
