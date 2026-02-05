@@ -3,10 +3,12 @@ package net.pekkatrol.hg2t.datagen;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.ItemLike;
+import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 import net.pekkatrol.hg2t.HG2Tomato;
 import net.pekkatrol.hg2t.block.ModBlocks;
@@ -81,6 +83,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('A', Items.WHEAT_SEEDS)
                 .unlockedBy(getHasName(Items.WHEAT_SEEDS), has(Items.WHEAT_SEEDS))
                 .save(pRecipeOutput, HG2Tomato.MOD_ID + ":wheat_pouch_from_seeds");
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CHAIR.get(), 2)
+                .pattern("  A")
+                .pattern("AAA")
+                .pattern("A A")
+                .define('A', ItemTags.PLANKS)
+                .unlockedBy(getHasName(ModBlocks.LUMIR_PLANKS.get()), has(ItemTags.PLANKS))
+                .save(pRecipeOutput, HG2Tomato.MOD_ID + ":chair_from_planks");
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.TOMATO_POUCH.get())
                 .pattern("AAA")

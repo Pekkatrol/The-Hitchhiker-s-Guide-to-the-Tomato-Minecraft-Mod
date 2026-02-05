@@ -1,7 +1,8 @@
-// 1.21	2026-02-03T15:24:05.0481643	Loot Tables
+// 1.21	2026-02-05T14:01:13.0376338	Loot Tables
 a1b5ba8f69192677811a7e33484a9fea94a05552 data/hgtotomato/loot_table/blocks/almond_bush.json
 8a1ccd8fddfa655716ae4044fe2b028fddcd4010 data/hgtotomato/loot_table/blocks/black_sand.json
 7f59b586e05583cf8fee491b79f42cd2f5791d05 data/hgtotomato/loot_table/blocks/card_box.json
+3e4780964eee9029f3212b71478794165d5b0bc3 data/hgtotomato/loot_table/blocks/chair.json
 6fcca8d092770b72f34882f29917e251b3945b2c data/hgtotomato/loot_table/blocks/lumir_button.json
 5f6790d2cd5f0b219c1d72c169a375dd276c17f5 data/hgtotomato/loot_table/blocks/lumir_door.json
 bf9f41699a4ec10503996d7aed62b08bd7709d49 data/hgtotomato/loot_table/blocks/lumir_fence.json

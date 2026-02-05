@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "hgtotomato:block/chair" },
+    "facing=south": { "model": "hgtotomato:block/chair", "y": 180 },
+    "facing=west":  { "model": "hgtotomato:block/chair", "y": 270 },
+    "facing=east":  { "model": "hgtotomato:block/chair", "y": 90 }
+  }
+}

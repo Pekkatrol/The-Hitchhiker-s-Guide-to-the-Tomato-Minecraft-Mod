@@ -100,6 +100,11 @@ public class ModBlocks {
                     .requiresCorrectToolForDrops()
                     .sound(SoundType.NETHERITE_BLOCK)));
 
+    public static final RegistryObject<Block> CHAIR = registerBlock("chair",
+            () -> new ChairBlock(BlockBehaviour.Properties.of().noOcclusion()
+                    .strength(2f, 3f)
+                    .sound(SoundType.WOOD)));
+
     public static final RegistryObject<Block> LUMIR_LEAVES = registerBlock("lumir_leaves",
             () -> new LeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)) {
                 @Override
