@@ -1,4 +1,4 @@
-// 1.21	2026-02-05T14:04:42.2984647	Recipes
+// 1.21	2026-02-06T09:13:42.4030789	Recipes
 6bfa7b38da0e97aa201e7e2505b1139755dec7b0 data/hgtotomato/advancement/recipes/building_blocks/lumir_slab.json
 4a1ae05c700d5ea182a92f3fd576f3bcfd39dc97 data/hgtotomato/advancement/recipes/building_blocks/lumir_stairs.json
 81e95ab0d0cdb4637561c613989517616ab3a365 data/hgtotomato/advancement/recipes/building_blocks/marble_wall.json
@@ -19,6 +19,7 @@ fdf71f29b34929cd5a8e9d6e85f43349a7011d29 data/hgtotomato/advancement/recipes/mis
 7029fb2f7a5aeaf8a5d6a4c660f70af3d8c80cd0 data/hgtotomato/advancement/recipes/misc/nookia_from_obsidian.json
 ffda5ac2beb75828d7a83ec7a34a1b849cdfeb8a data/hgtotomato/advancement/recipes/misc/present_from_card_box.json
 2f3b03707e6326345b7e50e9f725a16ac418b806 data/hgtotomato/advancement/recipes/misc/sticks_from_lumir_planks.json
+84d9a25f7d8371b720dfcb50974e85378ddd1489 data/hgtotomato/advancement/recipes/misc/table_from_planks.json
 4fe048701023a7a0fa0810a8dbfa8cd6183cee57 data/hgtotomato/advancement/recipes/misc/tomato_pouch_from_seeds.json
 4c0936a9a7e5c1fc0792da4b61b9648ce645e9a1 data/hgtotomato/advancement/recipes/misc/tomato_seeds_from_tomato.json
 4195819fb6549f4397a8e3897d4527105f79aa99 data/hgtotomato/advancement/recipes/misc/tomato_seeds_from_tomato_pouch.json
@@ -54,6 +55,7 @@ b76e0ec7ea4a4e875bbcb3e14216bf4e0cecba17 data/hgtotomato/recipe/nickel_ingot_fro
 2cc3d49636dbc38c81f1447ef14dc66504fa4e4f data/hgtotomato/recipe/nookia_from_obsidian.json
 c735fb682dc398efb7c125b72da915d07e049ff1 data/hgtotomato/recipe/present_from_card_box.json
 476da79abe043dc88fa76babfb6dcebdc3f9c651 data/hgtotomato/recipe/sticks_from_lumir_planks.json
+dccf9a2441110a678ffab214c7b52f1906133d0a data/hgtotomato/recipe/table_from_planks.json
 11578d1146ba6e4334aea1eb8330339da08db138 data/hgtotomato/recipe/tomato_pouch_from_seeds.json
 6e1fe8b5c235fe8f48d215d8bfcffb659cafea8a data/hgtotomato/recipe/tomato_seeds_from_tomato.json
 7fc078555cd002e73867bcadd3a737db47771781 data/hgtotomato/recipe/tomato_seeds_from_tomato_pouch.json

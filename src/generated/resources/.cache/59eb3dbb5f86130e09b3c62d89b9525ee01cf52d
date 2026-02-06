@@ -1,4 +1,4 @@
-// 1.21	2026-02-05T14:01:13.0376338	Loot Tables
+// 1.21	2026-02-06T09:13:42.3980795	Loot Tables
 a1b5ba8f69192677811a7e33484a9fea94a05552 data/hgtotomato/loot_table/blocks/almond_bush.json
 8a1ccd8fddfa655716ae4044fe2b028fddcd4010 data/hgtotomato/loot_table/blocks/black_sand.json
 7f59b586e05583cf8fee491b79f42cd2f5791d05 data/hgtotomato/loot_table/blocks/card_box.json
@@ -24,4 +24,5 @@ cbbe70e40fd98d5932d4000128829a88f5b9977b data/hgtotomato/loot_table/blocks/nicke
 7b5ba47f5f660c8e017680e15f98e00ee0526900 data/hgtotomato/loot_table/blocks/nickel_ore.json
 769a4c61aef60376c9ba8fd692f07bfdf7486a7a data/hgtotomato/loot_table/blocks/present.json
 f09d2b1ed4e2363f6bea19f678444337a75b0866 data/hgtotomato/loot_table/blocks/stripped_lumir_log.json
+62f5403d48b32fb0ebc631205a61b12428d8284f data/hgtotomato/loot_table/blocks/table.json
 bf4e63f1024892c337e8f72de87e996d4dfeec94 data/hgtotomato/loot_table/blocks/tomato_crop.json

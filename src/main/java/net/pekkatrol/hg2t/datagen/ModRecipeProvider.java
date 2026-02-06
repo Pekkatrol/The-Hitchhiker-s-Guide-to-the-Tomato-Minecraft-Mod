@@ -92,6 +92,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModBlocks.LUMIR_PLANKS.get()), has(ItemTags.PLANKS))
                 .save(pRecipeOutput, HG2Tomato.MOD_ID + ":chair_from_planks");
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.TABLE.get(), 2)
+                .pattern("   ")
+                .pattern("AAA")
+                .pattern("A A")
+                .define('A', ItemTags.PLANKS)
+                .unlockedBy(getHasName(ModBlocks.LUMIR_PLANKS.get()), has(ItemTags.PLANKS))
+                .save(pRecipeOutput, HG2Tomato.MOD_ID + ":table_from_planks");
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.TOMATO_POUCH.get())
                 .pattern("AAA")
                 .pattern("AAA")

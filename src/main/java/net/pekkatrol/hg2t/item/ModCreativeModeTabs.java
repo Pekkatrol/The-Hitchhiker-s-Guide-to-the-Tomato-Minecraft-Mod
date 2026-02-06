@@ -63,6 +63,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.LUMIR_PRESSURE_PLATE.get());
                         output.accept(ModBlocks.MARVIN.get());
                         output.accept(ModBlocks.CHAIR.get());
+                        output.accept(ModBlocks.TABLE.get());
                     })
                     .build());
 

@@ -105,6 +105,11 @@ public class ModBlocks {
                     .strength(2f, 3f)
                     .sound(SoundType.WOOD)));
 
+    public static final RegistryObject<Block> TABLE = registerBlock("table",
+            () -> new TableBlock(BlockBehaviour.Properties.of().noOcclusion()
+                    .strength(2f, 3f)
+                    .sound(SoundType.WOOD)));
+
     public static final RegistryObject<Block> LUMIR_LEAVES = registerBlock("lumir_leaves",
             () -> new LeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)) {
                 @Override
