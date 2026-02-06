@@ -2,6 +2,8 @@ package net.pekkatrol.hg2t;
 
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.gui.screens.MenuScreens;
+import net.minecraft.client.renderer.entity.EntityRenderer;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.block.ComposterBlock;
@@ -20,6 +22,8 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.pekkatrol.hg2t.block.ModBlocks;
 import net.pekkatrol.hg2t.block.entity.ModDataComponents;
 import net.pekkatrol.hg2t.block.entity.renderer.ModBlockEntities;
+import net.pekkatrol.hg2t.entity.ModEntities;
+import net.pekkatrol.hg2t.entity.client.ChairRenderer;
 import net.pekkatrol.hg2t.item.ModCreativeModeTabs;
 import net.pekkatrol.hg2t.item.ModItems;
 import net.pekkatrol.hg2t.potion.ModPotions;
@@ -57,6 +61,8 @@ public class HG2Tomato
         ModMenuTypes.register(modEventBus);
 
         ModRecipes.register(modEventBus);
+
+        ModEntities.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -99,6 +105,8 @@ public class HG2Tomato
         {
             MenuScreens.register(ModMenuTypes.PRESENT_MENU.get(), PresentScreen::new);
             MenuScreens.register(ModMenuTypes.CARDBOARD_MENU.get(), CardboardScreen::new);
+
+            EntityRenderers.register(ModEntities.CHAIR.get(), ChairRenderer::new);
         }
     }
 }

@@ -47,7 +47,9 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.LUMIR_FENCE_GATE.get())
                 .add(ModBlocks.LUMIR_BUTTON.get())
                 .add(ModBlocks.LUMIR_DOOR.get())
-                .add(ModBlocks.LUMIR_TRAPDOOR.get());
+                .add(ModBlocks.LUMIR_TRAPDOOR.get())
+                .add(ModBlocks.CHAIR.get())
+                .add(ModBlocks.TABLE.get());
 
         tag(BlockTags.FENCES).add(ModBlocks.LUMIR_FENCE.get());
         tag(BlockTags.FENCE_GATES).add(ModBlocks.LUMIR_FENCE_GATE.get());
