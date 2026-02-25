@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "tag": "minecraft:planks"
+    }
+  },
+  "pattern": [
+    "   ",
+    "AAA",
+    "A A"
+  ],
+  "result": {
+    "count": 2,
+    "id": "hgtotomato:table"
+  }
+}

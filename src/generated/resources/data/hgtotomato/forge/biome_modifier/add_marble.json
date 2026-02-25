@@ -1,0 +1,10 @@
+{
+  "type": "forge:add_features",
+  "biomes": [
+    "minecraft:plains",
+    "minecraft:beach",
+    "minecraft:windswept_hills"
+  ],
+  "features": "hgtotomato:marble_placed",
+  "step": "underground_decoration"
+}
