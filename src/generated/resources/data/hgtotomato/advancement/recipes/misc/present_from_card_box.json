@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_card_box": {
+      "conditions": {
+        "items": [
+          {
+            "items": "hgtotomato:card_box"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "hgtotomato:present_from_card_box"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_card_box"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "hgtotomato:present_from_card_box"
+    ]
+  }
+}

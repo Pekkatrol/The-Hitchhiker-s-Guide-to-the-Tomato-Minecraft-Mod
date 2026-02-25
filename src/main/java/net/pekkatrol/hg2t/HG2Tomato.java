@@ -7,6 +7,7 @@ import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.block.ComposterBlock;
+import net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -19,6 +20,8 @@ import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.ForgeRegistries;
 import net.pekkatrol.hg2t.block.ModBlocks;
 import net.pekkatrol.hg2t.block.entity.ModDataComponents;
 import net.pekkatrol.hg2t.block.entity.renderer.ModBlockEntities;
@@ -32,6 +35,7 @@ import net.pekkatrol.hg2t.screen.ModMenuTypes;
 import net.pekkatrol.hg2t.screen.custom.CardboardScreen;
 import net.pekkatrol.hg2t.screen.custom.PresentScreen;
 import org.slf4j.Logger;
+
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(HG2Tomato.MOD_ID)

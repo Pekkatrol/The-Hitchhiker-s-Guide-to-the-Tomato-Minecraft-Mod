@@ -1,0 +1,9 @@
+{
+  "type": "forge:add_features",
+  "biomes": [
+    "minecraft:plains",
+    "minecraft:beach"
+  ],
+  "features": "hgtotomato:almond_bush_placed",
+  "step": "vegetal_decoration"
+}

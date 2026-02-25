@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:nether_star"
+    },
+    "B": {
+      "item": "hgtotomato:compact_log"
+    },
+    "C": {
+      "item": "minecraft:netherite_ingot"
+    }
+  },
+  "pattern": [
+    "CAC",
+    "CAC",
+    "CBC"
+  ],
+  "result": {
+    "count": 1,
+    "id": "hgtotomato:bienvaillance"
+  }
+}
