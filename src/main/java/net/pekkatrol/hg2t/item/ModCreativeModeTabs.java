@@ -32,6 +32,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.NOOKIA.get());
                         output.accept(ModItems.BIENVAILLANCE.get());
                         output.accept(ModItems.ENERGIZED_GOLEM_SPAWN_EGG.get());
+                        output.accept(ModItems.CORE.get());
                     })
                     .build());
 
@@ -65,6 +66,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.MARVIN.get());
                         output.accept(ModBlocks.CHAIR.get());
                         output.accept(ModBlocks.TABLE.get());
+                        output.accept(ModBlocks.CORE_ALTAR.get());
                     })
                     .build());
 
