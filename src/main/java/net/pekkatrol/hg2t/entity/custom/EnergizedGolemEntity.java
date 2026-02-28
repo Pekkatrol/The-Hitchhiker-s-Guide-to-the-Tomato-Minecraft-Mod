@@ -2,7 +2,13 @@ package net.pekkatrol.hg2t.entity.custom;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.math.Axis;
+import net.minecraft.network.chat.Component;
+import net.minecraft.server.level.ServerBossEvent;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.world.BossEvent;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.AgeableMob;
@@ -31,6 +37,9 @@ public class EnergizedGolemEntity extends Monster {
     }
 
     private AnimationType currentAnimation = null;
+
+    private final ServerBossEvent bossEvent = new ServerBossEvent(Component.literal("Energized Golem"),
+            BossEvent.BossBarColor.BLUE, BossEvent.BossBarOverlay.NOTCHED_20);
 
     public final AnimationState idleAnimationState = new AnimationState();
     public final AnimationState walkAnimationState = new AnimationState();
@@ -67,6 +76,7 @@ public class EnergizedGolemEntity extends Monster {
     @Override
     public boolean doHurtTarget(Entity entity) {
         this.swing(InteractionHand.MAIN_HAND);
+        this.playSound(SoundEvents.WARDEN_ATTACK_IMPACT, 1.0F, this.getVoicePitch());
         return super.doHurtTarget(entity);
     }
 
@@ -124,4 +134,38 @@ public class EnergizedGolemEntity extends Monster {
             this.setupAnimationStates();
         }
     }
+
+    @Override
+    public void startSeenByPlayer(ServerPlayer pServerPlayer) {
+        super.startSeenByPlayer(pServerPlayer);
+        this.bossEvent.addPlayer(pServerPlayer);
+    }
+
+    @Override
+    public void stopSeenByPlayer(ServerPlayer pServerPlayer) {
+        super.stopSeenByPlayer(pServerPlayer);
+        this.bossEvent.removePlayer(pServerPlayer);
+    }
+
+    @Override
+    public void aiStep() {
+        super.aiStep();
+        this.bossEvent.setProgress(this.getHealth() / this.getMaxHealth());
+    }
+
+    @Override
+    protected SoundEvent getHurtSound(DamageSource pDamageSource) {
+        return SoundEvents.ELDER_GUARDIAN_HURT;
+    }
+
+    @Override
+    protected SoundEvent getDeathSound() {
+        return SoundEvents.ELDER_GUARDIAN_DEATH;
+    }
+
+    @Override
+    protected @Nullable SoundEvent getAmbientSound() {
+        return SoundEvents.ELDER_GUARDIAN_AMBIENT;
+    }
+
 }
