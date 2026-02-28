@@ -13,6 +13,7 @@
   "item.hgtotomato.almond": "Almond",
   "item.hgtotomato.bienvaillance": "§f§lBienvaillance",
   "item.hgtotomato.energized_golem_spawn_egg": "Energized Golem Spawn egg",
+  "item.hgtotomato.core": "Core",
 
   "block.hgtotomato.marvin": "Marvin Head",
   "block.hgtotomato.chair": "Chair",
@@ -39,6 +40,7 @@
   "block.hgtotomato.lumir_door": "Lumir door",
   "block.hgtotomato.lumir_trapdoor": "Lumir trapdoor",
   "block.hgtotomato.lumir_pressure_plate": "Lumir pressure plate",
+  "block.hgtotomato.core_altar": "Core altar",
 
   "block.hgtotomato.tomato_crop": "Tomato crop",
   "block.hgtotomato.almond_bush": "Almond bush",
@@ -57,6 +59,8 @@
   "tooltip.hgtotomato.bio_powder.shift_down": "Right click with it to fertilize some vegetation.",
   "tooltip.hgtotomato.bienvaillance": "Press §eShift§r for more information.",
   "tooltip.hgtotomato.bienvaillance.shift_down": "This sword was forged to punished those with §cSEGFAULT§r.",
+  "tooltip.hgtotomato.core": "Press §eShift§r for more information.",
+  "tooltip.hgtotomato.core.shift_down": "Right click with it on a core altar.",
 
   "creativetab.hgtotomato.hgtotomato_items": "HG2Tomato Items",
   "creativetab.hgtotomato.hgtotomato_blocks": "HG2Tomato Blocks",

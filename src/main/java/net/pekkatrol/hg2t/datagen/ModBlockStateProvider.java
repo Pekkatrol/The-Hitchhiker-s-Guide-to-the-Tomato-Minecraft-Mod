@@ -29,6 +29,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
     @Override
     protected void registerStatesAndModels() {
         blockWithItem(ModBlocks.BLACK_SAND);
+        blockWithItem(ModBlocks.CORE_ALTAR);
         blockWithItem(ModBlocks.MARBLE_BLOCK);
         blockWithItem(ModBlocks.MARBLE_BRICK);
         blockWithItem(ModBlocks.LUMIR_PLANKS);

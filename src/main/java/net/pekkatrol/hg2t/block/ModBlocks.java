@@ -218,6 +218,13 @@ public class ModBlocks {
             () -> new AlmondBushBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SWEET_BERRY_BUSH)));
 
 
+    public static final RegistryObject<Block> CORE_ALTAR = registerBlock("core_altar",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(-1.0F, 3600000.0F)
+                    .sound(SoundType.STONE)
+                    .noLootTable()
+            ));
+
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {

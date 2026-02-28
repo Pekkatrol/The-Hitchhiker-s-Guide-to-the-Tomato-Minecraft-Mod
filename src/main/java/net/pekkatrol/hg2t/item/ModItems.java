@@ -12,6 +12,7 @@ import net.pekkatrol.hg2t.HG2Tomato;
 import net.pekkatrol.hg2t.block.ModBlocks;
 import net.pekkatrol.hg2t.entity.ModEntities;
 import net.pekkatrol.hg2t.item.custom.BienvaillanceItem;
+import net.pekkatrol.hg2t.item.custom.CoreItem;
 import net.pekkatrol.hg2t.item.custom.FuelItem;
 import net.pekkatrol.hg2t.item.custom.NookiaItem;
 import org.spongepowered.asm.mixin.extensibility.IActivityContext;
@@ -83,6 +84,20 @@ public class ModItems {
 
     public static final RegistryObject<Item> ENERGIZED_GOLEM_SPAWN_EGG = ITEMS.register("energized_golem_spawn_egg",
             () -> new ForgeSpawnEggItem(ModEntities.ENERGIZED_GOLEM, 0x4e4848, 0x317d7f, new Item.Properties()));
+
+    public static final RegistryObject<Item> CORE = ITEMS.register("core",
+            () -> new CoreItem(new Item.Properties().stacksTo(1))
+            {
+                @Override
+                public void appendHoverText(ItemStack pStack, TooltipContext pContext, List<Component> pTooltipComponents, TooltipFlag pTooltipFlag) {
+                    if (Screen.hasShiftDown()) {
+                        pTooltipComponents.add(Component.translatable("tooltip.hgtotomato.core.shift_down"));
+                    } else {
+                        pTooltipComponents.add(Component.translatable("tooltip.hgtotomato.core"));
+                    }
+                    super.appendHoverText(pStack, pContext, pTooltipComponents, pTooltipFlag);
+                }
+            });
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
