@@ -3,12 +3,14 @@ package net.pekkatrol.hg2t.item;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.*;
+import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.pekkatrol.hg2t.HG2Tomato;
 import net.pekkatrol.hg2t.block.ModBlocks;
+import net.pekkatrol.hg2t.entity.ModEntities;
 import net.pekkatrol.hg2t.item.custom.BienvaillanceItem;
 import net.pekkatrol.hg2t.item.custom.FuelItem;
 import net.pekkatrol.hg2t.item.custom.NookiaItem;
@@ -78,6 +80,9 @@ public class ModItems {
     public static final RegistryObject<Item> BIENVAILLANCE = ITEMS.register("bienvaillance",
             () -> new BienvaillanceItem(ModToolTiers.NOOKIA, new Item.Properties()
                     .attributes(SwordItem.createAttributes(ModToolTiers.NOOKIA, 4, -2.4f))));
+
+    public static final RegistryObject<Item> ENERGIZED_GOLEM_SPAWN_EGG = ITEMS.register("energized_golem_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntities.ENERGIZED_GOLEM, 0x4e4848, 0x317d7f, new Item.Properties()));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
