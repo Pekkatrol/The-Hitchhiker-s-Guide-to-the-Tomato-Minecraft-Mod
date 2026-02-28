@@ -1,8 +1,14 @@
-// 1.21	2026-02-06T09:13:42.3980795	Loot Tables
+// 1.21	2026-02-28T17:41:24.133944	Loot Tables
 a1b5ba8f69192677811a7e33484a9fea94a05552 data/hgtotomato/loot_table/blocks/almond_bush.json
 8a1ccd8fddfa655716ae4044fe2b028fddcd4010 data/hgtotomato/loot_table/blocks/black_sand.json
 7f59b586e05583cf8fee491b79f42cd2f5791d05 data/hgtotomato/loot_table/blocks/card_box.json
 3e4780964eee9029f3212b71478794165d5b0bc3 data/hgtotomato/loot_table/blocks/chair.json
+5dad7346167723796cb4a76a097bdcf91a210d06 data/hgtotomato/loot_table/blocks/dungeon_bricks.json
+7bc5fac33d6bf7b97c0be25aed93583772127bdd data/hgtotomato/loot_table/blocks/dungeon_bricks_chisel.json
+31cd294527fc2532a4d2fe28aaa6742ac68507b2 data/hgtotomato/loot_table/blocks/dungeon_bricks_creeper.json
+5fbb7e02e588dfab13299ce7e5e3cd527c94b16b data/hgtotomato/loot_table/blocks/dungeon_bricks_slab.json
+e64be93d3407b825e2d44badb8ef8ea4d01224b7 data/hgtotomato/loot_table/blocks/dungeon_bricks_stair.json
+562b964196fd1dffedab2a8873f7affe21657192 data/hgtotomato/loot_table/blocks/dungeon_bricks_wall.json
 6fcca8d092770b72f34882f29917e251b3945b2c data/hgtotomato/loot_table/blocks/lumir_button.json
 5f6790d2cd5f0b219c1d72c169a375dd276c17f5 data/hgtotomato/loot_table/blocks/lumir_door.json
 bf9f41699a4ec10503996d7aed62b08bd7709d49 data/hgtotomato/loot_table/blocks/lumir_fence.json

@@ -57,6 +57,8 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         tag(BlockTags.LOGS).add(ModBlocks.LUMIR_LOG.get());
         tag(BlockTags.SAND).add(ModBlocks.BLACK_SAND.get());
 
+        tag(BlockTags.WALLS).add(ModBlocks.DUNGEON_BRICKS_WALL.get());
+
         this.tag(BlockTags.LOGS_THAT_BURN)
                 .add(ModBlocks.LUMIR_LOG.get())
                 .add(ModBlocks.STRIPPED_LUMIR_LOG.get());

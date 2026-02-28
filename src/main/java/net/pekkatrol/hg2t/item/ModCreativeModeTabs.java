@@ -67,6 +67,12 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.CHAIR.get());
                         output.accept(ModBlocks.TABLE.get());
                         output.accept(ModBlocks.CORE_ALTAR.get());
+                        output.accept(ModBlocks.DUNGEON_BRICKS.get());
+                        output.accept(ModBlocks.DUNGEON_BRICKS_CHISEL.get());
+                        output.accept(ModBlocks.DUNGEON_BRICKS_CREEPER.get());
+                        output.accept(ModBlocks.DUNGEON_BRICKS_SLAB.get());
+                        output.accept(ModBlocks.DUNGEON_BRICKS_WALL.get());
+                        output.accept(ModBlocks.DUNGEON_BRICKS_STAIR.get());
                     })
                     .build());
 

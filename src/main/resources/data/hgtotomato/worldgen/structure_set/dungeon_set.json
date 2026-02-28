@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "hgtotomato:dungeon",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 987654,
+    "spacing": 24,
+    "separation": 8
+  }
+}

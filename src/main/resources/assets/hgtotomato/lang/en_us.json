@@ -41,6 +41,12 @@
   "block.hgtotomato.lumir_trapdoor": "Lumir trapdoor",
   "block.hgtotomato.lumir_pressure_plate": "Lumir pressure plate",
   "block.hgtotomato.core_altar": "Core altar",
+  "block.hgtotomato.dungeon_bricks": "Dungeon Bricks",
+  "block.hgtotomato.dungeon_bricks_chisel": "Chiseled Dungeon Bricks",
+  "block.hgtotomato.dungeon_bricks_creeper": "Dungeon Bricks Creeper",
+  "block.hgtotomato.dungeon_bricks_slab": "Dungeon Bricks Slab",
+  "block.hgtotomato.dungeon_bricks_stair": "Dungeon Bricks Stair",
+  "block.hgtotomato.dungeon_bricks_wall": "Dungeon Bricks Wall",
 
   "block.hgtotomato.tomato_crop": "Tomato crop",
   "block.hgtotomato.almond_bush": "Almond bush",
