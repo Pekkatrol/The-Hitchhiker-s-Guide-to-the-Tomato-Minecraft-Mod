@@ -31,6 +31,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.KETCHOUP.get());
                         output.accept(ModItems.NOOKIA.get());
                         output.accept(ModItems.BIENVAILLANCE.get());
+                        output.accept(ModItems.ENERGIZED_GOLEM_SPAWN_EGG.get());
                     })
                     .build());
 

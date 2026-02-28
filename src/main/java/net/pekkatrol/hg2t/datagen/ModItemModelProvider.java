@@ -43,6 +43,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         saplingItem(ModBlocks.LUMIR_SAPLING);
 
         handheldItem(ModItems.NOOKIA);
+
+        withExistingParent(ModItems.ENERGIZED_GOLEM_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
     }
 
     private ItemModelBuilder handheldItem(RegistryObject<Item> item) {

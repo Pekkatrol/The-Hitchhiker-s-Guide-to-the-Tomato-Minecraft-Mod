@@ -27,6 +27,7 @@ import net.pekkatrol.hg2t.block.entity.ModDataComponents;
 import net.pekkatrol.hg2t.block.entity.renderer.ModBlockEntities;
 import net.pekkatrol.hg2t.entity.ModEntities;
 import net.pekkatrol.hg2t.entity.client.ChairRenderer;
+import net.pekkatrol.hg2t.entity.client.EnergizedGolemRenderer;
 import net.pekkatrol.hg2t.item.ModCreativeModeTabs;
 import net.pekkatrol.hg2t.item.ModItems;
 import net.pekkatrol.hg2t.potion.ModPotions;
@@ -109,6 +110,8 @@ public class HG2Tomato
         {
             MenuScreens.register(ModMenuTypes.PRESENT_MENU.get(), PresentScreen::new);
             MenuScreens.register(ModMenuTypes.CARDBOARD_MENU.get(), CardboardScreen::new);
+
+            EntityRenderers.register(ModEntities.ENERGIZED_GOLEM.get(), EnergizedGolemRenderer::new);
 
             EntityRenderers.register(ModEntities.CHAIR.get(), ChairRenderer::new);
         }
