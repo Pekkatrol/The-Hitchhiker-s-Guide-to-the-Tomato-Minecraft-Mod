@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "hgtotomato:block/dungeon_bricks",
+    "east": "hgtotomato:block/dungeon_bricks_chisel",
+    "north": "hgtotomato:block/dungeon_bricks_chisel",
+    "particle": "hgtotomato:block/dungeon_bricks",
+    "south": "hgtotomato:block/dungeon_bricks_chisel",
+    "up": "hgtotomato:block/dungeon_bricks",
+    "west": "hgtotomato:block/dungeon_bricks_chisel"
+  }
+}

@@ -29,12 +29,14 @@ public class ModBlockStateProvider extends BlockStateProvider {
     @Override
     protected void registerStatesAndModels() {
         blockWithItem(ModBlocks.BLACK_SAND);
-        blockWithItem(ModBlocks.CORE_ALTAR);
         blockWithItem(ModBlocks.MARBLE_BLOCK);
         blockWithItem(ModBlocks.MARBLE_BRICK);
         blockWithItem(ModBlocks.LUMIR_PLANKS);
         blockWithItem(ModBlocks.NICKEL_BLOCK);
         blockWithItem(ModBlocks.NICKEL_ORE);
+
+        blockWithItem(ModBlocks.CORE_ALTAR);
+        blockWithItem(ModBlocks.DUNGEON_BRICKS);
 
         stairsBlock(ModBlocks.LUMIR_STAIRS.get(), blockTexture(ModBlocks.LUMIR_PLANKS.get()));
         slabBlock(ModBlocks.LUMIR_SLAB.get(), blockTexture(ModBlocks.LUMIR_PLANKS.get()), blockTexture(ModBlocks.LUMIR_PLANKS.get()));
@@ -42,6 +44,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
         pressurePlateBlock(ModBlocks.LUMIR_PRESSURE_PLATE.get(), blockTexture(ModBlocks.LUMIR_PLANKS.get()));
         fenceBlock(ModBlocks.LUMIR_FENCE.get(), blockTexture(ModBlocks.LUMIR_PLANKS.get()));
         fenceGateBlock(ModBlocks.LUMIR_FENCE_GATE.get(), blockTexture(ModBlocks.LUMIR_PLANKS.get()));
+
+        stairsBlock(ModBlocks.DUNGEON_BRICKS_STAIR.get(), blockTexture(ModBlocks.DUNGEON_BRICKS.get()));
+        slabBlock(ModBlocks.DUNGEON_BRICKS_SLAB.get(), blockTexture(ModBlocks.DUNGEON_BRICKS.get()), blockTexture(ModBlocks.DUNGEON_BRICKS.get()));
+        wallBlock(ModBlocks.DUNGEON_BRICKS_WALL.get(), blockTexture(ModBlocks.DUNGEON_BRICKS.get()));
 
         doorBlockWithRenderType(ModBlocks.LUMIR_DOOR.get(), modLoc("block/lumir_door_bottom"), modLoc("block/lumir_door_top"), "cutout");
         trapdoorBlockWithRenderType(ModBlocks.LUMIR_TRAPDOOR.get(), modLoc("block/lumir_trapdoor"), true, "cutout");
@@ -61,6 +67,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.LUMIR_PRESSURE_PLATE);
         blockItem(ModBlocks.LUMIR_FENCE_GATE);
         blockItem(ModBlocks.LUMIR_TRAPDOOR, "_bottom");
+
+        blockItem(ModBlocks.DUNGEON_BRICKS_WALL);
+        blockItem(ModBlocks.DUNGEON_BRICKS_SLAB);
+        blockItem(ModBlocks.DUNGEON_BRICKS_STAIR);
 
         makeCrop((CropBlock) ModBlocks.TOMATO_CROP.get(), "tomato_crop_stage", "tomato_crop_stage");
         makeBush(((SweetBerryBushBlock) ModBlocks.ALMOND_BUSH.get()), "almond_bush_stage", "almond_bush_stage");

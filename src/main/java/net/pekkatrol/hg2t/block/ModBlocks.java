@@ -225,6 +225,28 @@ public class ModBlocks {
                     .noLootTable()
             ));
 
+    public static final RegistryObject<Block> DUNGEON_BRICKS = registerBlock("dungeon_bricks",
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_BRICKS)));
+
+    public static final RegistryObject<Block> DUNGEON_BRICKS_CHISEL = registerBlock("dungeon_bricks_chisel",
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_BRICKS)));
+
+    public static final RegistryObject<Block> DUNGEON_BRICKS_CREEPER = registerBlock("dungeon_bricks_creeper",
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_BRICKS)));
+
+    public static final RegistryObject<WallBlock> DUNGEON_BRICKS_WALL = registerBlock("dungeon_bricks_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(ModBlocks.DUNGEON_BRICKS.get()))
+    );
+
+    public static final RegistryObject<SlabBlock> DUNGEON_BRICKS_SLAB = registerBlock("dungeon_bricks_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(ModBlocks.DUNGEON_BRICKS.get()))
+    );
+
+    public static final RegistryObject<StairBlock> DUNGEON_BRICKS_STAIR = registerBlock("dungeon_bricks_stair",
+            () -> new StairBlock(DUNGEON_BRICKS.get().defaultBlockState(),
+                    BlockBehaviour.Properties.ofFullCopy(ModBlocks.DUNGEON_BRICKS.get()))
+    );
+
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {

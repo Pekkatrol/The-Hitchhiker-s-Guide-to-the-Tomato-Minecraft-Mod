@@ -61,6 +61,13 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.CHAIR.get());
         dropSelf(ModBlocks.TABLE.get());
 
+        dropSelf(ModBlocks.DUNGEON_BRICKS.get());
+        dropSelf(ModBlocks.DUNGEON_BRICKS_SLAB.get());
+        dropSelf(ModBlocks.DUNGEON_BRICKS_WALL.get());
+        dropSelf(ModBlocks.DUNGEON_BRICKS_STAIR.get());
+        dropSelf(ModBlocks.DUNGEON_BRICKS_CHISEL.get());
+        dropSelf(ModBlocks.DUNGEON_BRICKS_CREEPER.get());
+
         dropSelf(ModBlocks.LUMIR_SAPLING.get());
         dropSelf(ModBlocks.STRIPPED_LUMIR_LOG.get());
 

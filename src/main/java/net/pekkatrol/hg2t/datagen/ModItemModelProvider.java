@@ -39,6 +39,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         fenceItem(ModBlocks.LUMIR_FENCE, ModBlocks.LUMIR_PLANKS);
         wallItem(ModBlocks.MARBLE_WALL, ModBlocks.MARBLE_BLOCK);
 
+        wallItem(ModBlocks.DUNGEON_BRICKS_WALL, ModBlocks.DUNGEON_BRICKS);
+
         simpleBlockItem(ModBlocks.LUMIR_DOOR);
 
         saplingItem(ModBlocks.LUMIR_SAPLING);
