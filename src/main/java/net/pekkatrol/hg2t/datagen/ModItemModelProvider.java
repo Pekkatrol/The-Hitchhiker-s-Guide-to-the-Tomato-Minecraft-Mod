@@ -34,6 +34,10 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.TOMATO_POUCH.get());
         basicItem(ModItems.KETCHOUP.get());
         basicItem(ModItems.CORE.get());
+        basicItem(ModItems.EMPTY_CORE.get());
+        basicItem(ModItems.SOLANUM.get());
+        basicItem(ModItems.GLASS_SHARDS.get());
+        basicItem(ModItems.SPAWNER_FRAGMENT.get());
 
         buttonItem(ModBlocks.LUMIR_BUTTON, ModBlocks.LUMIR_PLANKS);
         fenceItem(ModBlocks.LUMIR_FENCE, ModBlocks.LUMIR_PLANKS);

@@ -33,6 +33,10 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.BIENVAILLANCE.get());
                         output.accept(ModItems.ENERGIZED_GOLEM_SPAWN_EGG.get());
                         output.accept(ModItems.CORE.get());
+                        output.accept(ModItems.EMPTY_CORE.get());
+                        output.accept(ModItems.SOLANUM.get());
+                        output.accept(ModItems.GLASS_SHARDS.get());
+                        output.accept(ModItems.SPAWNER_FRAGMENT.get());
                     })
                     .build());
 
