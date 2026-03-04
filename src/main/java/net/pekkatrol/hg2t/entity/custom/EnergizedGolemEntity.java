@@ -2,6 +2,8 @@ package net.pekkatrol.hg2t.entity.custom;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.math.Axis;
+import net.minecraft.core.particles.BlockParticleOption;
+import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerBossEvent;
 import net.minecraft.server.level.ServerLevel;
@@ -9,12 +11,10 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.BossEvent;
+import net.minecraft.world.DifficultyInstance;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.world.entity.AgeableMob;
-import net.minecraft.world.entity.AnimationState;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.*;
@@ -24,6 +24,8 @@ import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.ServerLevelAccessor;
+import net.pekkatrol.hg2t.particle.ModParticles;
 import org.jetbrains.annotations.Nullable;
 import org.w3c.dom.Attr;
 
@@ -75,15 +77,36 @@ public class EnergizedGolemEntity extends Monster {
 
     @Override
     public boolean doHurtTarget(Entity entity) {
+        Level level = entity.level();
+
         this.swing(InteractionHand.MAIN_HAND);
+        ((ServerLevel) level).sendParticles(ParticleTypes.HAPPY_VILLAGER,
+                entity.getX() + 0.5, entity.getY() + 1.5,
+                entity.getZ() + 0.5, 10, 0, 0, 0, 3);
         this.playSound(SoundEvents.WARDEN_ATTACK_IMPACT, 1.0F, this.getVoicePitch());
         return super.doHurtTarget(entity);
     }
 
     @Override
+    public @Nullable SpawnGroupData finalizeSpawn(ServerLevelAccessor pLevel, DifficultyInstance pDifficulty, MobSpawnType pSpawnType, @Nullable SpawnGroupData pSpawnGroupData) {
+
+        if (pLevel instanceof ServerLevel serverLevel) {
+            serverLevel.sendParticles(
+                    ModParticles.ENERGIZED_PARTICLES.get(),
+                    this.getX(),
+                    this.getY() + 1.0,
+                    this.getZ(),
+                    30,
+                    0.5, 0.5, 0.5,
+                    0.1
+            );
+        }
+        return super.finalizeSpawn(pLevel, pDifficulty, pSpawnType, pSpawnGroupData);
+    }
+
+    @Override
     protected void tickDeath() {
         this.deathTime++;
-
         if (this.deathTime >= 40) {
             this.remove(RemovalReason.KILLED);
         }

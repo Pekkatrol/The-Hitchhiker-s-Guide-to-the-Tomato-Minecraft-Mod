@@ -99,6 +99,29 @@ public class ModItems {
                 }
             });
 
+    public static final RegistryObject<Item> EMPTY_CORE = ITEMS.register("empty_core",
+            () -> new Item(new Item.Properties().stacksTo(1))
+            {
+                @Override
+                public void appendHoverText(ItemStack pStack, TooltipContext pContext, List<Component> pTooltipComponents, TooltipFlag pTooltipFlag) {
+                    if (Screen.hasShiftDown()) {
+                        pTooltipComponents.add(Component.translatable("tooltip.hgtotomato.empty_core.shift_down"));
+                    } else {
+                        pTooltipComponents.add(Component.translatable("tooltip.hgtotomato.empty_core"));
+                    }
+                    super.appendHoverText(pStack, pContext, pTooltipComponents, pTooltipFlag);
+                }
+            });
+
+    public static final RegistryObject<Item> SOLANUM = ITEMS.register("solanum",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> GLASS_SHARDS = ITEMS.register("glass_shards",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> SPAWNER_FRAGMENT = ITEMS.register("spawner_fragment",
+            () -> new Item(new Item.Properties()));
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }

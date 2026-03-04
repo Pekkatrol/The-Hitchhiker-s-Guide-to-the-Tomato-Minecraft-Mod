@@ -9,6 +9,7 @@ import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration;
 import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.client.event.RegisterParticleProvidersEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
@@ -30,6 +31,9 @@ import net.pekkatrol.hg2t.entity.client.ChairRenderer;
 import net.pekkatrol.hg2t.entity.client.EnergizedGolemRenderer;
 import net.pekkatrol.hg2t.item.ModCreativeModeTabs;
 import net.pekkatrol.hg2t.item.ModItems;
+import net.pekkatrol.hg2t.loot.ModLootModifiers;
+import net.pekkatrol.hg2t.particle.EnergizedParticles;
+import net.pekkatrol.hg2t.particle.ModParticles;
 import net.pekkatrol.hg2t.potion.ModPotions;
 import net.pekkatrol.hg2t.recipe.ModRecipes;
 import net.pekkatrol.hg2t.screen.ModMenuTypes;
@@ -68,6 +72,10 @@ public class HG2Tomato
         ModRecipes.register(modEventBus);
 
         ModEntities.register(modEventBus);
+
+        ModParticles.register(modEventBus);
+
+        ModLootModifiers.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -114,6 +122,11 @@ public class HG2Tomato
             EntityRenderers.register(ModEntities.ENERGIZED_GOLEM.get(), EnergizedGolemRenderer::new);
 
             EntityRenderers.register(ModEntities.CHAIR.get(), ChairRenderer::new);
+        }
+
+        @SubscribeEvent
+        public static void registerParticleProvider(RegisterParticleProvidersEvent event) {
+            event.registerSpriteSet(ModParticles.ENERGIZED_PARTICLES.get(), EnergizedParticles.Provider::new);
         }
     }
 }

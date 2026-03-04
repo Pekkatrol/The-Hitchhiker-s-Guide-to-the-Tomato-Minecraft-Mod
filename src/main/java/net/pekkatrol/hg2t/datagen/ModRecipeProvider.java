@@ -5,9 +5,11 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.ItemLike;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 import net.pekkatrol.hg2t.HG2Tomato;
@@ -50,6 +52,23 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('B', Items.PAPER)
                 .unlockedBy(getHasName(ModItems.BIO_POWDER.get()), has(ModItems.BIO_POWDER.get()))
                 .save(pRecipeOutput, HG2Tomato.MOD_ID + ":card_box_from_bio_powder_and_paper");
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.SOLANUM.get())
+                .pattern("AAA")
+                .pattern("ABA")
+                .pattern("AAA")
+                .define('A', Items.DIAMOND)
+                .define('B', ModBlocks.MARVIN.get())
+                .unlockedBy(getHasName(ModBlocks.MARVIN.get()), has(ModBlocks.MARVIN.get()))
+                .save(pRecipeOutput, HG2Tomato.MOD_ID + ":solanum_from_marvin");
+
+        SmithingTransformRecipeBuilder.smithing(
+                        Ingredient.of(ModItems.SOLANUM.get()),
+                        Ingredient.of(ModItems.EMPTY_CORE.get()),
+                        Ingredient.of(ItemStack.EMPTY), RecipeCategory.MISC, ModItems.CORE.get()
+                )
+                .unlocks(getHasName(ModItems.EMPTY_CORE.get()), has(ModItems.EMPTY_CORE.get()))
+                .save(pRecipeOutput, HG2Tomato.MOD_ID + ":core_from_smithing");
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.LUMIR_PLANKS.get(), 4)
                 .requires(ModBlocks.LUMIR_LOG.get())
@@ -165,6 +184,13 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('B', ModBlocks.MARBLE_BLOCK.get())
                 .unlockedBy(getHasName(ModBlocks.NICKEL_BLOCK.get()), has(ModBlocks.NICKEL_BLOCK.get()))
                 .save(pRecipeOutput, HG2Tomato.MOD_ID + ":marvin_head");
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Blocks.GLASS)
+                .pattern("AA")
+                .pattern("AA")
+                .define('A', ModItems.GLASS_SHARDS.get())
+                .unlockedBy(getHasName(ModItems.GLASS_SHARDS.get()), has(ModItems.GLASS_SHARDS.get()))
+                .save(pRecipeOutput, HG2Tomato.MOD_ID + ":glass_from_glass_shard");
 
 
 
