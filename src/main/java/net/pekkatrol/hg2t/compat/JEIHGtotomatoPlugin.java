@@ -13,8 +13,10 @@ import net.minecraft.world.item.crafting.RecipeHolder;
 import net.minecraft.world.item.crafting.RecipeManager;
 import net.pekkatrol.hg2t.HG2Tomato;
 import net.pekkatrol.hg2t.block.ModBlocks;
+import net.pekkatrol.hg2t.recipe.CombustionGeneratorRecipe;
 import net.pekkatrol.hg2t.recipe.ModRecipes;
 import net.pekkatrol.hg2t.recipe.PresentRecipe;
+import net.pekkatrol.hg2t.screen.custom.CombustionGeneratorScreen;
 import net.pekkatrol.hg2t.screen.custom.PresentScreen;
 
 import java.util.List;
@@ -32,6 +34,9 @@ public class JEIHGtotomatoPlugin implements IModPlugin {
     public void registerCategories(IRecipeCategoryRegistration registration) {
         registration.addRecipeCategories(new PresentRecipeCategory(
                 registration.getJeiHelpers().getGuiHelper()));
+
+        registration.addRecipeCategories(new CombustionGeneratorRecipeCategory(
+                registration.getJeiHelpers().getGuiHelper()));
     }
 
     @Override
@@ -42,17 +47,29 @@ public class JEIHGtotomatoPlugin implements IModPlugin {
                 .getAllRecipesFor(ModRecipes.PRESENT_TYPE.get()).stream().map(RecipeHolder::value).toList();
 
         registration.addRecipes(PresentRecipeCategory.PRESENT_RECIPE_RECIPE_TYPE, presentRecipes);
+
+        List<CombustionGeneratorRecipe> combustionGeneratorRecipes = recipeManager
+                .getAllRecipesFor(ModRecipes.COMBUSTION_GENERATOR_TYPE.get()).stream().map(RecipeHolder::value).toList();
+
+        registration.addRecipes(CombustionGeneratorRecipeCategory.COMBUSTION_GENERATOR_RECIPE_RECIPE_TYPE, combustionGeneratorRecipes);
+
     }
 
     @Override
     public void registerGuiHandlers(IGuiHandlerRegistration registration) {
         registration.addRecipeClickArea(PresentScreen.class, 70, 30, 25, 20,
                 PresentRecipeCategory.PRESENT_RECIPE_RECIPE_TYPE);
+
+        registration.addRecipeClickArea(CombustionGeneratorScreen.class, 50, 35, 25, 20,
+                CombustionGeneratorRecipeCategory.COMBUSTION_GENERATOR_RECIPE_RECIPE_TYPE);
     }
 
     @Override
     public void registerRecipeCatalysts(IRecipeCatalystRegistration registration) {
         registration.addRecipeCatalyst(new ItemStack(ModBlocks.PRESENT.get().asItem()),
                 PresentRecipeCategory.PRESENT_RECIPE_RECIPE_TYPE);
+
+        registration.addRecipeCatalyst(new ItemStack(ModBlocks.COMBUSTION_GENERATOR.get().asItem()),
+                CombustionGeneratorRecipeCategory.COMBUSTION_GENERATOR_RECIPE_RECIPE_TYPE);
     }
 }

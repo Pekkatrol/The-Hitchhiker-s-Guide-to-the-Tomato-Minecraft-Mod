@@ -32,12 +32,14 @@ import net.pekkatrol.hg2t.entity.client.EnergizedGolemRenderer;
 import net.pekkatrol.hg2t.item.ModCreativeModeTabs;
 import net.pekkatrol.hg2t.item.ModItems;
 import net.pekkatrol.hg2t.loot.ModLootModifiers;
+import net.pekkatrol.hg2t.networking.ModMessages;
 import net.pekkatrol.hg2t.particle.EnergizedParticles;
 import net.pekkatrol.hg2t.particle.ModParticles;
 import net.pekkatrol.hg2t.potion.ModPotions;
 import net.pekkatrol.hg2t.recipe.ModRecipes;
 import net.pekkatrol.hg2t.screen.ModMenuTypes;
 import net.pekkatrol.hg2t.screen.custom.CardboardScreen;
+import net.pekkatrol.hg2t.screen.custom.CombustionGeneratorScreen;
 import net.pekkatrol.hg2t.screen.custom.PresentScreen;
 import org.slf4j.Logger;
 
@@ -76,6 +78,9 @@ public class HG2Tomato
         ModParticles.register(modEventBus);
 
         ModLootModifiers.register(modEventBus);
+
+        ModMessages.register();
+
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -118,6 +123,7 @@ public class HG2Tomato
         {
             MenuScreens.register(ModMenuTypes.PRESENT_MENU.get(), PresentScreen::new);
             MenuScreens.register(ModMenuTypes.CARDBOARD_MENU.get(), CardboardScreen::new);
+            MenuScreens.register(ModMenuTypes.COMBUSTION_GENERATOR_MENU.get(), CombustionGeneratorScreen::new);
 
             EntityRenderers.register(ModEntities.ENERGIZED_GOLEM.get(), EnergizedGolemRenderer::new);
 

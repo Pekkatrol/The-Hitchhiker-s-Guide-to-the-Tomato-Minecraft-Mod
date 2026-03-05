@@ -27,6 +27,17 @@ public class ModRecipes {
                 }
             });
 
+    public static final RegistryObject<RecipeSerializer<CombustionGeneratorRecipe>> COMBUSTION_GENERATOR_SERIALIZER =
+            SERIALIZERS.register("combustion_generator", CombustionGeneratorRecipe.Serializer::new);
+
+    public static final RegistryObject<RecipeType<CombustionGeneratorRecipe>> COMBUSTION_GENERATOR_TYPE =
+            TYPES.register("combustion_generator", () -> new RecipeType<CombustionGeneratorRecipe>() {
+                @Override
+                public String toString() {
+                    return "combustion_generator";
+                }
+            });
+
     public static void register(IEventBus eventBus) {
         SERIALIZERS.register(eventBus);
         TYPES.register(eventBus);

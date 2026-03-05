@@ -9,12 +9,17 @@ import net.minecraftforge.registries.RegistryObject;
 import net.pekkatrol.hg2t.HG2Tomato;
 import net.pekkatrol.hg2t.block.ModBlocks;
 import net.pekkatrol.hg2t.block.entity.custom.CardboardBlockEntity;
+import net.pekkatrol.hg2t.block.entity.custom.CombustionGeneratorBlockEntity;
 import net.pekkatrol.hg2t.block.entity.custom.PresentBlockEntity;
 
 public class ModBlockEntities {
 
     public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES =
             DeferredRegister.create(ForgeRegistries.BLOCK_ENTITY_TYPES, HG2Tomato.MOD_ID);
+
+    public static final RegistryObject<BlockEntityType<CombustionGeneratorBlockEntity>> COMBUSTION_GENERATOR_BE =
+            BLOCK_ENTITIES.register("combustion_generator_be", () -> BlockEntityType.Builder.of(
+                    CombustionGeneratorBlockEntity::new, ModBlocks.COMBUSTION_GENERATOR.get()).build(null));
 
     public static final RegistryObject<BlockEntityType<PresentBlockEntity>> PRESENT_BE =
             BLOCK_ENTITIES.register("present_be", () -> BlockEntityType.Builder.of(

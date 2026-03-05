@@ -61,6 +61,8 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.CHAIR.get());
         dropSelf(ModBlocks.TABLE.get());
 
+        dropSelf(ModBlocks.COMBUSTION_GENERATOR.get());
+
         dropSelf(ModBlocks.DUNGEON_BRICKS.get());
         dropSelf(ModBlocks.DUNGEON_BRICKS_SLAB.get());
         dropSelf(ModBlocks.DUNGEON_BRICKS_WALL.get());

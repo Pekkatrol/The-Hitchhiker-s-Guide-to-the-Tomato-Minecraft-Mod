@@ -38,6 +38,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.SOLANUM.get());
         basicItem(ModItems.GLASS_SHARDS.get());
         basicItem(ModItems.SPAWNER_FRAGMENT.get());
+        basicItem(ModItems.ASH.get());
 
         buttonItem(ModBlocks.LUMIR_BUTTON, ModBlocks.LUMIR_PLANKS);
         fenceItem(ModBlocks.LUMIR_FENCE, ModBlocks.LUMIR_PLANKS);
