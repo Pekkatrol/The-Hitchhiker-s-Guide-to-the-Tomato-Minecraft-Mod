@@ -1,0 +1,10 @@
+{
+  "type": "hgtotomato:combustion_generator",
+  "ingredient": {
+    "item": "hgtotomato:compact_log"
+  },
+  "result": {
+    "id": "hgtotomato:ash",
+    "count": 3
+  }
+}

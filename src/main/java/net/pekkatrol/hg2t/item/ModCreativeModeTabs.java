@@ -37,6 +37,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.SOLANUM.get());
                         output.accept(ModItems.GLASS_SHARDS.get());
                         output.accept(ModItems.SPAWNER_FRAGMENT.get());
+                        output.accept(ModItems.ASH.get());
                     })
                     .build());
 
@@ -77,6 +78,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.DUNGEON_BRICKS_SLAB.get());
                         output.accept(ModBlocks.DUNGEON_BRICKS_WALL.get());
                         output.accept(ModBlocks.DUNGEON_BRICKS_STAIR.get());
+                        output.accept(ModBlocks.COMBUSTION_GENERATOR.get());
                     })
                     .build());
 

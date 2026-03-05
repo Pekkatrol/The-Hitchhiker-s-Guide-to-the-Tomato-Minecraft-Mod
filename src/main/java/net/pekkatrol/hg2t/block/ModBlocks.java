@@ -66,6 +66,11 @@ public class ModBlocks {
                     .strength(2f, 3f)
                     .sound(SoundType.WOOD)));
 
+    public static final RegistryObject<Block> COMBUSTION_GENERATOR = registerBlock("combustion_generator",
+            () -> new CombustionGeneratorBlock(BlockBehaviour.Properties.of()
+                    .strength(2f, 3f)
+                    .sound(SoundType.BASALT)));
+
     public static final RegistryObject<Block> PRESENT = registerBlock("present",
             () -> new PresentBlock(BlockBehaviour.Properties.of()
                     .strength(2f, 3f)

@@ -18,6 +18,7 @@
   "item.hgtotomato.solanum": "Solanum",
   "item.hgtotomato.glass_shards": "Glass shards",
   "item.hgtotomato.spawner_fragment": "Spawner fragment",
+  "item.hgtotomato.ash": "Ash",
 
   "block.hgtotomato.marvin": "Marvin Head",
   "block.hgtotomato.chair": "Chair",
@@ -51,6 +52,7 @@
   "block.hgtotomato.dungeon_bricks_slab": "Dungeon Bricks Slab",
   "block.hgtotomato.dungeon_bricks_stair": "Dungeon Bricks Stair",
   "block.hgtotomato.dungeon_bricks_wall": "Dungeon Bricks Wall",
+  "block.hgtotomato.combustion_generator": "Combustion generator",
 
   "block.hgtotomato.tomato_crop": "Tomato crop",
   "block.hgtotomato.almond_bush": "Almond bush",

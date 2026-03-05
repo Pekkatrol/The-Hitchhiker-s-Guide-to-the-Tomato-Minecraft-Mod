@@ -1,8 +1,9 @@
-// 1.21	2026-02-28T17:41:24.133944	Loot Tables
+// 1.21	2026-03-04T18:29:22.0845206	Loot Tables
 a1b5ba8f69192677811a7e33484a9fea94a05552 data/hgtotomato/loot_table/blocks/almond_bush.json
 8a1ccd8fddfa655716ae4044fe2b028fddcd4010 data/hgtotomato/loot_table/blocks/black_sand.json
 7f59b586e05583cf8fee491b79f42cd2f5791d05 data/hgtotomato/loot_table/blocks/card_box.json
 3e4780964eee9029f3212b71478794165d5b0bc3 data/hgtotomato/loot_table/blocks/chair.json
+01bf31e04dc4ba5dd61fb72fb356cf7d09e98d89 data/hgtotomato/loot_table/blocks/combustion_generator.json
 5dad7346167723796cb4a76a097bdcf91a210d06 data/hgtotomato/loot_table/blocks/dungeon_bricks.json
 7bc5fac33d6bf7b97c0be25aed93583772127bdd data/hgtotomato/loot_table/blocks/dungeon_bricks_chisel.json
 31cd294527fc2532a4d2fe28aaa6742ac68507b2 data/hgtotomato/loot_table/blocks/dungeon_bricks_creeper.json
