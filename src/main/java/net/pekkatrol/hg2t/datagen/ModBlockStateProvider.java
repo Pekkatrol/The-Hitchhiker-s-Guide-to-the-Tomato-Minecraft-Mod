@@ -35,6 +35,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.NICKEL_BLOCK);
         blockWithItem(ModBlocks.NICKEL_ORE);
 
+        blockWithItem(ModBlocks.TOMATITE_BLOCK);
+        blockWithItem(ModBlocks.TOMATITE_CASING);
+
         blockWithItem(ModBlocks.CORE_ALTAR);
         blockWithItem(ModBlocks.DUNGEON_BRICKS);
 

@@ -125,6 +125,33 @@ public class ModItems {
     public static final RegistryObject<Item> ASH = ITEMS.register("ash",
             () -> new Item(new Item.Properties()));
 
+    public static final RegistryObject<Item> TOMATITE = ITEMS.register("tomatite",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> TOMATITE_NUGGET = ITEMS.register("tomatite_nugget",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> TOMATITE_CHIP = ITEMS.register("tomatite_chip",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> TOMATITE_BATTERY = ITEMS.register("tomatite_battery",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> TOMATITE_STICK = ITEMS.register("tomatite_stick",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> TOMATITE_PLATE = ITEMS.register("tomatite_plate",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> TOMATITE_GEAR = ITEMS.register("tomatite_gear",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> TOMATITE_TRANSISTOR = ITEMS.register("tomatite_transistor",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> ENERGY_PIPE = ITEMS.register("energy_pipe",
+            () -> new BlockItem(ModBlocks.ENERGY_PIPE.get(), new Item.Properties()));
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }

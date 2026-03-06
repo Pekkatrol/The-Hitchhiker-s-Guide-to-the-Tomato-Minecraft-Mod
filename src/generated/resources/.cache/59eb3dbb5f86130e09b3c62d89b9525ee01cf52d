@@ -1,4 +1,4 @@
-// 1.21	2026-03-04T18:29:22.0845206	Loot Tables
+// 1.21	2026-03-06T20:38:34.8156095	Loot Tables
 a1b5ba8f69192677811a7e33484a9fea94a05552 data/hgtotomato/loot_table/blocks/almond_bush.json
 8a1ccd8fddfa655716ae4044fe2b028fddcd4010 data/hgtotomato/loot_table/blocks/black_sand.json
 7f59b586e05583cf8fee491b79f42cd2f5791d05 data/hgtotomato/loot_table/blocks/card_box.json
@@ -10,6 +10,7 @@ a1b5ba8f69192677811a7e33484a9fea94a05552 data/hgtotomato/loot_table/blocks/almon
 5fbb7e02e588dfab13299ce7e5e3cd527c94b16b data/hgtotomato/loot_table/blocks/dungeon_bricks_slab.json
 e64be93d3407b825e2d44badb8ef8ea4d01224b7 data/hgtotomato/loot_table/blocks/dungeon_bricks_stair.json
 562b964196fd1dffedab2a8873f7affe21657192 data/hgtotomato/loot_table/blocks/dungeon_bricks_wall.json
+aff4d40adaef1ca79654c3a3aec6ca7b08526fe8 data/hgtotomato/loot_table/blocks/energy_pipe.json
 6fcca8d092770b72f34882f29917e251b3945b2c data/hgtotomato/loot_table/blocks/lumir_button.json
 5f6790d2cd5f0b219c1d72c169a375dd276c17f5 data/hgtotomato/loot_table/blocks/lumir_door.json
 bf9f41699a4ec10503996d7aed62b08bd7709d49 data/hgtotomato/loot_table/blocks/lumir_fence.json
@@ -32,4 +33,6 @@ cbbe70e40fd98d5932d4000128829a88f5b9977b data/hgtotomato/loot_table/blocks/nicke
 769a4c61aef60376c9ba8fd692f07bfdf7486a7a data/hgtotomato/loot_table/blocks/present.json
 f09d2b1ed4e2363f6bea19f678444337a75b0866 data/hgtotomato/loot_table/blocks/stripped_lumir_log.json
 62f5403d48b32fb0ebc631205a61b12428d8284f data/hgtotomato/loot_table/blocks/table.json
+737b89e433a6245bd26473b008ac386b5e682844 data/hgtotomato/loot_table/blocks/tomatite_block.json
+bb1421ac7a2b6aef1561fd9789afde3ecd24e4fe data/hgtotomato/loot_table/blocks/tomatite_casing.json
 bf4e63f1024892c337e8f72de87e996d4dfeec94 data/hgtotomato/loot_table/blocks/tomato_crop.json

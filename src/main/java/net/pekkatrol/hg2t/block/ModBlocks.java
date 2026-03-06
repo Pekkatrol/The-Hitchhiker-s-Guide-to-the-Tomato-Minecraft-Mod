@@ -252,6 +252,16 @@ public class ModBlocks {
                     BlockBehaviour.Properties.ofFullCopy(ModBlocks.DUNGEON_BRICKS.get()))
     );
 
+    public static final RegistryObject<Block> TOMATITE_BLOCK = registerBlock("tomatite_block",
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LAPIS_BLOCK)));
+
+    public static final RegistryObject<Block> TOMATITE_CASING = registerBlock("tomatite_casing",
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LAPIS_BLOCK)));
+
+    public static final RegistryObject<Block> ENERGY_PIPE = BLOCKS.register("energy_pipe",
+            () -> new EnergyPipeBlock(BlockBehaviour.Properties.of()
+                    .strength(1.0f)
+                    .noOcclusion()));
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {

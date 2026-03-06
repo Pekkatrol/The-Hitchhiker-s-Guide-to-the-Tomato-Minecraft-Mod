@@ -1,4 +1,4 @@
-// 1.21	2026-03-02T10:24:09.8666284	Block States: hgtotomato
+// 1.21	2026-03-06T19:39:34.2646461	Block States: hgtotomato
 021185ca960338b2b7630efab8c620f5f7da3069 assets/hgtotomato/blockstates/almond_bush.json
 67369ed8234e1f3fcf50e9e043358a565aba91f1 assets/hgtotomato/blockstates/black_sand.json
 7fb0541b753f9d109775ed70ced8d6801ec02697 assets/hgtotomato/blockstates/core_altar.json
@@ -24,6 +24,8 @@ ece4991be247d352f91224fd42300e1680fc42af assets/hgtotomato/blockstates/marble_bl
 68eddb7445baa5e85691bbf9609dd009a2713301 assets/hgtotomato/blockstates/nickel_block.json
 1a221eb6c3075225e2e5aeaf3ab03eb2c7359e50 assets/hgtotomato/blockstates/nickel_ore.json
 7e0db612f074a2fe6dd1666b3cf9cd6d0d22451e assets/hgtotomato/blockstates/stripped_lumir_log.json
+f09504a54e39f6e46bc9a37b4516078d778d4f3f assets/hgtotomato/blockstates/tomatite_block.json
+d60930557a4dffcbf08101e46074cd3a4f07fb88 assets/hgtotomato/blockstates/tomatite_casing.json
 8b6a6851ee03fa9c160e50fa9fdd0fa1b137d464 assets/hgtotomato/blockstates/tomato_crop.json
 a62bf06f77f5f2b706e0f0c0c44162cf26a4a073 assets/hgtotomato/models/block/almond_bush_stage0.json
 57e47ad416823ffdcdf7c8c9daca4f9791936259 assets/hgtotomato/models/block/almond_bush_stage1.json
@@ -80,6 +82,8 @@ fd498eed07876944460a26d90cb073b33000b2a8 assets/hgtotomato/models/block/marble_w
 b4f8ebdcc3c06f6d3b1158538d055ba873697e83 assets/hgtotomato/models/block/nickel_ore.json
 4aeff8c781e563fdb1945b5cb446d934f874b4b7 assets/hgtotomato/models/block/stripped_lumir_log.json
 8843ee59104930fb3284bc9531e99680397c65f8 assets/hgtotomato/models/block/stripped_lumir_log_horizontal.json
+960b6d2f3fd6a2e1181c48bee17716b29f9d2480 assets/hgtotomato/models/block/tomatite_block.json
+8344fc779b7d4fe167a95d556f3c31942c5d805e assets/hgtotomato/models/block/tomatite_casing.json
 5bf8888ec8ddeff6a28938a2892cc6fa1fb509b3 assets/hgtotomato/models/block/tomato_crop_stage0.json
 9cbd17ddde6e0ebe0f3b85a88e87df8256ee1c20 assets/hgtotomato/models/block/tomato_crop_stage1.json
 bad7fcde1c466c1cb47a4378e6a8dfe7cec34c83 assets/hgtotomato/models/block/tomato_crop_stage2.json
@@ -102,3 +106,5 @@ ef7eb03f249826f15b3b17b9dcf29fd939dcbd36 assets/hgtotomato/models/item/lumir_lea
 db7704c8a06a38f449e83b6752f40f9d6cae53da assets/hgtotomato/models/item/nickel_block.json
 fe6a251956e7ec90182681d5eb0b3bdb2fc2d93e assets/hgtotomato/models/item/nickel_ore.json
 5b5a8abc7ca96c3d2a0eb210a96cab5bee7618ac assets/hgtotomato/models/item/stripped_lumir_log.json
+dd348617630c30a1cef72844264652f274e5958a assets/hgtotomato/models/item/tomatite_block.json
+14d4fa5c8655da9c1ece59b3cf32cd3fa1a20ce3 assets/hgtotomato/models/item/tomatite_casing.json

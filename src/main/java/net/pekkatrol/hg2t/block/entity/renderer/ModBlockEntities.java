@@ -10,6 +10,7 @@ import net.pekkatrol.hg2t.HG2Tomato;
 import net.pekkatrol.hg2t.block.ModBlocks;
 import net.pekkatrol.hg2t.block.entity.custom.CardboardBlockEntity;
 import net.pekkatrol.hg2t.block.entity.custom.CombustionGeneratorBlockEntity;
+import net.pekkatrol.hg2t.block.entity.custom.EnergyPipeBlockEntity;
 import net.pekkatrol.hg2t.block.entity.custom.PresentBlockEntity;
 
 public class ModBlockEntities {
@@ -20,6 +21,10 @@ public class ModBlockEntities {
     public static final RegistryObject<BlockEntityType<CombustionGeneratorBlockEntity>> COMBUSTION_GENERATOR_BE =
             BLOCK_ENTITIES.register("combustion_generator_be", () -> BlockEntityType.Builder.of(
                     CombustionGeneratorBlockEntity::new, ModBlocks.COMBUSTION_GENERATOR.get()).build(null));
+
+    public static final RegistryObject<BlockEntityType<EnergyPipeBlockEntity>> ENERGY_PIPE_BE =
+            BLOCK_ENTITIES.register("energy_pipe_be", () -> BlockEntityType.Builder.of(
+                    EnergyPipeBlockEntity::new, ModBlocks.COMBUSTION_GENERATOR.get()).build(null));
 
     public static final RegistryObject<BlockEntityType<PresentBlockEntity>> PRESENT_BE =
             BLOCK_ENTITIES.register("present_be", () -> BlockEntityType.Builder.of(

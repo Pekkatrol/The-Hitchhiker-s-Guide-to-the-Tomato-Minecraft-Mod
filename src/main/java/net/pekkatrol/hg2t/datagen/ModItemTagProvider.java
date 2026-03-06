@@ -22,8 +22,7 @@ public class ModItemTagProvider extends ItemTagsProvider {
     @Override
     protected void addTags(HolderLookup.Provider pProvider) {
         tag(ItemTags.LOGS_THAT_BURN)
-                .add(ModBlocks.LUMIR_LOG.get().asItem())
-                .add(ModBlocks.STRIPPED_LUMIR_LOG.get().asItem());
+                .add(ModBlocks.LUMIR_LOG.get().asItem());
 
         tag(ItemTags.PLANKS)
                 .add(ModBlocks.LUMIR_PLANKS.get().asItem());

@@ -192,6 +192,123 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModItems.GLASS_SHARDS.get()), has(ModItems.GLASS_SHARDS.get()))
                 .save(pRecipeOutput, HG2Tomato.MOD_ID + ":glass_from_glass_shard");
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.TOMATITE_NUGGET.get())
+                .pattern("AB")
+                .pattern("CD")
+                .define('A', ModItems.GLASS_SHARDS.get())
+                .define('B', ModItems.ASH.get())
+                .define('C', Items.LAPIS_LAZULI)
+                .define('D', ModItems.TOMATO.get())
+                .unlockedBy(getHasName(ModItems.GLASS_SHARDS.get()), has(ModItems.GLASS_SHARDS.get()))
+                .save(pRecipeOutput, HG2Tomato.MOD_ID + ":tomatite_from_craft");
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.TOMATITE_BLOCK.get())
+                .pattern("AAA")
+                .pattern("AAA")
+                .pattern("AAA")
+                .define('A', ModItems.TOMATITE.get())
+                .unlockedBy(getHasName(ModItems.TOMATITE.get()), has(ModItems.TOMATITE.get()))
+                .save(pRecipeOutput, HG2Tomato.MOD_ID + ":tomatite_block_from_tomatite");
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.TOMATITE.get())
+                .pattern("AAA")
+                .pattern("AAA")
+                .pattern("AAA")
+                .define('A', ModItems.TOMATITE_NUGGET.get())
+                .unlockedBy(getHasName(ModItems.TOMATITE_NUGGET.get()), has(ModItems.TOMATITE_NUGGET.get()))
+                .save(pRecipeOutput, HG2Tomato.MOD_ID + ":tomatite_from_tomatite_nugget");
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.TOMATITE_NUGGET.get(), 9)
+                .requires(ModItems.TOMATITE.get())
+                .unlockedBy(getHasName(ModItems.TOMATITE.get()), has(ModItems.TOMATITE.get()))
+                .save(pRecipeOutput, HG2Tomato.MOD_ID + ":tomatite_nugget_from_tomatite");
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.TOMATITE.get(), 9)
+                .requires(ModBlocks.TOMATITE_BLOCK.get())
+                .unlockedBy(getHasName(ModBlocks.TOMATITE_BLOCK.get()), has(ModBlocks.TOMATITE_BLOCK.get()))
+                .save(pRecipeOutput, HG2Tomato.MOD_ID + ":tomatite_from_tomatite_block");
+
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.TOMATITE_GEAR.get())
+                .pattern(" B ")
+                .pattern("BAB")
+                .pattern(" B ")
+                .define('A', ModItems.TOMATITE_NUGGET.get())
+                .define('B', ModItems.TOMATITE.get())
+                .unlockedBy(getHasName(ModItems.TOMATITE.get()), has(ModItems.TOMATITE.get()))
+                .save(pRecipeOutput, HG2Tomato.MOD_ID + ":tomatite_gear_from_tomatite");
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.TOMATITE_PLATE.get())
+                .pattern("AA")
+                .define('A', ModItems.TOMATITE.get())
+                .unlockedBy(getHasName(ModItems.TOMATITE.get()), has(ModItems.TOMATITE.get()))
+                .save(pRecipeOutput, HG2Tomato.MOD_ID + ":tomatite_plate_from_tomatite");
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.TOMATITE_STICK.get())
+                .pattern("A")
+                .pattern("A")
+                .define('A', ModItems.TOMATITE.get())
+                .unlockedBy(getHasName(ModItems.TOMATITE.get()), has(ModItems.TOMATITE.get()))
+                .save(pRecipeOutput, HG2Tomato.MOD_ID + ":tomatite_stick_from_tomatite");
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.TOMATITE_CASING.get())
+                .pattern("CBC")
+                .pattern("BAB")
+                .pattern("CBC")
+                .define('A', ModItems.SPAWNER_FRAGMENT.get())
+                .define('B', ModItems.TOMATITE.get())
+                .define('C', ModItems.TOMATITE_PLATE.get())
+                .unlockedBy(getHasName(ModItems.SPAWNER_FRAGMENT.get()), has(ModItems.SPAWNER_FRAGMENT.get()))
+                .save(pRecipeOutput, HG2Tomato.MOD_ID + ":tomatite_casing_from_spawner_fragment");
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.TOMATITE_BATTERY.get())
+                .pattern("BAB")
+                .pattern("BAB")
+                .pattern("BAB")
+                .define('A', Items.REDSTONE_BLOCK)
+                .define('B', ModItems.TOMATITE_PLATE.get())
+                .unlockedBy(getHasName(ModItems.TOMATITE_PLATE.get()), has(ModItems.TOMATITE_PLATE.get()))
+                .save(pRecipeOutput, HG2Tomato.MOD_ID + ":tomatite_battery_from_tomatite_plate");
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.TOMATITE_TRANSISTOR.get())
+                .pattern("BBB")
+                .pattern("AAA")
+                .pattern("BBB")
+                .define('A', Items.GLOWSTONE)
+                .define('B', ModItems.TOMATITE_PLATE.get())
+                .unlockedBy(getHasName(ModItems.TOMATITE_PLATE.get()), has(ModItems.TOMATITE_PLATE.get()))
+                .save(pRecipeOutput, HG2Tomato.MOD_ID + ":tomatite_transistor_from_tomatite_plate");
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.ENERGY_PIPE.get())
+                .pattern("BBB")
+                .pattern("AAA")
+                .pattern("BBB")
+                .define('A', ModItems.NICKEL_INGOT.get())
+                .define('B', ModItems.TOMATITE_PLATE.get())
+                .unlockedBy(getHasName(ModItems.TOMATITE_PLATE.get()), has(ModItems.TOMATITE_PLATE.get()))
+                .save(pRecipeOutput, HG2Tomato.MOD_ID + ":energy_pipe_from_tomatite_plate");
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.TOMATITE_CHIP.get())
+                .pattern("BAB")
+                .pattern("CCC")
+                .pattern("BAB")
+                .define('A', Items.QUARTZ_BLOCK)
+                .define('B', ModItems.TOMATITE_TRANSISTOR.get())
+                .define('C', ModItems.TOMATITE_PLATE.get())
+                .unlockedBy(getHasName(ModItems.TOMATITE_TRANSISTOR.get()), has(ModItems.TOMATITE_TRANSISTOR.get()))
+                .save(pRecipeOutput, HG2Tomato.MOD_ID + ":tomatite_chip_from_tomatite_transistor");
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.COMBUSTION_GENERATOR.get())
+                .pattern("BCB")
+                .pattern("BDB")
+                .pattern("BAB")
+                .define('A', ModBlocks.TOMATITE_CASING.get())
+                .define('B', Items.IRON_BARS)
+                .define('C', ModItems.TOMATITE_BATTERY.get())
+                .define('D', Items.FURNACE)
+                .unlockedBy(getHasName(ModBlocks.TOMATITE_CASING.get()), has(ModBlocks.TOMATITE_CASING.get()))
+                .save(pRecipeOutput, HG2Tomato.MOD_ID + ":combustion_generator_from_tomatite_casing");
+
 
 
         oreSmelting(pRecipeOutput, NICKEL_SMELTABLES, RecipeCategory.MISC, ModItems.NICKEL_INGOT.get(), 0.25f, 200, "nickel");

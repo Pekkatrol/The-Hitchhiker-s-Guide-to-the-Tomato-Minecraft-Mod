@@ -38,6 +38,15 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.GLASS_SHARDS.get());
                         output.accept(ModItems.SPAWNER_FRAGMENT.get());
                         output.accept(ModItems.ASH.get());
+                        output.accept(ModItems.TOMATITE_NUGGET.get());
+                        output.accept(ModItems.TOMATITE.get());
+                        output.accept(ModItems.TOMATITE_CHIP.get());
+                        output.accept(ModItems.TOMATITE_BATTERY.get());
+                        output.accept(ModItems.TOMATITE_STICK.get());
+                        output.accept(ModItems.TOMATITE_PLATE.get());
+                        output.accept(ModItems.TOMATITE_GEAR.get());
+                        output.accept(ModItems.TOMATITE_TRANSISTOR.get());
+
                     })
                     .build());
 
@@ -78,7 +87,10 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.DUNGEON_BRICKS_SLAB.get());
                         output.accept(ModBlocks.DUNGEON_BRICKS_WALL.get());
                         output.accept(ModBlocks.DUNGEON_BRICKS_STAIR.get());
+                        output.accept(ModBlocks.TOMATITE_BLOCK.get());
+                        output.accept(ModBlocks.TOMATITE_CASING.get());
                         output.accept(ModBlocks.COMBUSTION_GENERATOR.get());
+                        output.accept(ModBlocks.ENERGY_PIPE.get());
                     })
                     .build());
 
