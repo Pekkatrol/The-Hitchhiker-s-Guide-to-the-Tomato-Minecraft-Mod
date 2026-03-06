@@ -1,4 +1,4 @@
-// 1.21	2026-03-05T13:16:55.7862926	Item Models: hgtotomato
+// 1.21	2026-03-06T07:57:50.6281671	Item Models: hgtotomato
 92ff5188e3f4313d31061e97ba6c657fbf22e207 assets/hgtotomato/models/item/almond.json
 e0843374548767be827710a4a35af5614c65ffab assets/hgtotomato/models/item/ash.json
 6da5ee8bef178deceb045dda141d1c2943899098 assets/hgtotomato/models/item/banana.json
@@ -20,6 +20,14 @@ a9f0f56fda6c7f0dc5d124d56888edd8f6e34650 assets/hgtotomato/models/item/nookia.js
 496edc781e209efbd1cf49d5820db9e4bd829f4f assets/hgtotomato/models/item/raw_nickel.json
 a60fabb143e1d8ac4af6b158425927ccde53bd2c assets/hgtotomato/models/item/solanum.json
 8b5d687f2cba6f96be519820be0c4e51d66d1ab4 assets/hgtotomato/models/item/spawner_fragment.json
+935ad7d225b346704237cbd60c44b486c0482208 assets/hgtotomato/models/item/tomatite.json
+e57705fdb26d6530919dbc0817160753fe5836e1 assets/hgtotomato/models/item/tomatite_battery.json
+f9635fc48f30cd3f8b037c67a1bfcf4b402cdbcf assets/hgtotomato/models/item/tomatite_chip.json
+abbe2aca17f72db462da763c73ce979dcf4356c3 assets/hgtotomato/models/item/tomatite_gear.json
+43b5fe5caf8aa3964b59f71bd23dd51957c78812 assets/hgtotomato/models/item/tomatite_nugget.json
+27348a2eaaf4f263a857f5c87011978757465a84 assets/hgtotomato/models/item/tomatite_plate.json
+9e7447199ad467049866df4853adff2625ede06f assets/hgtotomato/models/item/tomatite_stick.json
+3889ff0c1ce456469c36e6cb51feb46a96a67bb2 assets/hgtotomato/models/item/tomatite_transistor.json
 68db3934b51567887ab706136aa5095bb44fa3e8 assets/hgtotomato/models/item/tomato.json
 6d5b0ba60dbbebef48cb82ac66f8c807cd34dfcc assets/hgtotomato/models/item/tomato_pouch.json
 03511334b401973c3f7bd78c7fb00d4f13113b8f assets/hgtotomato/models/item/tomato_seeds.json

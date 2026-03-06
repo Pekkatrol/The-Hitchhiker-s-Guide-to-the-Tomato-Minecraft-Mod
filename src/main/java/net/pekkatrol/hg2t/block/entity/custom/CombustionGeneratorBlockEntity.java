@@ -56,30 +56,32 @@ public class CombustionGeneratorBlockEntity extends BlockEntity implements MenuP
 
     private static final int INPUT_SLOT = 0;
     private static final int OUTPUT_SLOT = 1;
-
     private static final int CAPACITY = 60000;
+    private static final int ENERGY_PRODUCED = 30;
 
     private final ModEnergyStorage ENERGY_STORAGE = new ModEnergyStorage(CAPACITY, 250) {
         @Override
         public void onEnergyChanged() {
             setChanged();
         }
-        @Override
-        public boolean canReceive() {
-            return false;
-        }
     };
 
-    private LazyOptional<IEnergyStorage> lazyEnergyHanlder = LazyOptional.empty();
+    // Wrapper output-only exposé aux blocs externes
+    private final IEnergyStorage outputOnlyStorage = new IEnergyStorage() {
+        @Override public int receiveEnergy(int maxReceive, boolean simulate) { return 0; }
+        @Override public int extractEnergy(int maxExtract, boolean simulate) { return ENERGY_STORAGE.extractEnergy(maxExtract, simulate); }
+        @Override public int getEnergyStored() { return ENERGY_STORAGE.getEnergyStored(); }
+        @Override public int getMaxEnergyStored() { return ENERGY_STORAGE.getMaxEnergyStored(); }
+        @Override public boolean canExtract() { return true; }
+        @Override public boolean canReceive() { return false; }
+    };
 
+    private LazyOptional<IEnergyStorage> lazyEnergyHandler = LazyOptional.of(() -> outputOnlyStorage);
     private LazyOptional<IItemHandler> lazyItemHandler = LazyOptional.empty();
 
     protected final ContainerData data;
     private int progress = 0;
-    private int maxProgress = 256;
-
-
-    private static final int ENERGY_PRODUCED = 30;
+    private int maxProgress = 72;
     private int energyThisCraft = 0;
 
     public void tick(Level level, BlockPos blockPos, BlockState blockState) {
@@ -105,6 +107,7 @@ public class CombustionGeneratorBlockEntity extends BlockEntity implements MenuP
             }
             resetProgress();
         }
+
         if (!level.isClientSide()) {
             ModMessages.sentToClients(new EnergySyncS2CPacket(this.ENERGY_STORAGE.getEnergyStored(), getBlockPos()));
         }
@@ -141,14 +144,14 @@ public class CombustionGeneratorBlockEntity extends BlockEntity implements MenuP
     public void onLoad() {
         super.onLoad();
         lazyItemHandler = LazyOptional.of(() -> itemHandler);
-        lazyEnergyHanlder = LazyOptional.of(() -> ENERGY_STORAGE);
+        lazyEnergyHandler = LazyOptional.of(() -> outputOnlyStorage);
     }
 
     @Override
     public void invalidateCaps() {
         super.invalidateCaps();
         lazyItemHandler.invalidate();
-        lazyEnergyHanlder.invalidate();
+        lazyEnergyHandler.invalidate();
     }
 
     public void drops() {
@@ -171,11 +174,10 @@ public class CombustionGeneratorBlockEntity extends BlockEntity implements MenuP
     @Override
     protected void loadAdditional(CompoundTag pTag, HolderLookup.Provider pRegistries) {
         super.loadAdditional(pTag, pRegistries);
-
         itemHandler.deserializeNBT(pRegistries, pTag.getCompound("inventory"));
         progress = pTag.getInt("combustion_generator.progress");
         maxProgress = pTag.getInt("combustion_generator.maxProgress");
-        ENERGY_STORAGE.setEnergy(pTag.getInt("combustion_generator.energy"));
+        ENERGY_STORAGE.setEnergyDirect(pTag.getInt("combustion_generator.energy"));
     }
 
     @Override
@@ -217,18 +219,15 @@ public class CombustionGeneratorBlockEntity extends BlockEntity implements MenuP
 
     private boolean hasRecipe() {
         Optional<RecipeHolder<CombustionGeneratorRecipe>> recipe = getCurrentRecipe();
-
-        if (recipe.isEmpty()) {
-            return false;
-        }
-
+        if (recipe.isEmpty()) return false;
         ItemStack output = recipe.get().value().output();
         return canInsertIntoOutputSlot(output) && canInsertItemAmountIntoOutputSlot(output.getCount());
     }
 
     private Optional<RecipeHolder<CombustionGeneratorRecipe>> getCurrentRecipe() {
         return this.level.getRecipeManager()
-                .getRecipeFor(ModRecipes.COMBUSTION_GENERATOR_TYPE.get(), new CombustionGeneratorRecipeInput(itemHandler.getStackInSlot(INPUT_SLOT)), level);
+                .getRecipeFor(ModRecipes.COMBUSTION_GENERATOR_TYPE.get(),
+                        new CombustionGeneratorRecipeInput(itemHandler.getStackInSlot(INPUT_SLOT)), level);
     }
 
     private boolean canInsertIntoOutputSlot(ItemStack output) {
@@ -237,7 +236,8 @@ public class CombustionGeneratorBlockEntity extends BlockEntity implements MenuP
     }
 
     private boolean canInsertItemAmountIntoOutputSlot(int count) {
-        int maxCount = itemHandler.getStackInSlot(OUTPUT_SLOT).isEmpty() ? 64 : itemHandler.getStackInSlot(OUTPUT_SLOT).getMaxStackSize();
+        int maxCount = itemHandler.getStackInSlot(OUTPUT_SLOT).isEmpty() ? 64 :
+                itemHandler.getStackInSlot(OUTPUT_SLOT).getMaxStackSize();
         int currentCount = itemHandler.getStackInSlot(OUTPUT_SLOT).getCount();
         return maxCount >= currentCount + count;
     }
@@ -263,7 +263,7 @@ public class CombustionGeneratorBlockEntity extends BlockEntity implements MenuP
     }
 
     @Override
-    public @NotNull <T> LazyOptional<T> getCapability(@NotNull Capability<T> cap, @org.checkerframework.checker.nullness.qual.Nullable Direction side) {
+    public @NotNull <T> LazyOptional<T> getCapability(@NotNull Capability<T> cap, @Nullable Direction side) {
         if (cap == ForgeCapabilities.ITEM_HANDLER) {
             if (side == Direction.UP) {
                 return LazyOptional.of(() -> new RangedWrapper(itemHandler, INPUT_SLOT, INPUT_SLOT + 1)).cast();
@@ -273,7 +273,7 @@ public class CombustionGeneratorBlockEntity extends BlockEntity implements MenuP
         }
 
         if (cap == ForgeCapabilities.ENERGY) {
-            return lazyEnergyHanlder.cast();
+            return lazyEnergyHandler.cast();
         }
 
         return super.getCapability(cap, side);

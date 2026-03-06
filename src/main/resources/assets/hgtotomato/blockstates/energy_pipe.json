@@ -1,0 +1,31 @@
+{
+  "multipart": [
+    {
+      "apply": { "model": "hgtotomato:block/energy_pipe_core" }
+    },
+    {
+      "when": { "north": "true" },
+      "apply": { "model": "hgtotomato:block/energy_pipe_north" }
+    },
+    {
+      "when": { "south": "true" },
+      "apply": { "model": "hgtotomato:block/energy_pipe_south" }
+    },
+    {
+      "when": { "east": "true" },
+      "apply": { "model": "hgtotomato:block/energy_pipe_east" }
+    },
+    {
+      "when": { "west": "true" },
+      "apply": { "model": "hgtotomato:block/energy_pipe_west" }
+    },
+    {
+      "when": { "up": "true" },
+      "apply": { "model": "hgtotomato:block/energy_pipe_up" }
+    },
+    {
+      "when": { "down": "true" },
+      "apply": { "model": "hgtotomato:block/energy_pipe_down" }
+    }
+  ]
+}

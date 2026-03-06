@@ -39,6 +39,14 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.GLASS_SHARDS.get());
         basicItem(ModItems.SPAWNER_FRAGMENT.get());
         basicItem(ModItems.ASH.get());
+        basicItem(ModItems.TOMATITE.get());
+        basicItem(ModItems.TOMATITE_NUGGET.get());
+        basicItem(ModItems.TOMATITE_BATTERY.get());
+        basicItem(ModItems.TOMATITE_CHIP.get());
+        basicItem(ModItems.TOMATITE_STICK.get());
+        basicItem(ModItems.TOMATITE_PLATE.get());
+        basicItem(ModItems.TOMATITE_GEAR.get());
+        basicItem(ModItems.TOMATITE_TRANSISTOR.get());
 
         buttonItem(ModBlocks.LUMIR_BUTTON, ModBlocks.LUMIR_PLANKS);
         fenceItem(ModBlocks.LUMIR_FENCE, ModBlocks.LUMIR_PLANKS);
