@@ -20,6 +20,7 @@ import net.minecraft.world.item.crafting.RecipeHolder;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.capabilities.ForgeCapabilities;
 import net.minecraftforge.common.util.LazyOptional;
@@ -68,12 +69,35 @@ public class CombustionGeneratorBlockEntity extends BlockEntity implements MenuP
 
     // Wrapper output-only exposé aux blocs externes
     private final IEnergyStorage outputOnlyStorage = new IEnergyStorage() {
-        @Override public int receiveEnergy(int maxReceive, boolean simulate) { return 0; }
-        @Override public int extractEnergy(int maxExtract, boolean simulate) { return ENERGY_STORAGE.extractEnergy(maxExtract, simulate); }
-        @Override public int getEnergyStored() { return ENERGY_STORAGE.getEnergyStored(); }
-        @Override public int getMaxEnergyStored() { return ENERGY_STORAGE.getMaxEnergyStored(); }
-        @Override public boolean canExtract() { return true; }
-        @Override public boolean canReceive() { return false; }
+        @Override
+        public int receiveEnergy(int maxReceive, boolean simulate) {
+            return 0;
+        }
+
+        @Override
+        public int extractEnergy(int maxExtract, boolean simulate) {
+            return ENERGY_STORAGE.extractEnergy(maxExtract, simulate);
+        }
+
+        @Override
+        public int getEnergyStored() {
+            return ENERGY_STORAGE.getEnergyStored();
+        }
+
+        @Override
+        public int getMaxEnergyStored() {
+            return ENERGY_STORAGE.getMaxEnergyStored();
+        }
+
+        @Override
+        public boolean canExtract() {
+            return true;
+        }
+
+        @Override
+        public boolean canReceive() {
+            return false;
+        }
     };
 
     private LazyOptional<IEnergyStorage> lazyEnergyHandler = LazyOptional.of(() -> outputOnlyStorage);
@@ -262,6 +286,19 @@ public class CombustionGeneratorBlockEntity extends BlockEntity implements MenuP
         this.ENERGY_STORAGE.setEnergyDirect(energy);
     }
 
+    private Direction getRelativeDirection(Direction absoluteDir) {
+        if (absoluteDir == Direction.UP || absoluteDir == Direction.DOWN) return absoluteDir;
+
+        Direction facing = this.getBlockState().getValue(BlockStateProperties.HORIZONTAL_FACING);
+        return switch (facing) {
+            case NORTH -> absoluteDir;
+            case SOUTH -> absoluteDir.getOpposite();
+            case EAST -> absoluteDir.getCounterClockWise();
+            case WEST -> absoluteDir.getClockWise();
+            default -> absoluteDir;
+        };
+    }
+
     @Override
     public @NotNull <T> LazyOptional<T> getCapability(@NotNull Capability<T> cap, @Nullable Direction side) {
         if (cap == ForgeCapabilities.ITEM_HANDLER) {
@@ -273,7 +310,9 @@ public class CombustionGeneratorBlockEntity extends BlockEntity implements MenuP
         }
 
         if (cap == ForgeCapabilities.ENERGY) {
-            return lazyEnergyHandler.cast();
+            Direction relative = getRelativeDirection(side == null ? Direction.NORTH : side);
+            if (relative == Direction.SOUTH) return lazyEnergyHandler.cast();
+            return LazyOptional.empty();
         }
 
         return super.getCapability(cap, side);

@@ -263,6 +263,11 @@ public class ModBlocks {
                     .strength(1.0f)
                     .noOcclusion()));
 
+    public static final RegistryObject<Block> TOMATITE_TANK = registerBlock("tomatite_tank",
+            () -> new TomatiteTankBlock(BlockBehaviour.Properties.of()
+                    .strength(2f, 3f)
+                    .sound(SoundType.BASALT)));
+
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

@@ -1,4 +1,4 @@
-// 1.21	2026-03-06T20:38:34.8156095	Loot Tables
+// 1.21	2026-03-06T21:04:08.2654424	Loot Tables
 a1b5ba8f69192677811a7e33484a9fea94a05552 data/hgtotomato/loot_table/blocks/almond_bush.json
 8a1ccd8fddfa655716ae4044fe2b028fddcd4010 data/hgtotomato/loot_table/blocks/black_sand.json
 7f59b586e05583cf8fee491b79f42cd2f5791d05 data/hgtotomato/loot_table/blocks/card_box.json
@@ -35,4 +35,5 @@ f09d2b1ed4e2363f6bea19f678444337a75b0866 data/hgtotomato/loot_table/blocks/strip
 62f5403d48b32fb0ebc631205a61b12428d8284f data/hgtotomato/loot_table/blocks/table.json
 737b89e433a6245bd26473b008ac386b5e682844 data/hgtotomato/loot_table/blocks/tomatite_block.json
 bb1421ac7a2b6aef1561fd9789afde3ecd24e4fe data/hgtotomato/loot_table/blocks/tomatite_casing.json
+8a094f4f68b525909fde9daca662d6d1eb608742 data/hgtotomato/loot_table/blocks/tomatite_tank.json
 bf4e63f1024892c337e8f72de87e996d4dfeec94 data/hgtotomato/loot_table/blocks/tomato_crop.json

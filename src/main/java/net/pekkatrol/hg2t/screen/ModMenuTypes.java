@@ -1,10 +1,7 @@
 package net.pekkatrol.hg2t.screen;
 
 import net.pekkatrol.hg2t.HG2Tomato;
-import net.pekkatrol.hg2t.screen.custom.CardboardMenu;
-import net.pekkatrol.hg2t.screen.custom.CombustionGeneratorMenu;
-import net.pekkatrol.hg2t.screen.custom.PresentMenu;
-import net.pekkatrol.hg2t.screen.custom.PresentScreen;
+import net.pekkatrol.hg2t.screen.custom.*;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.inventory.MenuType;
 import net.minecraftforge.common.extensions.IForgeMenuType;
@@ -22,6 +19,9 @@ public class ModMenuTypes {
 
     public static final RegistryObject<MenuType<CombustionGeneratorMenu>> COMBUSTION_GENERATOR_MENU =
             MENUS.register("combustion_generator_menu", () -> IForgeMenuType.create(CombustionGeneratorMenu::new));
+
+    public static final RegistryObject<MenuType<TomatiteTankMenu>> TOMATITE_TANK_MENU =
+            MENUS.register("tomatite_tank_menu", () -> IForgeMenuType.create(TomatiteTankMenu::new));
 
     public static final RegistryObject<MenuType<CardboardMenu>> CARDBOARD_MENU =
             MENUS.register("cardboard_menu", () -> IForgeMenuType.create(CardboardMenu::new));

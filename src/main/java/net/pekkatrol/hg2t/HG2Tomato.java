@@ -41,6 +41,7 @@ import net.pekkatrol.hg2t.screen.ModMenuTypes;
 import net.pekkatrol.hg2t.screen.custom.CardboardScreen;
 import net.pekkatrol.hg2t.screen.custom.CombustionGeneratorScreen;
 import net.pekkatrol.hg2t.screen.custom.PresentScreen;
+import net.pekkatrol.hg2t.screen.custom.TomatiteTankScreen;
 import org.slf4j.Logger;
 
 
@@ -124,6 +125,7 @@ public class HG2Tomato
             MenuScreens.register(ModMenuTypes.PRESENT_MENU.get(), PresentScreen::new);
             MenuScreens.register(ModMenuTypes.CARDBOARD_MENU.get(), CardboardScreen::new);
             MenuScreens.register(ModMenuTypes.COMBUSTION_GENERATOR_MENU.get(), CombustionGeneratorScreen::new);
+            MenuScreens.register(ModMenuTypes.TOMATITE_TANK_MENU.get(), TomatiteTankScreen::new);
 
             EntityRenderers.register(ModEntities.ENERGIZED_GOLEM.get(), EnergizedGolemRenderer::new);
 
