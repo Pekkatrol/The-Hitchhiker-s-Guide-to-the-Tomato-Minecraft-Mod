@@ -91,6 +91,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.TOMATITE_CASING.get());
                         output.accept(ModBlocks.COMBUSTION_GENERATOR.get());
                         output.accept(ModBlocks.ENERGY_PIPE.get());
+                        output.accept(ModBlocks.TOMATITE_TANK.get());
                     })
                     .build());
 

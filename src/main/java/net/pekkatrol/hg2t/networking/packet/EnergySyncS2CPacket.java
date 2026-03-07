@@ -6,6 +6,7 @@ import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraftforge.event.network.CustomPayloadEvent;
 import net.pekkatrol.hg2t.block.entity.custom.CombustionGeneratorBlockEntity;
+import net.pekkatrol.hg2t.block.entity.custom.TomatiteTankBlockEntity;
 
 public class EnergySyncS2CPacket {
 
@@ -35,7 +36,10 @@ public class EnergySyncS2CPacket {
 
             if (blockEntity instanceof CombustionGeneratorBlockEntity generator) {
                 generator.setEnergyLevel(energy);
+            } else if (blockEntity instanceof TomatiteTankBlockEntity tank) {
+                tank.setEnergyLevel(energy);
             }
+
         });
 
         context.setPacketHandled(true);

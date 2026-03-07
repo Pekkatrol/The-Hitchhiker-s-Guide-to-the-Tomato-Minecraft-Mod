@@ -8,10 +8,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.pekkatrol.hg2t.HG2Tomato;
 import net.pekkatrol.hg2t.block.ModBlocks;
-import net.pekkatrol.hg2t.block.entity.custom.CardboardBlockEntity;
-import net.pekkatrol.hg2t.block.entity.custom.CombustionGeneratorBlockEntity;
-import net.pekkatrol.hg2t.block.entity.custom.EnergyPipeBlockEntity;
-import net.pekkatrol.hg2t.block.entity.custom.PresentBlockEntity;
+import net.pekkatrol.hg2t.block.entity.custom.*;
 
 public class ModBlockEntities {
 
@@ -24,7 +21,11 @@ public class ModBlockEntities {
 
     public static final RegistryObject<BlockEntityType<EnergyPipeBlockEntity>> ENERGY_PIPE_BE =
             BLOCK_ENTITIES.register("energy_pipe_be", () -> BlockEntityType.Builder.of(
-                    EnergyPipeBlockEntity::new, ModBlocks.COMBUSTION_GENERATOR.get()).build(null));
+                    EnergyPipeBlockEntity::new, ModBlocks.ENERGY_PIPE.get()).build(null));
+
+    public static final RegistryObject<BlockEntityType<TomatiteTankBlockEntity>> TOMATITE_TANK_BE =
+            BLOCK_ENTITIES.register("tomatite_tank_be", () -> BlockEntityType.Builder.of(
+                    TomatiteTankBlockEntity::new, ModBlocks.TOMATITE_TANK.get()).build(null));
 
     public static final RegistryObject<BlockEntityType<PresentBlockEntity>> PRESENT_BE =
             BLOCK_ENTITIES.register("present_be", () -> BlockEntityType.Builder.of(

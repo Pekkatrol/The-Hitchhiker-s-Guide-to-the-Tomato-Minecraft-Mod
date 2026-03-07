@@ -15,6 +15,7 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityTicker;
 import net.minecraft.world.level.block.entity.BlockEntityType;
+import net.minecraftforge.common.capabilities.ForgeCapabilities;
 import org.jetbrains.annotations.Nullable;
 
 public class EnergyPipeBlock extends Block implements EntityBlock {
@@ -70,10 +71,13 @@ public class EnergyPipeBlock extends Block implements EntityBlock {
 
     private boolean canConnect(Level level, BlockPos pos, Direction dir) {
         BlockPos neighborPos = pos.relative(dir);
+        BlockState neighborState = level.getBlockState(neighborPos);
+
+        if (neighborState.getBlock() instanceof EnergyPipeBlock) return true;
+
         BlockEntity be = level.getBlockEntity(neighborPos);
         if (be == null) return false;
-        return be.getCapability(net.minecraftforge.common.capabilities.ForgeCapabilities.ENERGY,
-                dir.getOpposite()).isPresent();
+        return be.getCapability(ForgeCapabilities.ENERGY, dir.getOpposite()).isPresent();
     }
 
     @Override
