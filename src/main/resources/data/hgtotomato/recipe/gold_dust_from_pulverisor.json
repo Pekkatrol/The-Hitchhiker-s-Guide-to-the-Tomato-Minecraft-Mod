@@ -1,0 +1,11 @@
+{
+  "type": "hgtotomato:pulverisor",
+  "ingredient": {
+    "item": "minecraft:raw_gold"
+  },
+  "result": {
+    "id": "hgtotomato:gold_dust",
+    "count": 2
+  },
+  "energy_cost": 35
+}

@@ -19,6 +19,8 @@
   "item.hgtotomato.glass_shards": "Glass shards",
   "item.hgtotomato.spawner_fragment": "Spawner fragment",
   "item.hgtotomato.ash": "Ash",
+  "item.hgtotomato.iron_dust": "Iron dust",
+  "item.hgtotomato.gold_dust": "Gold dust",
   "item.hgtotomato.tomatite": "Tomatite",
   "item.hgtotomato.tomatite_nugget": "Tomatite nugget",
   "item.hgtotomato.tomatite_chip": "Tomatite chip",
@@ -65,6 +67,8 @@
   "block.hgtotomato.tomatite_casing": "Tomatite casing",
   "block.hgtotomato.energy_pipe": "Energy pipe",
   "block.hgtotomato.tomatite_tank": "Tomatite energy tank",
+  "block.hgtotomato.compressor": "Compressor",
+  "block.hgtotomato.pulverisor": "Pulverisor",
 
   "block.hgtotomato.tomato_crop": "Tomato crop",
   "block.hgtotomato.almond_bush": "Almond bush",
@@ -90,6 +94,7 @@
 
   "creativetab.hgtotomato.hgtotomato_items": "HG2Tomato Items",
   "creativetab.hgtotomato.hgtotomato_blocks": "HG2Tomato Blocks",
+  "creativetab.hgtotomato.hgtotomato_energy": "HG2Tomato Energy & machine",
 
   "entity.hgtotomato.energized_golem": "Energized Golem"
 }

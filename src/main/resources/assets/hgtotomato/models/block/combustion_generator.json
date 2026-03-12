@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "down": "hgtotomato:block/combustion_generator_bottom",
-    "east": "hgtotomato:block/combustion_generator_side",
-    "north": "hgtotomato:block/combustion_generator_front",
-    "particle": "hgtotomato:block/combustion_generator_side",
-    "south": "hgtotomato:block/combustion_generator_side",
-    "up": "hgtotomato:block/combustion_generator_top",
-    "west": "hgtotomato:block/combustion_generator_side"
+    "down": "hgtotomato:block/combustion_generator/combustion_generator_bottom",
+    "east": "hgtotomato:block/combustion_generator/combustion_generator_side",
+    "north": "hgtotomato:block/combustion_generator/combustion_generator_front",
+    "particle": "hgtotomato:block/combustion_generator/combustion_generator_side",
+    "south": "hgtotomato:block/combustion_generator/combustion_generator_output_face",
+    "up": "hgtotomato:block/combustion_generator/combustion_generator_top",
+    "west": "hgtotomato:block/combustion_generator/combustion_generator_side"
   }
 }

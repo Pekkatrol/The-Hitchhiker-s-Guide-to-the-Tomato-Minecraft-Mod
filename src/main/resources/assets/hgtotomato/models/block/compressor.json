@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "hgtotomato:block/compressor/compressor_bottom",
+    "east": "hgtotomato:block/compressor/compressor_side",
+    "north": "hgtotomato:block/compressor/compressor_front",
+    "particle": "hgtotomato:block/compressor/compressor_side",
+    "south": "hgtotomato:block/compressor/compressor_input_face",
+    "up": "hgtotomato:block/compressor/compressor_top",
+    "west": "hgtotomato:block/compressor/compressor_side"
+  }
+}

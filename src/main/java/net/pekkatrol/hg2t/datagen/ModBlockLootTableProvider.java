@@ -67,6 +67,8 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.TOMATITE_CASING.get());
         dropSelf(ModBlocks.TOMATITE_TANK.get());
         dropSelf(ModBlocks.COMBUSTION_GENERATOR.get());
+        dropSelf(ModBlocks.COMPRESSOR.get());
+        dropSelf(ModBlocks.PULVERISOR.get());
 
         dropSelf(ModBlocks.DUNGEON_BRICKS.get());
         dropSelf(ModBlocks.DUNGEON_BRICKS_SLAB.get());

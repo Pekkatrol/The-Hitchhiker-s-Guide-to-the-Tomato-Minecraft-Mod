@@ -39,6 +39,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.GLASS_SHARDS.get());
         basicItem(ModItems.SPAWNER_FRAGMENT.get());
         basicItem(ModItems.ASH.get());
+        basicItem(ModItems.IRON_DUST.get());
+        basicItem(ModItems.GOLD_DUST.get());
         basicItem(ModItems.TOMATITE.get());
         basicItem(ModItems.TOMATITE_NUGGET.get());
         basicItem(ModItems.TOMATITE_BATTERY.get());

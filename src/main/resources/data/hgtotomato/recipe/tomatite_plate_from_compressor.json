@@ -1,0 +1,11 @@
+{
+  "type": "hgtotomato:compressor",
+  "ingredient": {
+    "item": "hgtotomato:tomatite"
+  },
+  "result": {
+    "id": "hgtotomato:tomatite_plate",
+    "count": 1
+  },
+  "energy_cost": 10
+}

@@ -309,6 +309,41 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModBlocks.TOMATITE_CASING.get()), has(ModBlocks.TOMATITE_CASING.get()))
                 .save(pRecipeOutput, HG2Tomato.MOD_ID + ":combustion_generator_from_tomatite_casing");
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.TOMATITE_TANK.get())
+                .pattern("CBC")
+                .pattern("CDC")
+                .pattern("CAC")
+                .define('A', ModBlocks.TOMATITE_CASING.get())
+                .define('B', ModItems.TOMATITE_PLATE.get())
+                .define('C', ModItems.TOMATITE_BATTERY.get())
+                .define('D', ModItems.TOMATITE_CHIP.get())
+                .unlockedBy(getHasName(ModBlocks.TOMATITE_CASING.get()), has(ModBlocks.TOMATITE_CASING.get()))
+                .save(pRecipeOutput, HG2Tomato.MOD_ID + ":tomatite_tank_from_tomatite_casing");
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.COMPRESSOR.get())
+                .pattern("BDB")
+                .pattern("ECE")
+                .pattern("BAB")
+                .define('A', ModBlocks.TOMATITE_CASING.get())
+                .define('B', ModItems.TOMATITE_PLATE.get())
+                .define('C', ModItems.TOMATITE_BATTERY.get())
+                .define('D', ModItems.TOMATITE_CHIP.get())
+                .define('E', Blocks.PISTON)
+                .unlockedBy(getHasName(ModBlocks.TOMATITE_CASING.get()), has(ModBlocks.TOMATITE_CASING.get()))
+                .save(pRecipeOutput, HG2Tomato.MOD_ID + ":compressor_from_tomatite_casing");
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.PULVERISOR.get())
+                .pattern("EDE")
+                .pattern("BCB")
+                .pattern("EAE")
+                .define('A', ModBlocks.TOMATITE_CASING.get())
+                .define('B', ModItems.TOMATITE_GEAR.get())
+                .define('C', ModItems.TOMATITE_BATTERY.get())
+                .define('D', ModItems.TOMATITE_CHIP.get())
+                .define('E', ModItems.TOMATITE_PLATE.get())
+                .unlockedBy(getHasName(ModBlocks.TOMATITE_CASING.get()), has(ModBlocks.TOMATITE_CASING.get()))
+                .save(pRecipeOutput, HG2Tomato.MOD_ID + ":pulverisor_from_tomatite_casing");
+
 
 
         oreSmelting(pRecipeOutput, NICKEL_SMELTABLES, RecipeCategory.MISC, ModItems.NICKEL_INGOT.get(), 0.25f, 200, "nickel");

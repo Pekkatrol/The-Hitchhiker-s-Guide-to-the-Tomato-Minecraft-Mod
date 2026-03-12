@@ -23,6 +23,12 @@ public class ModMenuTypes {
     public static final RegistryObject<MenuType<TomatiteTankMenu>> TOMATITE_TANK_MENU =
             MENUS.register("tomatite_tank_menu", () -> IForgeMenuType.create(TomatiteTankMenu::new));
 
+    public static final RegistryObject<MenuType<CompressorMenu>> COMPRESSOR_MENU =
+            MENUS.register("compressor_menu", () -> IForgeMenuType.create(CompressorMenu::new));
+
+    public static final RegistryObject<MenuType<PulverisorMenu>> PULVERISOR_MENU =
+            MENUS.register("pulverisor_menu", () -> IForgeMenuType.create(PulverisorMenu::new));
+
     public static final RegistryObject<MenuType<CardboardMenu>> CARDBOARD_MENU =
             MENUS.register("cardboard_menu", () -> IForgeMenuType.create(CardboardMenu::new));
 
