@@ -268,6 +268,17 @@ public class ModBlocks {
                     .strength(2f, 3f)
                     .sound(SoundType.BASALT)));
 
+    public static final RegistryObject<Block> COMPRESSOR = registerBlock("compressor",
+            () -> new CompressorBlock(BlockBehaviour.Properties.of()
+                    .strength(2f, 3f)
+                    .sound(SoundType.BASALT)));
+
+    public static final RegistryObject<Block> PULVERISOR = registerBlock("pulverisor",
+            () -> new PulverisorBlock(BlockBehaviour.Properties.of()
+                    .strength(2f, 3f)
+                    .sound(SoundType.BASALT)));
+
+
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

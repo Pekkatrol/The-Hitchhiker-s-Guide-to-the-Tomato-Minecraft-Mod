@@ -7,6 +7,8 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraftforge.event.network.CustomPayloadEvent;
 import net.minecraftforge.network.PacketDistributor;
 import net.pekkatrol.hg2t.block.entity.custom.CombustionGeneratorBlockEntity;
+import net.pekkatrol.hg2t.block.entity.custom.CompressorBlockEntity;
+import net.pekkatrol.hg2t.block.entity.custom.PulverisorBlockEntity;
 import net.pekkatrol.hg2t.block.entity.custom.TomatiteTankBlockEntity;
 
 public class EnergySyncC2SPacket {
@@ -40,6 +42,10 @@ public class EnergySyncC2SPacket {
                 generator.setEnergyLevel(energy);
             } else if (blockEntity instanceof TomatiteTankBlockEntity tank) {
                 tank.setEnergyLevel(energy);
+            } else if (blockEntity instanceof CompressorBlockEntity compressor) {
+                compressor.setEnergyLevel(energy);
+            } else if (blockEntity instanceof PulverisorBlockEntity pulverisor) {
+                pulverisor.setEnergyLevel(energy);
             }
         });
 

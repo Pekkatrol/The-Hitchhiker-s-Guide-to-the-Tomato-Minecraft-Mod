@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "down": "hgtotomato:block/tomatite_block",
-    "east": "hgtotomato:block/tomatite_tank_output_face",
-    "north": "hgtotomato:block/tomatite_tank_front",
-    "particle": "hgtotomato:block/tomatite_block",
-    "south": "hgtotomato:block/tomatite_block",
-    "up": "hgtotomato:block/tomatite_block",
-    "west": "hgtotomato:block/tomatite_tank_input_face"
+    "down": "hgtotomato:block/tomatite_tank/tomatite_tank_face",
+    "east": "hgtotomato:block/tomatite_tank/tomatite_tank_output_face",
+    "north": "hgtotomato:block/tomatite_tank/tomatite_tank_front",
+    "particle": "hgtotomato:block/tomatite_tank/tomatite_tank_face",
+    "south": "hgtotomato:block/tomatite_tank/tomatite_tank_face",
+    "up": "hgtotomato:block/tomatite_tank/tomatite_tank_face",
+    "west": "hgtotomato:block/tomatite_tank/tomatite_tank_input_face"
   }
 }

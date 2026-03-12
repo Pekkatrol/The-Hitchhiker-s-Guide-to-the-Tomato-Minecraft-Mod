@@ -19,6 +19,14 @@ public class ModBlockEntities {
             BLOCK_ENTITIES.register("combustion_generator_be", () -> BlockEntityType.Builder.of(
                     CombustionGeneratorBlockEntity::new, ModBlocks.COMBUSTION_GENERATOR.get()).build(null));
 
+    public static final RegistryObject<BlockEntityType<CompressorBlockEntity>> COMPRESSOR_BE =
+            BLOCK_ENTITIES.register("compressor_be", () -> BlockEntityType.Builder.of(
+                    CompressorBlockEntity::new, ModBlocks.COMPRESSOR.get()).build(null));
+
+    public static final RegistryObject<BlockEntityType<PulverisorBlockEntity>> PULVERISOR_BE =
+            BLOCK_ENTITIES.register("pulverisor_be", () -> BlockEntityType.Builder.of(
+                    PulverisorBlockEntity::new, ModBlocks.PULVERISOR.get()).build(null));
+
     public static final RegistryObject<BlockEntityType<EnergyPipeBlockEntity>> ENERGY_PIPE_BE =
             BLOCK_ENTITIES.register("energy_pipe_be", () -> BlockEntityType.Builder.of(
                     EnergyPipeBlockEntity::new, ModBlocks.ENERGY_PIPE.get()).build(null));

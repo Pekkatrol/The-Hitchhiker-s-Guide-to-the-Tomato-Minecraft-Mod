@@ -1,4 +1,4 @@
-// 1.21	2026-03-06T07:57:50.6281671	Item Models: hgtotomato
+// 1.21	2026-03-12T19:21:53.3604853	Item Models: hgtotomato
 92ff5188e3f4313d31061e97ba6c657fbf22e207 assets/hgtotomato/models/item/almond.json
 e0843374548767be827710a4a35af5614c65ffab assets/hgtotomato/models/item/ash.json
 6da5ee8bef178deceb045dda141d1c2943899098 assets/hgtotomato/models/item/banana.json
@@ -9,6 +9,8 @@ e46eca4e165b1a1056c439739fe12e94fcd2ed27 assets/hgtotomato/models/item/dungeon_b
 70bea13b131a877ab7b90fc6f98407a20bc57858 assets/hgtotomato/models/item/empty_core.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/hgtotomato/models/item/energized_golem_spawn_egg.json
 4761c18d72ec30a6f47b81115f1ad2d2c947b0f0 assets/hgtotomato/models/item/glass_shards.json
+1e3cf4d2722910584537f82034a1bcc587166ce6 assets/hgtotomato/models/item/gold_dust.json
+243e3e83776c9f92249465dc1d6618ecbbf3c3f7 assets/hgtotomato/models/item/iron_dust.json
 0fe31c3d768c9027ffdb26c74374c3051af7fc33 assets/hgtotomato/models/item/ketchoup.json
 7bf5193c5c74c46977201307f11c2d290072611b assets/hgtotomato/models/item/lumir_button.json
 4095070972401c2c413976dbb2e8a1bf9ee432e0 assets/hgtotomato/models/item/lumir_door.json

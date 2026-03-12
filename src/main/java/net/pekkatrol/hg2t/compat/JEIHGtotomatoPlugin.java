@@ -13,11 +13,11 @@ import net.minecraft.world.item.crafting.RecipeHolder;
 import net.minecraft.world.item.crafting.RecipeManager;
 import net.pekkatrol.hg2t.HG2Tomato;
 import net.pekkatrol.hg2t.block.ModBlocks;
-import net.pekkatrol.hg2t.recipe.CombustionGeneratorRecipe;
-import net.pekkatrol.hg2t.recipe.ModRecipes;
-import net.pekkatrol.hg2t.recipe.PresentRecipe;
+import net.pekkatrol.hg2t.recipe.*;
 import net.pekkatrol.hg2t.screen.custom.CombustionGeneratorScreen;
+import net.pekkatrol.hg2t.screen.custom.CompressorScreen;
 import net.pekkatrol.hg2t.screen.custom.PresentScreen;
+import net.pekkatrol.hg2t.screen.custom.PulverisorScreen;
 
 import java.util.List;
 
@@ -37,6 +37,12 @@ public class JEIHGtotomatoPlugin implements IModPlugin {
 
         registration.addRecipeCategories(new CombustionGeneratorRecipeCategory(
                 registration.getJeiHelpers().getGuiHelper()));
+
+        registration.addRecipeCategories(new CompressorRecipeCategory(
+                registration.getJeiHelpers().getGuiHelper()));
+
+        registration.addRecipeCategories(new PulverisorRecipeCategory(
+                registration.getJeiHelpers().getGuiHelper()));
     }
 
     @Override
@@ -53,6 +59,16 @@ public class JEIHGtotomatoPlugin implements IModPlugin {
 
         registration.addRecipes(CombustionGeneratorRecipeCategory.COMBUSTION_GENERATOR_RECIPE_RECIPE_TYPE, combustionGeneratorRecipes);
 
+        List<CompressorRecipe> compressorRecipes = recipeManager
+                .getAllRecipesFor(ModRecipes.COMPRESSOR_TYPE.get()).stream().map(RecipeHolder::value).toList();
+
+        registration.addRecipes(CompressorRecipeCategory.COMPRESSOR_RECIPE_RECIPE_TYPE, compressorRecipes);
+
+        List<PulverisorRecipe> pulverisorRecipes = recipeManager
+                .getAllRecipesFor(ModRecipes.PULVERISOR_TYPE.get()).stream().map(RecipeHolder::value).toList();
+
+        registration.addRecipes(PulverisorRecipeCategory.PULVERISOR_RECIPE_RECIPE_TYPE, pulverisorRecipes);
+
     }
 
     @Override
@@ -62,6 +78,12 @@ public class JEIHGtotomatoPlugin implements IModPlugin {
 
         registration.addRecipeClickArea(CombustionGeneratorScreen.class, 50, 35, 25, 20,
                 CombustionGeneratorRecipeCategory.COMBUSTION_GENERATOR_RECIPE_RECIPE_TYPE);
+
+        registration.addRecipeClickArea(CompressorScreen.class, 50, 35, 25, 20,
+                CompressorRecipeCategory.COMPRESSOR_RECIPE_RECIPE_TYPE);
+
+        registration.addRecipeClickArea(PulverisorScreen.class, 50, 35, 25, 20,
+                PulverisorRecipeCategory.PULVERISOR_RECIPE_RECIPE_TYPE);
     }
 
     @Override
@@ -71,5 +93,11 @@ public class JEIHGtotomatoPlugin implements IModPlugin {
 
         registration.addRecipeCatalyst(new ItemStack(ModBlocks.COMBUSTION_GENERATOR.get().asItem()),
                 CombustionGeneratorRecipeCategory.COMBUSTION_GENERATOR_RECIPE_RECIPE_TYPE);
+
+        registration.addRecipeCatalyst(new ItemStack(ModBlocks.COMPRESSOR.get().asItem()),
+                CompressorRecipeCategory.COMPRESSOR_RECIPE_RECIPE_TYPE);
+
+        registration.addRecipeCatalyst(new ItemStack(ModBlocks.PULVERISOR.get().asItem()),
+                PulverisorRecipeCategory.PULVERISOR_RECIPE_RECIPE_TYPE);
     }
 }

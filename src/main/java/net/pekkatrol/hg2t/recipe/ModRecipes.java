@@ -38,6 +38,28 @@ public class ModRecipes {
                 }
             });
 
+    public static final RegistryObject<RecipeSerializer<CompressorRecipe>> COMPRESSOR_SERIALIZER =
+            SERIALIZERS.register("compressor", CompressorRecipe.Serializer::new);
+
+    public static final RegistryObject<RecipeType<CompressorRecipe>> COMPRESSOR_TYPE =
+            TYPES.register("compressor", () -> new RecipeType<CompressorRecipe>() {
+                @Override
+                public String toString() {
+                    return "compressor";
+                }
+            });
+
+    public static final RegistryObject<RecipeSerializer<PulverisorRecipe>> PULVERISOR_SERIALIZER =
+            SERIALIZERS.register("pulverisor", PulverisorRecipe.Serializer::new);
+
+    public static final RegistryObject<RecipeType<PulverisorRecipe>> PULVERISOR_TYPE =
+            TYPES.register("pulverisor", () -> new RecipeType<PulverisorRecipe>() {
+                @Override
+                public String toString() {
+                    return "pulverisor";
+                }
+            });
+
     public static void register(IEventBus eventBus) {
         SERIALIZERS.register(eventBus);
         TYPES.register(eventBus);

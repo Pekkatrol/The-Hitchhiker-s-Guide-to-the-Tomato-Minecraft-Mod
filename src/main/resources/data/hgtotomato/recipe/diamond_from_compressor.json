@@ -1,0 +1,11 @@
+{
+  "type": "hgtotomato:compressor",
+  "ingredient": {
+    "item": "minecraft:coal_block"
+  },
+  "result": {
+    "id": "minecraft:diamond",
+    "count": 1
+  },
+  "energy_cost": 200
+}

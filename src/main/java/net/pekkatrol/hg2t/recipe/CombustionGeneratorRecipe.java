@@ -1,10 +1,12 @@
 package net.pekkatrol.hg2t.recipe;
 
+import com.mojang.serialization.Codec;
 import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.NonNullList;
 import net.minecraft.network.RegistryFriendlyByteBuf;
+import net.minecraft.network.codec.ByteBufCodecs;
 import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -13,7 +15,7 @@ import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.Level;
 
-public record CombustionGeneratorRecipe(Ingredient inputItem, ItemStack output) implements Recipe<CombustionGeneratorRecipeInput> {
+public record CombustionGeneratorRecipe(Ingredient inputItem, ItemStack output, int energyProduced) implements Recipe<CombustionGeneratorRecipeInput> {
 
     @Override
     public NonNullList<Ingredient> getIngredients() {
@@ -24,10 +26,7 @@ public record CombustionGeneratorRecipe(Ingredient inputItem, ItemStack output) 
 
     @Override
     public boolean matches(CombustionGeneratorRecipeInput pInput, Level pLevel) {
-        if (pLevel.isClientSide()) {
-            return false;
-        }
-
+        if (pLevel.isClientSide()) return false;
         return inputItem.test(pInput.getItem(0));
     }
 
@@ -60,13 +59,15 @@ public record CombustionGeneratorRecipe(Ingredient inputItem, ItemStack output) 
 
         public static final MapCodec<CombustionGeneratorRecipe> CODEC = RecordCodecBuilder.mapCodec(inst -> inst.group(
                 Ingredient.CODEC_NONEMPTY.fieldOf("ingredient").forGetter(CombustionGeneratorRecipe::inputItem),
-                ItemStack.CODEC.fieldOf("result").forGetter(CombustionGeneratorRecipe::output)
+                ItemStack.CODEC.fieldOf("result").forGetter(CombustionGeneratorRecipe::output),
+                Codec.INT.optionalFieldOf("energy_produced", 20).forGetter(CombustionGeneratorRecipe::energyProduced)
         ).apply(inst, CombustionGeneratorRecipe::new));
 
         public static final StreamCodec<RegistryFriendlyByteBuf, CombustionGeneratorRecipe> STREAM_CODEC =
                 StreamCodec.composite(
                         Ingredient.CONTENTS_STREAM_CODEC, CombustionGeneratorRecipe::inputItem,
                         ItemStack.STREAM_CODEC, CombustionGeneratorRecipe::output,
+                        ByteBufCodecs.INT, CombustionGeneratorRecipe::energyProduced,
                         CombustionGeneratorRecipe::new);
 
         @Override

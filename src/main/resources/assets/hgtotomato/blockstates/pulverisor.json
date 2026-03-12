@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "hgtotomato:block/pulverisor" },
+    "facing=south": { "model": "hgtotomato:block/pulverisor", "y": 180 },
+    "facing=west":  { "model": "hgtotomato:block/pulverisor", "y": 270 },
+    "facing=east":  { "model": "hgtotomato:block/pulverisor", "y": 90 }
+  }
+}

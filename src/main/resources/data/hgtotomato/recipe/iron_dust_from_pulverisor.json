@@ -1,0 +1,11 @@
+{
+  "type": "hgtotomato:pulverisor",
+  "ingredient": {
+    "item": "minecraft:raw_iron"
+  },
+  "result": {
+    "id": "hgtotomato:iron_dust",
+    "count": 2
+  },
+  "energy_cost": 25
+}

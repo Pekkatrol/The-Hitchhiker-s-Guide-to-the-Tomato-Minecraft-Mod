@@ -38,15 +38,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.GLASS_SHARDS.get());
                         output.accept(ModItems.SPAWNER_FRAGMENT.get());
                         output.accept(ModItems.ASH.get());
-                        output.accept(ModItems.TOMATITE_NUGGET.get());
-                        output.accept(ModItems.TOMATITE.get());
-                        output.accept(ModItems.TOMATITE_CHIP.get());
-                        output.accept(ModItems.TOMATITE_BATTERY.get());
-                        output.accept(ModItems.TOMATITE_STICK.get());
-                        output.accept(ModItems.TOMATITE_PLATE.get());
-                        output.accept(ModItems.TOMATITE_GEAR.get());
-                        output.accept(ModItems.TOMATITE_TRANSISTOR.get());
-
+                        output.accept(ModItems.IRON_DUST.get());
+                        output.accept(ModItems.GOLD_DUST.get());
                     })
                     .build());
 
@@ -87,11 +80,28 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.DUNGEON_BRICKS_SLAB.get());
                         output.accept(ModBlocks.DUNGEON_BRICKS_WALL.get());
                         output.accept(ModBlocks.DUNGEON_BRICKS_STAIR.get());
+                    })
+                    .build());
+
+    public static final RegistryObject<CreativeModeTab> HGTOTOMATO_ENERGY_TAB = CREATIVE_MODE_TABS.register("hgtotomato_energy_tab",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.TOMATITE.get()))
+                    .title(Component.translatable("creativetab.hgtotomato.hgtotomato_energy"))
+                    .displayItems((itemDisplayParameters, output) -> {
+                        output.accept(ModItems.TOMATITE_NUGGET.get());
+                        output.accept(ModItems.TOMATITE.get());
                         output.accept(ModBlocks.TOMATITE_BLOCK.get());
+                        output.accept(ModItems.TOMATITE_CHIP.get());
+                        output.accept(ModItems.TOMATITE_BATTERY.get());
+                        output.accept(ModItems.TOMATITE_STICK.get());
+                        output.accept(ModItems.TOMATITE_PLATE.get());
+                        output.accept(ModItems.TOMATITE_GEAR.get());
+                        output.accept(ModItems.TOMATITE_TRANSISTOR.get());
                         output.accept(ModBlocks.TOMATITE_CASING.get());
-                        output.accept(ModBlocks.COMBUSTION_GENERATOR.get());
                         output.accept(ModBlocks.ENERGY_PIPE.get());
                         output.accept(ModBlocks.TOMATITE_TANK.get());
+                        output.accept(ModBlocks.COMBUSTION_GENERATOR.get());
+                        output.accept(ModBlocks.COMPRESSOR.get());
+                        output.accept(ModBlocks.PULVERISOR.get());
                     })
                     .build());
 

@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "hgtotomato:block/pulverisor/pulverisor_bottom",
+    "east": "hgtotomato:block/pulverisor/pulverisor_side",
+    "north": "hgtotomato:block/pulverisor/pulverisor_front",
+    "particle": "hgtotomato:block/pulverisor/pulverisor_side",
+    "south": "hgtotomato:block/pulverisor/pulverisor_input_face",
+    "up": "hgtotomato:block/pulverisor/pulverisor_top",
+    "west": "hgtotomato:block/pulverisor/pulverisor_side"
+  }
+}

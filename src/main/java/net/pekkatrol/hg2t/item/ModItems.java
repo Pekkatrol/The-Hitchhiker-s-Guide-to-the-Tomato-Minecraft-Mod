@@ -125,6 +125,12 @@ public class ModItems {
     public static final RegistryObject<Item> ASH = ITEMS.register("ash",
             () -> new Item(new Item.Properties()));
 
+    public static final RegistryObject<Item> IRON_DUST = ITEMS.register("iron_dust",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> GOLD_DUST = ITEMS.register("gold_dust",
+            () -> new Item(new Item.Properties()));
+
     public static final RegistryObject<Item> TOMATITE = ITEMS.register("tomatite",
             () -> new Item(new Item.Properties()));
 
